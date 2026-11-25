@@ -1,0 +1,2 @@
+
+$ cp /kaggle/working/logs/*.log /kaggle/working/out/ ; ls -la /kaggle/working/out

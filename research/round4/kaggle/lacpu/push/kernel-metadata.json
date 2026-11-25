@@ -1,0 +1,15 @@
+{
+ "id": "shubhsaxena2008/heartwick-r4-lacpu",
+ "title": "Heartwick R4 Lacpu",
+ "code_file": "main.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "model_sources": []
+}

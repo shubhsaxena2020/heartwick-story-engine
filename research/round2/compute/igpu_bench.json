@@ -1,0 +1,12 @@
+{
+ "device": "Intel(R) Arc(TM) 130T GPU (24GB)",
+ "torch": "2.13.0+xpu",
+ "mem_gb": 26.8,
+ "gemm_fp16_4096_tflops": 8.46,
+ "gemm_fp16_8192_tflops": 11.78,
+ "gemm_wan_ffn_tflops": 17.54,
+ "sdpa_L8190_s": 0.244,
+ "sdpa_L8190_tflops": 5.63,
+ "sdpa_L32760_s": 4.872,
+ "sdpa_L32760_tflops": 4.51
+}

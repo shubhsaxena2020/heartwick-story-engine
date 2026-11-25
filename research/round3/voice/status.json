@@ -1,0 +1,18 @@
+{
+ "qwen3": {
+  "install_rc": 0,
+  "install_s": 43.7,
+  "run_rc": 0,
+  "run_s": 1896.1
+ },
+ "voxcpm": {
+  "install_rc": 0,
+  "install_s": 45.1,
+  "run_rc": 0,
+  "run_s": 1797.3
+ },
+ "score": {
+  "rc": 0,
+  "s": 650.2
+ }
+}

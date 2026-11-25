@@ -1,0 +1,38 @@
+{
+ "plan": {
+  "name": "xpu_q4_384",
+  "quant": "Q4_K_M",
+  "high": "C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf",
+  "low": "C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf",
+  "clips": [
+   {
+    "id": "xpu_q4_384x672_81f",
+    "image": "C:/Users/shubh/Projects/heartwick/research/round2/compute/laptop/key.jpg",
+    "w": 384,
+    "h": 672,
+    "frames": 81,
+    "seed": 7,
+    "emb": "C:/Users/shubh/tools/r2models/emb_nell.pt"
+   }
+  ]
+ },
+ "phases": {
+  "vae_load_s": 1.4,
+  "peak_vram_gb_encode": 4.83
+ },
+ "clips": {
+  "xpu_q4_384x672_81f": {
+   "cfg": {
+    "id": "xpu_q4_384x672_81f",
+    "image": "C:/Users/shubh/Projects/heartwick/research/round2/compute/laptop/key.jpg",
+    "w": 384,
+    "h": 672,
+    "frames": 81,
+    "seed": 7,
+    "emb": "C:/Users/shubh/tools/r2models/emb_nell.pt"
+   },
+   "vae_encode_s": 70.5,
+   "tokens": 21168
+  }
+ }
+}

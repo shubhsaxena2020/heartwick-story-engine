@@ -1,0 +1,10 @@
+{
+ "gemm_fp16_tflops": 21.2,
+ "sdpa_L21168_s": 0.73,
+ "sdpa_L21168_tflops": 12.6,
+ "sage_err": "RuntimeError('PassManager::run failed')",
+ "sdpa_L32760_s": 1.77,
+ "sdpa_L32760_tflops": 12.4,
+ "sdpa_L42840_s": 3.13,
+ "sdpa_L42840_tflops": 12.0
+}

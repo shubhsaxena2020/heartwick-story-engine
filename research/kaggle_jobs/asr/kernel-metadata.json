@@ -1,0 +1,1 @@
+{"id": "shubhsaxena2008/heartwick-research-asr", "title": "Heartwick Research ASR", "code_file": "asr.py", "language": "python", "kernel_type": "script", "is_private": true, "enable_gpu": false, "enable_tpu": false, "enable_internet": true, "dataset_sources": ["shubhsaxena2008/heartwick-research-pbaudio"], "competition_sources": [], "kernel_sources": [], "model_sources": []}

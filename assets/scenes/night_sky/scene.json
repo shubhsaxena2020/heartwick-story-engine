@@ -1,0 +1,69 @@
+{
+ "name": "night_sky",
+ "world": [
+  1400,
+  3000
+ ],
+ "ground": 2480.0,
+ "tall": true,
+ "margin": 260,
+ "q": 1.25,
+ "spots": {
+  "left": [
+   420.0,
+   2460.0
+  ],
+  "center": [
+   700.0,
+   2480.0
+  ],
+  "right": [
+   952.0000000000001,
+   2480.0
+  ]
+ },
+ "fx": {
+  "particles": [
+   "fireflies"
+  ],
+  "twinkle": {
+   "n": 80,
+   "y_max": 1800.0
+  },
+  "mist": {
+   "y": 2240.0,
+   "alpha": 0.18
+  }
+ },
+ "layers": [
+  {
+   "name": "sky",
+   "depth": 0.08,
+   "image": "00_sky.jpg"
+  },
+  {
+   "name": "far",
+   "depth": 0.3,
+   "image": "01_far.png"
+  },
+  {
+   "name": "mid",
+   "depth": 0.6,
+   "image": "02_mid.png"
+  },
+  {
+   "name": "ground",
+   "depth": 0.92,
+   "image": "03_ground.png"
+  },
+  {
+   "name": "actors",
+   "depth": 1.0
+  },
+  {
+   "name": "fore",
+   "depth": 1.25,
+   "image": "05_fore.png"
+  }
+ ]
+}

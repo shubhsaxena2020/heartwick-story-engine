@@ -1,0 +1,16 @@
+{
+ "video": "results/lacpu/out/la/la_k10.mp4",
+ "fps_sampled": 24.0,
+ "n": 144,
+ "all": {
+  "mad_mean": 0.834,
+  "mad_p10": 0.376,
+  "flow_med_px": 0.45,
+  "flow_p95_px": 0.61,
+  "subject_p97_med_px": 1.19,
+  "subject_still_frac": 0.294,
+  "static_frac": 0.091,
+  "longest_static_s": 0.29
+ },
+ "shots": []
+}

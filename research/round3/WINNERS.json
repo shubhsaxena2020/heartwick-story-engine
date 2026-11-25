@@ -1,0 +1,202 @@
+{
+ "status": "PARTIAL. The video GPU session (heartwick-r3-wan) sat QUEUED 13:35-18:21 IST and was deleted by the coordinator before it ran: 0 GPU minutes were used, and NO round-3 video axis was measured. Voice (CPU kernel) is complete. Video values below come from round 1/2 clips re-scored today by the vision critic; they are weak evidence (one seed each, mixed quants).",
+ "updated": "2026-11-23T18:30:00+05:30",
+ "beat": "Nell walks to the maple, kneels on one knee, lifts the small grey squirrel Pip and smiles (one 5.06 s shot, 81 frames @16 fps)",
+ "critic": "local 9Router cc/claude-sonnet-5-5, stream false, temperature 0, 2 runs per sheet, fixed rubric in research/round3/tools/critic.py (motion, identity, anatomy, framing, art, artifacts; 0-10, total = mean)",
+ "axes": {
+  "precision": {
+   "status": "partially measured (round-2 clips, no Q8/fp16)",
+   "candidates": {
+    "Q4_K_M_480": {
+     "critic_total": 5.58,
+     "pip": "grows/unclear",
+     "kneel": "crouch x2",
+     "gpu_s_per_clip": 888
+    },
+    "Q5_K_M_480_seed7": {
+     "critic_total": 6.0,
+     "pip": "grows x2",
+     "kneel": "crouch x2",
+     "gpu_s_per_clip": 863
+    },
+    "Q5_K_M_480_seed11": {
+     "critic_total": 6.17,
+     "pip": "unclear",
+     "kneel": "crouch x2",
+     "gpu_s_per_clip": 863
+    },
+    "Q8_0_sharded": "untested"
+   },
+   "winner": "Q5_K_M (keep). It is the same speed as Q4 and scored +0.4. The seed-to-seed spread (0.17) is close to that gap, so the difference is barely real. Q8_0 and fp16 are untested.",
+   "rerun": "research/round3/kaggle/wan (gen3.py split mode, plan p2_q8)"
+  },
+  "resolution": {
+   "status": "partially measured (544 only, Q4)",
+   "candidates": {
+    "480x832_Q4": {
+     "critic_total": 5.58,
+     "gpu_s_per_clip": 888
+    },
+    "544x960_Q4": {
+     "critic_total": 6.5,
+     "pip": "same size x2",
+     "kneel": "unclear/crouch",
+     "gpu_s_per_clip": 1553
+    },
+    "720x1280_sharded": "untested"
+   },
+   "winner": "544x960 is provisionally better: +0.9 critic over 480 with the same quant and seed, and Pip held its size on both critic runs. It costs 1.8x the GPU time. One seed only; confirm before switching production. 720 is untested.",
+   "rerun": "research/round3/kaggle/wan (plans p1_g1 q5_544_4s, p2_720)"
+  },
+  "steps": {
+   "winner": "4",
+   "status": "tested 24 Nov s1",
+   "scores": {
+    "q5_480_4s": 6.58,
+    "q5_480_8s": 6.0
+   },
+   "note": "8 steps 2x GPU, no visible gain; both still crouch, Pip grows. Keep the lightx2v 4-step distill."
+  },
+  "mode": {
+   "status": "untested",
+   "candidates": [
+    "plain I2V",
+    "FLF2V with keyframe pair",
+    "VACE pose-driven (not built)"
+   ],
+   "winner": "untested; round-2 reasoning still favours FLF2V for kneel/Pip-size control",
+   "rerun": "research/round3/kaggle/keys (flf_* and i2v_v3 clips)"
+  },
+  "keyframes": {
+   "status": "untested",
+   "candidates": [
+    "Z-Image-Turbo alone",
+    "Qwen-Image-Edit-2511 chained",
+    "Qwen-Edit + OpenPose",
+    "Qwen-Edit direct + pose"
+   ],
+   "winner": "untested; note the Qwen-Edit T4 path has never run successfully (round-2 cuBLASLt failure; round-3 fix is written but unrun)",
+   "rerun": "research/round3/kaggle/keys/keys3.py"
+  },
+  "finishing": {
+   "winner": "rife60 + realesr-animevideov3",
+   "status": "rendered 24 Nov s1 (rife30/60 x anime/general); judged by spec, not by critic",
+   "note": "Shubh asked for high fps; anime ESRGAN suits the style. Files: research/round3/results/s1/out/finished/"
+  },
+  "style": {
+   "status": "untested",
+   "candidates": [
+    "round-1 soft watercolour",
+    "flatter jewel-tone"
+   ],
+   "winner": "watercolour (unchanged default)",
+   "rerun": "research/round3/kaggle/keys (JT_K0/JT_K2 + flf_jt)"
+  },
+  "reference_round1": {
+   "critic_total": 6.0,
+   "kneel": "crouch x2",
+   "pip": "yes/unclear",
+   "note": "ZeroGPU Lightning 6-step fp8 clip Shubh likes; the critic sees the same flaws he named (crouch, motion 4/10, artifacts 5/10)"
+  },
+  "voice": {
+   "status": "measured (CPU kernel heartwick-r3-voice-cpu, same 52-word ~20 s line, 2 seeds each)",
+   "line": "Nell knelt down in the cold, wet leaves and held out her hand. For a long moment, the little grey squirrel only trembled. Then, slowly, he crept into her palm, as light as a falling leaf. \"There you are,\" she whispered. And for the first time in three long years, Nell smiled.",
+   "candidates": {
+    "british_narrator (Qwen3 clone)": {
+     "wer": "0 (the only miss is grey->gray spelling)",
+     "utmos_mean": 4.53,
+     "pitch_range_st": 10.98,
+     "words_per_s": 2.43,
+     "emotion_hap": "0.84-0.94",
+     "cpu_s_per_20s": 272
+    },
+    "narrator_warm_f (VoxCPM2 clone)": {
+     "wer": "0",
+     "utmos_mean": 4.47,
+     "pitch_range_st": 9.27,
+     "words_per_s": 2.87,
+     "emotion_hap": "0.97 (most consistent warmth)",
+     "cpu_s_per_20s": 857
+    },
+    "narrator_baritone (Qwen3 clone)": {
+     "wer": "0",
+     "utmos_mean": 4.45,
+     "pitch_range_st": 8.95,
+     "words_per_s": 2.62,
+     "emotion_hap": "0.89-0.91",
+     "cpu_s_per_20s": 265
+    }
+   },
+   "winner": "british_narrator: highest predicted naturalness (UTMOS) on both seeds, widest pitch range, calmest pace, 3x cheaper than VoxCPM2. The margins are small (0.06-0.08 MOS), and Claude cannot hear audio, so a human listen decides. Runner-up for cozy Nell Shorts: narrator_warm_f.",
+   "files": "research/round3/voice/line__*.mp3",
+   "fixes": {
+    "villain_true_bass": {
+     "winner": "re-designed voice research/round3/voice/villain_bass_ref.wav (Qwen3 VoiceDesign, ref F0 80.8 Hz)",
+     "measured": "median F0 140 -> 96 Hz, 10th pct 73 Hz, UTMOS 4.46 (unchanged), WER 0. BUT the emotion classifier moved from angry 0.90 to happy 0.50: deeper, less menacing",
+     "rejected": "rubberband pitch-down 3.5 st of the old voice: UTMOS collapsed to 1.82"
+    },
+    "slower_sleep": {
+     "winner": "long designed pauses (1.3 s) + ffmpeg atempo=0.85",
+     "measured": "female 2.44 -> 2.08 words/s, male 2.36 -> 2.01; UTMOS cost -0.03 / -0.06; WER 0"
+    }
+   }
+  },
+  "precision_sharded_q8": {
+   "winner": null,
+   "status": "failed: OOM on T4 (s1, 24 Nov)",
+   "note": "Q8 split over 2x T4 OOMed by ~1.1 GiB; not viable with this loader"
+  },
+  "resolution_720": {
+   "winner": null,
+   "status": "failed: OOM on T4 (s1, 24 Nov)"
+  }
+ },
+ "recommended_production_preset": {
+  "status": "UNCHANGED from round 2: round 3 measured no video axis on Kaggle",
+  "model": "Wan2.2-I2V-A14B lightx2v 4-step distill 260412 GGUF (jayn7)",
+  "quant": "Q5_K_M",
+  "gen_resolution": [
+   480,
+   832
+  ],
+  "steps": 4,
+  "mode": "plain I2V (FLF2V untested)",
+  "finish": "RIFE 30 fps + Real-ESRGAN realesr-animevideov3 -> 1080x1920",
+  "voice": "british_narrator (pending a human listen); narrator_warm_f for cozy Nell stories",
+  "gpu_cost": "863 GPU-s per 5.06 s clip on one T4, so ~171 GPU-s per finished second. One finished minute is ~12 clips: ~2.9 T4-hours, or ~1.45 h of T4x2 session time with both GPUs busy. That rises to ~2.0 h of session time with the 1.4x retry rate. Finishing is extra.",
+  "candidate_upgrade": "544x960 generation: +0.9 critic in one sample, 1553 GPU-s per clip, so ~5.2 T4-h (~2.6 h session) per finished minute before retries. Confirm with a second seed first."
+ },
+ "fast_preset": {
+  "status": "untested in round 3",
+  "note": "round 2: 384x672 + ESRGAN is 2x cheaper (443 GPU-s per clip), softer, with one morph frame"
+ },
+ "rerun": {
+  "session1_video_axes": {
+   "kernel": "shubhsaxena2008/heartwick-r3-wan",
+   "build": "python research/round3/kaggle/wan/build.py",
+   "push": "python research/round3/tools/r3_push.py research/round3/kaggle/wan/push shubhsaxena2008/heartwick-r3-wan \"r3 session 1\" --est-h 2.4",
+   "covers": "Q5 480 4/6/8 steps; Q5 544; Q8_0 sharded over both T4s; Q5 720x1280 sharded; finishing grid RIFE30/60 x ESRGAN anime/general; QA + 8-frame sheets for all clips incl. round 1/2",
+   "est_session_h": 2.3,
+   "scripts": [
+    "research/round3/kaggle/wan/kernel_wan.py",
+    "research/round3/kaggle/wan/gen3.py",
+    "research/round3/kaggle/wan/finish3.py",
+    "research/round3/kaggle/wan/qa3.py"
+   ]
+  },
+  "session2_keys_flf_style": {
+   "kernel": "shubhsaxena2008/heartwick-r3-keys",
+   "build": "python research/round3/kaggle/keys/build.py",
+   "push": "python research/round3/tools/r3_push.py research/round3/kaggle/keys/push shubhsaxena2008/heartwick-r3-keys \"r3 session 2\" --est-h 2.0",
+   "covers": "end keys by Z-Image alone / Qwen-Edit chain / Qwen-Edit chain + OpenPose / direct edit; jewel-tone restyle; Wan FLF2V per key pair, jewel FLF, I2V with improved prompt, FLF seed 11; finish + QA",
+   "note": "kernel_sources is empty, so it computes the umt5 embeddings itself (~2 min); add 'shubhsaxena2008/heartwick-r3-wan' to kernel_sources in build.py to reuse session 1's instead. Never run: the Qwen-Edit-on-T4 and Z-Image-fp16 code paths are written but untested.",
+   "scripts": [
+    "research/round3/kaggle/keys/kernel_keys.py",
+    "research/round3/kaggle/keys/keys3.py"
+   ]
+  },
+  "scoring": "download outputs into research/round3/results/s1 and s2 (kaggle kernels output <slug> -p <dir>); python research/round3/tools/critic.py --ref research/round3/kaggle/ds_inputs/K0.png --sheets <dir>/out/sheets/*_sheet.jpg --out <dir>/out/critic.json; python research/round3/tools/aggregate.py",
+  "inputs_dataset": "shubhsaxena2008/heartwick-r3-inputs (K0, pose skeletons, round-1/2 clips, voice refs)",
+  "vace": "not built in round 3; the round-1 kernel is research/pipeline_proto/C_pose_repaint/push"
+ }
+}

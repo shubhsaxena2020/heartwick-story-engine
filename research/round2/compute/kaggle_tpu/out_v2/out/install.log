@@ -1,0 +1,30 @@
+
+$ set -e; pip install -q uv; git clone -q https://github.com/AI-Hypercomputer/maxdiffusion.git /tmp/maxdiffusion; python3 -m uv venv --python 3.12 /tmp/mdv --seed -q; source /tmp/mdv/bin/activate; cd /tmp/maxdiffusion; bash setup.sh MODE=stable DEVICE=tpu 2>&1 | tail -25; python -c 'import jax;print(jax.__version__, jax.devices())'
+Collecting pluggy>=1.0.0 (from hatchling)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting tomlkit>=0.11.1 (from hatchling)
+  Downloading tomlkit-0.15.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting trove-classifiers (from hatchling)
+  Downloading trove_classifiers-2026.9.21.13-py3-none-any.whl.metadata (2.4 kB)
+Downloading setuptools-84.2.1-py3-none-any.whl (876 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 876.3/876.3 kB 16.9 MB/s  0:00:00
+Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+Using cached uv-0.13.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.6 MB)
+Downloading hatchling-1.33.0-py3-none-any.whl (78 kB)
+Downloading hatch_requirements_txt-0.4.1-py3-none-any.whl (7.8 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading tomlkit-0.15.2-py3-none-any.whl (52 kB)
+Downloading trove_classifiers-2026.9.21.13-py3-none-any.whl (14 kB)
+Installing collected packages: trove-classifiers, uv, tomlkit, setuptools, pluggy, pathspec, packaging, wheel, hatchling, hatch-requirements-txt
+
+Successfully installed hatch-requirements-txt-0.4.1 hatchling-1.33.0 packaging-26.3 pathspec-1.1.1 pluggy-1.7.0 setuptools-84.2.1 tomlkit-0.15.2 trove-classifiers-2026.9.21.13 uv-0.13.9 wheel-0.48.0
+Virtual environment detected. UV will use it.
+Using Python 3.13.18 environment at: /usr
+error: No solution found when resolving dependencies
+  cause: Because only torch==2.10.0+cpu is available and torch==2.10.0+cpu has no wheels with a matching Python version tag (e.g., `cp313`), we can conclude that all versions of torch cannot be used.
+         And because you require torch, we can conclude that your requirements are unsatisfiable.
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'jax'

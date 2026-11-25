@@ -1,0 +1,15 @@
+{
+ "id": "shubhsaxena2008/heartwick-r2-tpu-wan",
+ "title": "Heartwick R2 TPU Wan",
+ "code_file": "r2_tpu.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": true,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "model_sources": []
+}

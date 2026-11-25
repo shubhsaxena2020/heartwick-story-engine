@@ -1,0 +1,36 @@
+{
+ "date": "2026-11-24",
+ "kaggle_platform": {
+  "p100": "retired; the kaggle CLI maps NvidiaTeslaP100 to T4",
+  "tpu_v5e8_via_api": "NOT attached in 2/2 API pushes (heartwick-r4-tpu, heartwick-r4-tpuprobe): COLAB_IMAGE_TYPE=cpu, jax.devices()=[CpuDevice], no /dev/accel*, 0.00 h TPU quota charged",
+  "cpu_session": "4 vCPU Xeon 2.2 GHz, 31 GB RAM, 2.5 TB scratch disk, /kaggle/working is a 20 GB loop device",
+  "cpu_concurrency": "3 CPU kernels ran at the same time (heartwick-r4-cpuconc1..3) while a GPU kernel was queued; all CPU kernels today started in < 1 min",
+  "hf_download": {"gpu_or_tpu_image_66GB_s": 341, "cpu_kernel_12_8GB_s": 34, "fastwan_dit_vae_12_8GB_in_gpu_kernel_s": 64},
+  "kernel_output_as_weight_cache": {"save_12_8GB_output_wall_min": 20, "vae_2_8GB_load_from_mount_s": 79.2, "dit_10GB_load_from_mount_s": 2883.2,
+                                     "note": "mounted kernel output read at ~35 MB/s (vs 200-380 MB/s from HF); one run, with a FLUX process holding ~16 GB of the 31 GB RAM at the same time"},
+  "gpu_queue_min": {"heartwick-r4-bench": 170, "heartwick-r4-fw2": 0, "heartwick-r4-a14b": "QUEUED since 18:26 IST, still queued at 20:10; do not re-push/delete. Measures A14B Q5 4-step on K2 with the mouth-closed prompt: 81f on GPU0 (+fp16 VAE decode test), 49f on GPU1. Fetch: python research/round4/tools/r4push.py x heartwick-r4-a14b research/round4/results/a14b --no-push"},
+  "quota_at_start": "GPU 14.2 h used of 30 h, TPU 0 of 20 h (refresh 2026-11-28 00:00 UTC)"
+ },
+ "v3_baseline": {
+  "wan22_a14b_q5_480x832_81f_gpu_s": {"vae_encode": 84, "step": 139, "steps": 4, "vae_decode": 143, "total": 783, "with_overheads": 863},
+  "qwen_image_edit_2511_q3_480x832_key_s": 160,
+  "refinish_rife_esrgan_60fps_t4_s_for_88s": 3144,
+  "audio_cpu_kernel_min_for_84s_narration": 29,
+  "mouth_audit_S02_s7": {"mouth_resid_p90_median": 0.468, "spikes_over_1px": 21, "frames": 81},
+  "mouth_lock_S02_s7": {"mouth_resid_p90_median": 0.056, "spikes_over_1px": 7}
+ },
+ "fastwan22_ti2v_5b_dmd3_fp16_t4": {
+  "480x832_121f_step_s": [10.8, 11.1], "denoise_s": 33, "vae_decode_fp32_s": 313, "vae_encode_s": 1, "total_s": 347, "peak_vram_gb": 14.9,
+  "704x1280_121f": "OOM in the transformer (27,280 tokens, per-token timestep embedding)",
+  "identity": "fails: frame0->1 mean abs diff 16-21 (A14B: 1.0), first-vs-last 43 (A14B: 7.3); Nell turns into a young girl, saturated colours"
+ },
+ "flux2_klein_4b_fp16_t4_cpu_offload": {
+  "load_s": 52.7, "new_key_1088x1920_2refs_s": 61.7, "new_key_768x1344_2refs_s": 39.2, "edit_768x1344_1ref_s": 33.7, "redraw_1088x1920_1ref_s": 48.0,
+  "peak_vram_gb": 9.6, "quality": "on-model Nell in new scenes (glasses, bun, green cardigan, rust skirt), clean anime line art; blink edit works; mouth edit also changed the expression/head (needs region-only compositing); one 768 key drifted to a watercolour paper border"
+ },
+ "limited_animation_renderer_la_py": {
+  "cpu_kernel": {"prep_s_per_shot": 17, "render_ms_per_frame_1080x1920": 145, "frames": 144},
+  "gpu_kernel": {"esrgan_s": 0.4, "depth_s": 0.5, "matte_cpu_s": 3.7, "plate_cpu_s": 4.9, "render_cpu_ms_per_frame": 142, "torch_gpu_render_ms_per_frame": 20.2},
+  "motion_audit": {"la_k2": {"subject_p97_med_px": 1.29, "longest_static_s": 0.12}, "la_k10": {"subject_p97_med_px": 1.19, "longest_static_s": 0.29}}
+ }
+}

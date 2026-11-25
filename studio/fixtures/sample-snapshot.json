@@ -1,0 +1,1425 @@
+{
+ "schema": 1,
+ "generated_at": "2026-11-21T17:50:43+05:30",
+ "stages": [
+  "script",
+  "narration",
+  "images",
+  "render",
+  "review",
+  "approved",
+  "published"
+ ],
+ "counts": {
+  "script": 2,
+  "narration": 2,
+  "images": 0,
+  "render": 0,
+  "review": 2,
+  "approved": 1,
+  "published": 0
+ },
+ "stories": [
+  {
+   "slug": "[redacted: text from a private story]",
+   "title": "[redacted: text from a private story]",
+   "file": "[redacted: text from a private story]",
+   "chapters": 3,
+   "shots": 9,
+   "lines": 17,
+   "words": 194,
+   "characters": [
+    "abe",
+    "june"
+   ],
+   "mtime": "2026-11-21T13:57:01+05:30",
+   "error": null,
+   "outputs": [
+    "[redacted: text from a private story]"
+   ]
+  },
+  {
+   "slug": "pip",
+   "title": "[redacted: text from a private story]",
+   "file": "stories/pip.md",
+   "chapters": 13,
+   "shots": 47,
+   "lines": 81,
+   "words": 1113,
+   "characters": [
+    "dee",
+    "eli",
+    "nell",
+    "pip",
+    "pip_kit"
+   ],
+   "mtime": "2026-11-21T14:12:03+05:30",
+   "error": null,
+   "outputs": [
+    "pip_pilot_final",
+    "pip_pilot_v2",
+    "pip_pilot",
+    "pip_pilot_v1",
+    "pip_pilot_v0",
+    "pip_full"
+   ]
+  }
+ ],
+ "videos": [
+  {
+   "name": "pip_pilot_final",
+   "story": "pip",
+   "title": "[redacted: text from a private story]",
+   "series_tag": "Pip · Part 1",
+   "kind": "short",
+   "voice": "af_heart",
+   "stage": "narration",
+   "reached": {
+    "script": "2026-11-21T17:01:56+05:30",
+    "narration": "2026-11-21T17:01:56+05:30"
+   },
+   "progress": {
+    "lines_done": 16,
+    "lines_total": 16,
+    "images_done": 20,
+    "images_total": 23
+   },
+   "chapters": 2,
+   "duration_s": null,
+   "shots": null,
+   "shots_per_min": null,
+   "caption_chunks": null,
+   "srt_cues": null,
+   "lufs": null,
+   "true_peak": null,
+   "lra": null,
+   "sync": null,
+   "asr": null,
+   "render_s": null,
+   "verify_s": null,
+   "worker_total_s": null,
+   "worker_stages": {},
+   "mp4_bytes": null,
+   "media": {},
+   "preview_pending": false,
+   "samples": [],
+   "srt": null,
+   "seo_md": null,
+   "seo": null,
+   "approval": null,
+   "errors": [],
+   "warnings": [],
+   "updated_at": "2026-11-21T17:01:56+05:30"
+  },
+  {
+   "name": "pip_pilot_v2",
+   "story": "pip",
+   "title": "[redacted: text from a private story]",
+   "series_tag": "Pip · Part 1",
+   "kind": "short",
+   "voice": "af_heart",
+   "stage": "review",
+   "reached": {
+    "script": "2026-11-21T16:01:08+05:30",
+    "narration": "2026-11-21T16:19:07+05:30",
+    "render": "2026-11-21T16:19:08+05:30",
+    "review": "2026-11-21T16:19:32+05:30"
+   },
+   "progress": {
+    "lines_done": 16,
+    "lines_total": 16,
+    "images_done": 20,
+    "images_total": 23
+   },
+   "chapters": 2,
+   "duration_s": 72.375,
+   "shots": 16,
+   "shots_per_min": 13.3,
+   "caption_chunks": 59,
+   "srt_cues": 35,
+   "lufs": -15.0,
+   "true_peak": -1.5,
+   "lra": 3.3,
+   "sync": {
+    "chunks": 59,
+    "speech_present": 59,
+    "onset_chunks": 25,
+    "onset_median_s": 0.03,
+    "onset_p90_abs_s": 0.076
+   },
+   "asr": {
+    "wer": 0.012,
+    "ref_words": 169,
+    "asr_words": 168,
+    "matched_chunk_starts": 57,
+    "caption_vs_speech_median_s": 0.003,
+    "caption_vs_speech_p90_abs_s": 0.155
+   },
+   "render_s": 419.6,
+   "verify_s": 252.8,
+   "worker_total_s": 675.7,
+   "worker_stages": {
+    "render": 419.6,
+    "verify_asr": 252.8
+   },
+   "mp4_bytes": 39678034,
+   "media": {
+    "thumb": {
+     "key": "6030f95cb160/thumbnail.jpg",
+     "bytes": 138278
+    },
+    "sheet": {
+     "key": "77cb13232bb9/contact_sheet.jpg",
+     "bytes": 556628
+    },
+    "vsref": {
+     "key": "8a76db28c016/vs_reference.jpg",
+     "bytes": 323238
+    },
+    "preview": {
+     "key": "75a7adb2c1cb/pip_pilot_v2_480p.mp4",
+     "bytes": 2752023
+    }
+   },
+   "preview_pending": false,
+   "samples": [],
+   "srt": "[redacted: text from a private story]",
+   "seo_md": "[redacted: text from a private story]",
+   "seo": {
+    "title": "[redacted: text from a private story]",
+    "titles": [
+     "[redacted: text from a private story]",
+     "[redacted: text from a private story]",
+     "[redacted: text from a private story]"
+    ],
+    "filename": "[redacted: text from a private story]",
+    "tags": 12,
+    "hashtags": [
+     "#heartwarmingstory",
+     "#emotionalstory",
+     "#babysquirrel"
+    ]
+   },
+   "approval": null,
+   "errors": [],
+   "warnings": [],
+   "updated_at": "2026-11-21T16:19:32+05:30"
+  },
+  {
+   "name": "pip_pilot",
+   "story": "pip",
+   "title": "[redacted: text from a private story]",
+   "series_tag": "Pip · Part 1",
+   "kind": "short",
+   "voice": "af_heart",
+   "stage": "narration",
+   "reached": {
+    "script": "2026-11-21T13:34:52+05:30",
+    "narration": "2026-11-21T16:19:07+05:30"
+   },
+   "progress": {
+    "lines_done": 16,
+    "lines_total": 16,
+    "images_done": 20,
+    "images_total": 23
+   },
+   "chapters": 2,
+   "duration_s": null,
+   "shots": null,
+   "shots_per_min": null,
+   "caption_chunks": null,
+   "srt_cues": null,
+   "lufs": null,
+   "true_peak": null,
+   "lra": null,
+   "sync": null,
+   "asr": null,
+   "render_s": null,
+   "verify_s": null,
+   "worker_total_s": 764.8,
+   "worker_stages": {
+    "install": 97.3,
+    "tts": 28.8,
+    "images_phase1": 609.9,
+    "cutout": 23.1,
+    "depth": 5.7
+   },
+   "mp4_bytes": null,
+   "media": {
+    "masters": {
+     "key": "8e5cccd2a5e1/master_candidates.jpg",
+     "bytes": 245149
+    }
+   },
+   "preview_pending": false,
+   "samples": [
+    {
+     "name": "sample_af_bella",
+     "key": "57cdf03b200d/sample_af_bella.wav",
+     "bytes": 645644
+    },
+    {
+     "name": "sample_af_heart",
+     "key": "c7298b927b6d/sample_af_heart.wav",
+     "bytes": 602444
+    },
+    {
+     "name": "sample_af_nicole",
+     "key": "a3fbc935b2f8/sample_af_nicole.wav",
+     "bytes": 920444
+    }
+   ],
+   "srt": null,
+   "seo_md": null,
+   "seo": null,
+   "approval": null,
+   "errors": [],
+   "warnings": [],
+   "updated_at": "2026-11-21T16:19:07+05:30"
+  },
+  {
+   "name": "pip_pilot_v1",
+   "story": "pip",
+   "title": "[redacted: text from a private story]",
+   "series_tag": "Pip · Part 1",
+   "kind": "short",
+   "voice": "af_heart",
+   "stage": "review",
+   "reached": {
+    "script": "2026-11-21T15:40:21+05:30",
+    "narration": "2026-11-21T15:57:15+05:30",
+    "render": "2026-11-21T15:57:15+05:30",
+    "review": "2026-11-21T15:57:39+05:30"
+   },
+   "progress": {
+    "lines_done": 16,
+    "lines_total": 16,
+    "images_done": 20,
+    "images_total": 23
+   },
+   "chapters": 2,
+   "duration_s": 72.375,
+   "shots": 16,
+   "shots_per_min": 13.3,
+   "caption_chunks": 59,
+   "srt_cues": 35,
+   "lufs": -15.0,
+   "true_peak": -1.5,
+   "lra": 3.3,
+   "sync": {
+    "chunks": 59,
+    "speech_present": 59,
+    "onset_chunks": 25,
+    "onset_median_s": 0.03,
+    "onset_p90_abs_s": 0.076
+   },
+   "asr": {
+    "wer": 0.012,
+    "ref_words": 169,
+    "asr_words": 168,
+    "matched_chunk_starts": 57,
+    "caption_vs_speech_median_s": 0.003,
+    "caption_vs_speech_p90_abs_s": 0.155
+   },
+   "render_s": 371.6,
+   "verify_s": 265.4,
+   "worker_total_s": 648.3,
+   "worker_stages": {
+    "render": 371.6,
+    "verify_asr": 265.4
+   },
+   "mp4_bytes": 38858427,
+   "media": {
+    "thumb": {
+     "key": "9863314bbda2/thumbnail.jpg",
+     "bytes": 143149
+    },
+    "sheet": {
+     "key": "aa444ffdc880/contact_sheet.jpg",
+     "bytes": 548893
+    },
+    "vsref": {
+     "key": "21b9cb1434f6/vs_reference.jpg",
+     "bytes": 319311
+    },
+    "preview": {
+     "key": "c537ecdf77f6/pip_pilot_v1_480p.mp4",
+     "bytes": 2701801
+    }
+   },
+   "preview_pending": false,
+   "samples": [],
+   "srt": "[redacted: text from a private story]",
+   "seo_md": "[redacted: text from a private story]",
+   "seo": {
+    "title": "[redacted: text from a private story]",
+    "titles": [
+     "[redacted: text from a private story]",
+     "[redacted: text from a private story]",
+     "[redacted: text from a private story]"
+    ],
+    "filename": "[redacted: text from a private story]",
+    "tags": 12,
+    "hashtags": [
+     "#heartwarmingstory",
+     "#emotionalstory",
+     "#babysquirrel"
+    ]
+   },
+   "approval": {
+    "status": "needs_changes",
+    "note": "Captions a little fast in the storm part.",
+    "at": "2026-11-21T15:57:39+05:30",
+    "id": "fixture-2"
+   },
+   "errors": [],
+   "warnings": [],
+   "updated_at": "2026-11-21T15:57:39+05:30"
+  },
+  {
+   "name": "pip_pilot_v0",
+   "story": "pip",
+   "title": "[redacted: text from a private story]",
+   "series_tag": "Pip · Part 1",
+   "kind": "short",
+   "voice": "af_heart",
+   "stage": "approved",
+   "reached": {
+    "script": "2026-11-21T15:20:15+05:30",
+    "narration": "2026-11-21T15:38:30+05:30",
+    "render": "2026-11-21T15:38:30+05:30",
+    "review": "2026-11-21T15:38:55+05:30",
+    "approved": "2026-11-21T15:38:55+05:30"
+   },
+   "progress": {
+    "lines_done": 16,
+    "lines_total": 16,
+    "images_done": 20,
+    "images_total": 23
+   },
+   "chapters": 2,
+   "duration_s": 72.375,
+   "shots": 16,
+   "shots_per_min": 13.3,
+   "caption_chunks": 59,
+   "srt_cues": 35,
+   "lufs": -15.0,
+   "true_peak": -1.5,
+   "lra": 3.3,
+   "sync": {
+    "chunks": 59,
+    "speech_present": 59,
+    "onset_chunks": 25,
+    "onset_median_s": 0.03,
+    "onset_p90_abs_s": 0.07
+   },
+   "asr": {
+    "wer": 0.012,
+    "ref_words": 169,
+    "asr_words": 168,
+    "matched_chunk_starts": 57,
+    "caption_vs_speech_median_s": 0.003,
+    "caption_vs_speech_p90_abs_s": 0.155
+   },
+   "render_s": 343.9,
+   "verify_s": 262.7,
+   "worker_total_s": 624.7,
+   "worker_stages": {
+    "tts": 6.5,
+    "render": 343.9,
+    "verify_asr": 262.7
+   },
+   "mp4_bytes": 39247527,
+   "media": {
+    "thumb": {
+     "key": "314a69e85365/thumbnail.jpg",
+     "bytes": 138700
+    },
+    "sheet": {
+     "key": "323fbe8ed2e1/contact_sheet.jpg",
+     "bytes": 541192
+    },
+    "vsref": {
+     "key": "14cbf4b9f436/vs_reference.jpg",
+     "bytes": 318740
+    },
+    "preview": {
+     "key": "5abb97316eb9/pip_pilot_v0_480p.mp4",
+     "bytes": 2684201
+    }
+   },
+   "preview_pending": false,
+   "samples": [],
+   "srt": "[redacted: text from a private story]",
+   "seo_md": "[redacted: text from a private story]",
+   "seo": {
+    "title": "[redacted: text from a private story]",
+    "titles": [
+     "[redacted: text from a private story]",
+     "[redacted: text from a private story]",
+     "[redacted: text from a private story]"
+    ],
+    "filename": "[redacted: text from a private story]",
+    "tags": 12,
+    "hashtags": [
+     "#heartwarmingstory",
+     "#emotionalstory",
+     "#babysquirrel"
+    ]
+   },
+   "approval": {
+    "status": "approved",
+    "note": "Lovely. Upload Sunday.",
+    "at": "2026-11-21T15:38:55+05:30",
+    "id": "fixture-1"
+   },
+   "errors": [
+    "Kaggle worker: tts: ModuleNotFoundError: No module named 'kokoro'"
+   ],
+   "warnings": [],
+   "updated_at": "2026-11-21T15:38:55+05:30"
+  },
+  {
+   "name": "pip_full",
+   "story": "pip",
+   "title": "[redacted: text from a private story]",
+   "series_tag": "Pip",
+   "kind": "long",
+   "voice": "af_heart",
+   "stage": "script",
+   "reached": {
+    "script": "2026-11-21T14:24:32+05:30"
+   },
+   "progress": {
+    "lines_done": 0,
+    "lines_total": 81,
+    "images_done": 20,
+    "images_total": 77
+   },
+   "chapters": 13,
+   "duration_s": null,
+   "shots": null,
+   "shots_per_min": null,
+   "caption_chunks": null,
+   "srt_cues": null,
+   "lufs": null,
+   "true_peak": null,
+   "lra": null,
+   "sync": null,
+   "asr": null,
+   "render_s": null,
+   "verify_s": null,
+   "worker_total_s": null,
+   "worker_stages": {},
+   "mp4_bytes": null,
+   "media": {},
+   "preview_pending": false,
+   "samples": [],
+   "srt": null,
+   "seo_md": null,
+   "seo": null,
+   "approval": null,
+   "errors": [],
+   "warnings": [],
+   "updated_at": "2026-11-21T14:24:32+05:30"
+  },
+  {
+   "name": "[redacted: text from a private story]",
+   "story": "[redacted: text from a private story]",
+   "title": "[redacted: text from a private story]",
+   "series_tag": "[redacted: text from a private story]",
+   "kind": "short",
+   "voice": "af_heart",
+   "stage": "script",
+   "reached": {
+    "script": "2026-11-21T14:02:24+05:30"
+   },
+   "progress": {
+    "lines_done": 0,
+    "lines_total": 17,
+    "images_done": 0,
+    "images_total": 17
+   },
+   "chapters": 3,
+   "duration_s": null,
+   "shots": null,
+   "shots_per_min": null,
+   "caption_chunks": null,
+   "srt_cues": null,
+   "lufs": null,
+   "true_peak": null,
+   "lra": null,
+   "sync": null,
+   "asr": null,
+   "render_s": null,
+   "verify_s": null,
+   "worker_total_s": null,
+   "worker_stages": {},
+   "mp4_bytes": null,
+   "media": {},
+   "preview_pending": false,
+   "samples": [],
+   "srt": null,
+   "seo_md": null,
+   "seo": null,
+   "approval": null,
+   "errors": [],
+   "warnings": [],
+   "updated_at": "2026-11-21T14:02:24+05:30"
+  }
+ ],
+ "kaggle": {
+  "quota": {
+   "used_h": 0.93,
+   "remaining_h": 29.07,
+   "total_h": 30.0,
+   "refresh_at": "2026-11-28T00:00:00+00:00",
+   "checked_at": "2026-11-21T17:46:51+05:30",
+   "source": "kaggle quota"
+  },
+  "week_start": "2026-11-21T05:30:00+05:30",
+  "quota_total_h": 30.0,
+  "gpu_min_week_local": 58.4,
+  "gpu_min_total_local": 58.4,
+  "cpu_min_total_local": 35.9,
+  "jobs": [
+   {
+    "kernel": "heartwick-gpu-fixture-running",
+    "gpu": true,
+    "pushed_at": "2026-11-21T17:32:25+05:30",
+    "state": "running",
+    "state_at": null,
+    "wait_min": 34.0,
+    "run_min": 6.5,
+    "wall_min": null,
+    "images": 13,
+    "utts": 17,
+    "render": false,
+    "video": null,
+    "story": "[redacted: text from a private story]",
+    "worker_stages": null,
+    "worker_errors": [],
+    "worker_total_s": null,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "[redacted: text from a private story]",
+    "gpu": true,
+    "pushed_at": "2026-11-21T17:32:25+05:30",
+    "state": "unknown",
+    "state_at": null,
+    "wait_min": null,
+    "run_min": null,
+    "wall_min": null,
+    "images": 13,
+    "utts": 17,
+    "render": false,
+    "video": "[redacted: text from a private story]",
+    "story": "[redacted: text from a private story]",
+    "worker_stages": null,
+    "worker_errors": [],
+    "worker_total_s": null,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "heartwick-gpu-pip-full",
+    "gpu": true,
+    "pushed_at": "2026-11-21T17:05:50+05:30",
+    "state": "complete",
+    "state_at": "2026-11-21T17:25:14+05:30",
+    "wait_min": 0.1,
+    "run_min": 19.3,
+    "wall_min": 19.4,
+    "images": 41,
+    "utts": 80,
+    "render": false,
+    "video": "pip_full",
+    "story": "pip",
+    "worker_stages": null,
+    "worker_errors": [],
+    "worker_total_s": null,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "heartwick-render-pip-pilot-v2",
+    "gpu": false,
+    "pushed_at": "2026-11-21T16:04:24+05:30",
+    "state": "complete",
+    "state_at": "2026-11-21T16:17:06+05:30",
+    "wait_min": 0.0,
+    "run_min": 12.7,
+    "wall_min": 12.7,
+    "images": 0,
+    "utts": 0,
+    "render": true,
+    "video": "pip_pilot_v2",
+    "story": "pip",
+    "worker_stages": {
+     "install": 0.0,
+     "images_phase1": 0.0,
+     "images_phase2": 0.0,
+     "render": 419.6,
+     "verify_asr": 252.8
+    },
+    "worker_errors": [],
+    "worker_total_s": 675.7,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "heartwick-render-pip-pilot-v1",
+    "gpu": false,
+    "pushed_at": "2026-11-21T15:43:32+05:30",
+    "state": "complete",
+    "state_at": "2026-11-21T15:55:14+05:30",
+    "wait_min": 0.1,
+    "run_min": 11.6,
+    "wall_min": 11.7,
+    "images": 0,
+    "utts": 0,
+    "render": true,
+    "video": "pip_pilot_v1",
+    "story": "pip",
+    "worker_stages": {
+     "install": 0.0,
+     "images_phase1": 0.0,
+     "images_phase2": 0.0,
+     "render": 371.6,
+     "verify_asr": 265.4
+    },
+    "worker_errors": [],
+    "worker_total_s": 648.3,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "heartwick-render-pip-pilot-v0",
+    "gpu": false,
+    "pushed_at": "2026-11-21T15:24:46+05:30",
+    "state": "complete",
+    "state_at": "2026-11-21T15:36:28+05:30",
+    "wait_min": 0.1,
+    "run_min": 11.6,
+    "wall_min": 11.7,
+    "images": 0,
+    "utts": 0,
+    "render": true,
+    "video": "pip_pilot_v0",
+    "story": "pip",
+    "worker_stages": {
+     "install": 0.0,
+     "tts": 6.5,
+     "images_phase1": 0.0,
+     "images_phase2": 0.0,
+     "render": 343.9,
+     "verify_asr": 262.7
+    },
+    "worker_errors": [
+     "tts: ModuleNotFoundError: No module named 'kokoro'"
+    ],
+    "worker_total_s": 624.7,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "heartwick-gpu-pip",
+    "gpu": true,
+    "pushed_at": "2026-11-21T14:19:45+05:30",
+    "state": "complete",
+    "state_at": "2026-11-21T16:59:05+05:30",
+    "wait_min": 146.8,
+    "run_min": 12.5,
+    "wall_min": 159.3,
+    "images": 6,
+    "utts": 0,
+    "render": true,
+    "video": null,
+    "story": "pip",
+    "worker_stages": null,
+    "worker_errors": [],
+    "worker_total_s": null,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "[redacted: text from a private story]",
+    "gpu": true,
+    "pushed_at": "2026-11-21T14:02:30+05:30",
+    "state": "cancelled",
+    "state_at": null,
+    "wait_min": null,
+    "run_min": 0.0,
+    "wall_min": null,
+    "images": 13,
+    "utts": 17,
+    "render": true,
+    "video": null,
+    "story": "[redacted: text from a private story]",
+    "worker_stages": null,
+    "worker_errors": [],
+    "worker_total_s": null,
+    "note": "cancelled (deleted while queued; requeued by run_queue.py)",
+    "live_status": null
+   },
+   {
+    "kernel": "heartwick-gpu",
+    "gpu": true,
+    "pushed_at": "2026-11-21T13:53:37+05:30",
+    "state": "complete",
+    "state_at": "2026-11-21T14:07:31+05:30",
+    "wait_min": 0.1,
+    "run_min": 13.8,
+    "wall_min": 13.9,
+    "images": 14,
+    "utts": 16,
+    "render": false,
+    "video": "pip_pilot",
+    "story": "pip",
+    "worker_stages": {
+     "install": 97.3,
+     "tts": 28.8,
+     "images_phase1": 609.9,
+     "images_phase2": 0.0,
+     "cutout": 23.1,
+     "depth": 5.7
+    },
+    "worker_errors": [],
+    "worker_total_s": 764.8,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "heartwick-gpu",
+    "gpu": true,
+    "pushed_at": "2026-11-21T13:35:09+05:30",
+    "state": "complete",
+    "state_at": "2026-11-21T13:48:03+05:30",
+    "wait_min": 0.1,
+    "run_min": 12.8,
+    "wall_min": 12.9,
+    "images": 15,
+    "utts": 16,
+    "render": false,
+    "video": null,
+    "story": null,
+    "worker_stages": {
+     "install": 29.1,
+     "tts": 0.0,
+     "images_phase1": 673.6,
+     "images_phase2": 0.0,
+     "cutout": 31.2,
+     "depth": 5.9
+    },
+    "worker_errors": [
+     "tts: ModuleNotFoundError: No module named 'kokoro'"
+    ],
+    "worker_total_s": 739.8,
+    "note": null,
+    "live_status": null
+   },
+   {
+    "kernel": "heartwick-gpu-fixture-error",
+    "gpu": true,
+    "pushed_at": "2026-11-21T13:35:09+05:30",
+    "state": "error",
+    "state_at": "2026-11-21T13:48:03+05:30",
+    "wait_min": 0.1,
+    "run_min": 12.8,
+    "wall_min": 12.9,
+    "images": 15,
+    "utts": 16,
+    "render": false,
+    "video": null,
+    "story": null,
+    "worker_stages": {
+     "install": 29.1,
+     "tts": 0.0,
+     "images_phase1": 673.6,
+     "images_phase2": 0.0,
+     "cutout": 31.2,
+     "depth": 5.9
+    },
+    "worker_errors": [
+     "images: CUDA out of memory (fixture)"
+    ],
+    "worker_total_s": 739.8,
+    "note": null,
+    "live_status": null
+   }
+  ],
+  "by_day": [
+   {
+    "date": "2026-11-21",
+    "gpu_min": 58.4,
+    "cpu_min": 35.9
+   }
+  ],
+  "by_video": [
+   {
+    "video": "pip_full",
+    "gpu_min": 19.3,
+    "cpu_min": 0.0
+   },
+   {
+    "video": "pip_pilot",
+    "gpu_min": 13.8,
+    "cpu_min": 0.0
+   },
+   {
+    "video": "heartwick-gpu",
+    "gpu_min": 12.8,
+    "cpu_min": 0.0
+   },
+   {
+    "video": "pip_pilot_v2",
+    "gpu_min": 0.0,
+    "cpu_min": 12.7
+   },
+   {
+    "video": "pip (story)",
+    "gpu_min": 12.5,
+    "cpu_min": 0.0
+   },
+   {
+    "video": "pip_pilot_v0",
+    "gpu_min": 0.0,
+    "cpu_min": 11.6
+   },
+   {
+    "video": "pip_pilot_v1",
+    "gpu_min": 0.0,
+    "cpu_min": 11.6
+   }
+  ],
+  "poll": {
+   "checked_at": "2026-11-21T17:46:51+05:30",
+   "error": null
+  }
+ },
+ "queue": {
+  "runner": {
+   "running": true,
+   "pids": [
+    33764
+   ],
+   "started_at": "2026-11-21T16:21:30+05:30"
+  },
+  "current": {
+   "text": "[redacted: text from a private story]",
+   "since": "2026-11-21T17:32:18+05:30"
+  },
+  "log_tail": [
+   {
+    "at": "2026-11-21T16:21:30+05:30",
+    "text": "queue runner started, pid 33764",
+    "level": "info"
+   },
+   {
+    "at": "2026-11-21T16:21:34+05:30",
+    "text": "heartwick-gpu-pip -> QUEUED",
+    "level": "info"
+   },
+   {
+    "at": "2026-11-21T16:46:35+05:30",
+    "text": "heartwick-gpu-pip -> RUNNING",
+    "level": "info"
+   },
+   {
+    "at": "2026-11-21T16:59:05+05:30",
+    "text": "heartwick-gpu-pip -> COMPLETE",
+    "level": "info"
+   },
+   {
+    "at": "2026-11-21T16:59:05+05:30",
+    "text": "RUN fetch heartwick-gpu-pip --story pip",
+    "level": "info"
+   },
+   {
+    "at": "2026-11-21T17:01:56+05:30",
+    "text": "rc=1 · TypeError: can only concatenate str (not \"NoneType\") to str",
+    "level": "err"
+   },
+   {
+    "at": "2026-11-21T17:01:56+05:30",
+    "text": "RUN make stories/pip.md --sections 1-2 --short --name pip_pilot_final --no-gpu",
+    "level": "info"
+   },
+   {
+    "at": "2026-11-21T17:05:41+05:30",
+    "text": "rc=1 · TypeError: can only concatenate str (not \"NoneType\") to str",
+    "level": "err"
+   },
+   {
+    "at": "2026-11-21T17:05:41+05:30",
+    "text": "RUN make stories/pip.md --name pip_full",
+    "level": "info"
+   },
+   {
+    "at": "2026-11-21T17:32:18+05:30",
+    "text": "rc=1 · TypeError: can only concatenate str (not \"NoneType\") to str",
+    "level": "err"
+   },
+   {
+    "at": "2026-11-21T17:32:18+05:30",
+    "text": "[redacted: text from a private story]",
+    "level": "info"
+   }
+  ],
+  "jobs": [
+   {
+    "id": "fixture-q1",
+    "label": "[redacted: text from a private story]",
+    "args": [
+     "make"
+    ],
+    "status": "pending",
+    "added_at": "2026-11-21T17:50:43+05:30",
+    "source": "dashboard"
+   }
+  ]
+ },
+ "research": {
+  "present": true,
+  "report_md": "# Heartwick research report (fixture)\n\nA **fixture** standing in for `research/RESEARCH_REPORT.md`, which another agent is writing.\n\n## Voice\n| Voice | Warmth | Clarity | Notes |\n|---|---|---|---|\n| af_heart | high | high | current default |\n| af_bella | medium | high | brighter |\n\n## Next steps\n1. Compare three voices on the same 30-second passage.\n2. Keep loudness at -15 LUFS.\n\n> The kindest love leaves the window open.\n",
+  "report_truncated": false,
+  "report_mtime": "2026-11-21T17:50:43+05:30",
+  "samples": [
+   {
+    "name": "sample_af_bella",
+    "key": "57cdf03b200d/sample_af_bella.wav",
+    "bytes": 645644
+   },
+   {
+    "name": "sample_af_heart",
+    "key": "c7298b927b6d/sample_af_heart.wav",
+    "bytes": 602444
+   }
+  ],
+  "other_docs": []
+ },
+ "channel": {
+  "exists": false,
+  "youtube": null,
+  "instagram": null,
+  "note": "[redacted: text from a private story]"
+ },
+ "actions": {
+  "applied": [
+   {
+    "id": "fixture-1",
+    "kind": "approve",
+    "video": "pip_pilot_v0",
+    "at": "2026-11-21T17:50:43+05:30",
+    "applied_at": "2026-11-21T17:50:43+05:30",
+    "via": "vercel inbox",
+    "result": "ok",
+    "msg": "pip_pilot_v0 -> approved"
+   }
+  ]
+ },
+ "events": [
+  {
+   "at": "2026-11-21T17:46:51+05:30",
+   "level": "warn",
+   "source": "inbox",
+   "text": "pull failed (start): HTTPError 404",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T17:32:25+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "[redacted: text from a private story]",
+   "video": "[redacted: text from a private story]"
+  },
+  {
+   "at": "2026-11-21T17:32:18+05:30",
+   "level": "err",
+   "source": "queue",
+   "text": "Queue runner: rc=1 · TypeError: can only concatenate str (not \"NoneType\") to str",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T17:25:14+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "heartwick-gpu-pip-full complete in 19.3 min after 0.1 min queued",
+   "video": "pip_full"
+  },
+  {
+   "at": "2026-11-21T17:05:50+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "Pushed heartwick-gpu-pip-full (GPU)",
+   "video": "pip_full"
+  },
+  {
+   "at": "2026-11-21T17:05:41+05:30",
+   "level": "err",
+   "source": "queue",
+   "text": "Queue runner: rc=1 · TypeError: can only concatenate str (not \"NoneType\") to str",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T17:01:56+05:30",
+   "level": "err",
+   "source": "queue",
+   "text": "Queue runner: rc=1 · TypeError: can only concatenate str (not \"NoneType\") to str",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T16:59:05+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "heartwick-gpu-pip complete in 12.5 min after 146.8 min queued",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T16:19:08+05:30",
+   "level": "info",
+   "source": "render",
+   "text": "Rendered pip_pilot_v2 (72.375 s)",
+   "video": "pip_pilot_v2"
+  },
+  {
+   "at": "2026-11-21T16:17:06+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "heartwick-render-pip-pilot-v2 complete in 12.7 min",
+   "video": "pip_pilot_v2"
+  },
+  {
+   "at": "2026-11-21T16:04:24+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "Pushed heartwick-render-pip-pilot-v2 (CPU)",
+   "video": "pip_pilot_v2"
+  },
+  {
+   "at": "2026-11-21T15:57:15+05:30",
+   "level": "info",
+   "source": "render",
+   "text": "Rendered pip_pilot_v1 (72.375 s)",
+   "video": "pip_pilot_v1"
+  },
+  {
+   "at": "2026-11-21T15:55:14+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "heartwick-render-pip-pilot-v1 complete in 11.6 min after 0.1 min queued",
+   "video": "pip_pilot_v1"
+  },
+  {
+   "at": "2026-11-21T15:43:32+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "Pushed heartwick-render-pip-pilot-v1 (CPU)",
+   "video": "pip_pilot_v1"
+  },
+  {
+   "at": "2026-11-21T15:38:55+05:30",
+   "level": "err",
+   "source": "qa",
+   "text": "Kaggle worker: tts: ModuleNotFoundError: No module named 'kokoro'",
+   "video": "pip_pilot_v0"
+  },
+  {
+   "at": "2026-11-21T15:38:30+05:30",
+   "level": "info",
+   "source": "render",
+   "text": "Rendered pip_pilot_v0 (72.375 s)",
+   "video": "pip_pilot_v0"
+  },
+  {
+   "at": "2026-11-21T15:36:28+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "heartwick-render-pip-pilot-v0 complete in 11.6 min after 0.1 min queued",
+   "video": "pip_pilot_v0"
+  },
+  {
+   "at": "2026-11-21T15:36:28+05:30",
+   "level": "err",
+   "source": "kaggle",
+   "text": "heartwick-render-pip-pilot-v0 worker: tts: ModuleNotFoundError: No module named 'kokoro'",
+   "video": "pip_pilot_v0"
+  },
+  {
+   "at": "2026-11-21T15:24:46+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "Pushed heartwick-render-pip-pilot-v0 (CPU)",
+   "video": "pip_pilot_v0"
+  },
+  {
+   "at": "2026-11-21T14:19:45+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "Pushed heartwick-gpu-pip (GPU)",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T14:07:31+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "heartwick-gpu complete in 13.8 min after 0.1 min queued",
+   "video": "pip_pilot"
+  },
+  {
+   "at": "2026-11-21T14:02:30+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "[redacted: text from a private story]",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T14:02:30+05:30",
+   "level": "warn",
+   "source": "kaggle",
+   "text": "[redacted: text from a private story]",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T13:53:37+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "Pushed heartwick-gpu (GPU)",
+   "video": "pip_pilot"
+  },
+  {
+   "at": "2026-11-21T13:48:03+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "heartwick-gpu complete in 12.8 min after 0.1 min queued",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T13:48:03+05:30",
+   "level": "err",
+   "source": "kaggle",
+   "text": "heartwick-gpu worker: tts: ModuleNotFoundError: No module named 'kokoro'",
+   "video": null
+  },
+  {
+   "at": "2026-11-21T13:35:09+05:30",
+   "level": "info",
+   "source": "kaggle",
+   "text": "Pushed heartwick-gpu (GPU)",
+   "video": null
+  }
+ ],
+ "truth": {
+  "at": "2026-11-21T17:50:43+05:30",
+  "n_checks": 17,
+  "n_fail": 0,
+  "n_skip": 0,
+  "checks": [
+   {
+    "key": "stories",
+    "label": "Stories",
+    "expected": 2,
+    "shown": 2,
+    "ok": true,
+    "tol": null,
+    "page": "Overview",
+    "source": "stories/*.md",
+    "note": null
+   },
+   {
+    "key": "rendered",
+    "label": "Videos rendered",
+    "expected": 3,
+    "shown": 3,
+    "ok": true,
+    "tol": null,
+    "page": "Overview",
+    "source": "out/<name>/<name>.mp4 files",
+    "note": null
+   },
+   {
+    "key": "reviewable",
+    "label": "Videos with QA (review or later)",
+    "expected": 3,
+    "shown": 3,
+    "ok": true,
+    "tol": null,
+    "page": "Overview",
+    "source": "mp4 + qa_report.json",
+    "note": null
+   },
+   {
+    "key": "approved",
+    "label": "Approved or published",
+    "expected": 0,
+    "shown": 0,
+    "ok": true,
+    "tol": null,
+    "page": "Overview",
+    "source": "dashboard/data/approvals.json",
+    "note": null
+   },
+   {
+    "key": "dur:pip_pilot_v0",
+    "label": "pip_pilot_v0 duration (s)",
+    "expected": 72.4,
+    "shown": 72.375,
+    "ok": true,
+    "tol": 0.15,
+    "page": "Videos",
+    "source": "ffprobe of the mp4 vs qa_report.json",
+    "note": null
+   },
+   {
+    "key": "lufs:pip_pilot_v0",
+    "label": "pip_pilot_v0 loudness (LUFS)",
+    "expected": -15.0,
+    "shown": -15.0,
+    "ok": true,
+    "tol": 0.6,
+    "page": "Videos",
+    "source": "ffmpeg ebur128 of the mp4 vs qa_report.json",
+    "note": null
+   },
+   {
+    "key": "lines:pip_pilot_v0",
+    "label": "pip_pilot_v0 narration lines on disk",
+    "expected": 16,
+    "shown": 16,
+    "ok": true,
+    "tol": null,
+    "page": "Overview",
+    "source": "cache/<slug>/assets/<line id>.wav",
+    "note": null
+   },
+   {
+    "key": "preview:pip_pilot_v0",
+    "label": "pip_pilot_v0 480p preview",
+    "expected": 1,
+    "shown": 1,
+    "ok": true,
+    "tol": null,
+    "page": "Videos",
+    "source": "dashboard/data/previews (encoded from the current mp4)",
+    "note": "encoded and uploaded by the exporter when the mp4 changes"
+   },
+   {
+    "key": "dur:pip_pilot_v1",
+    "label": "pip_pilot_v1 duration (s)",
+    "expected": 72.4,
+    "shown": 72.375,
+    "ok": true,
+    "tol": 0.15,
+    "page": "Videos",
+    "source": "ffprobe of the mp4 vs qa_report.json",
+    "note": null
+   },
+   {
+    "key": "lufs:pip_pilot_v1",
+    "label": "pip_pilot_v1 loudness (LUFS)",
+    "expected": -15.0,
+    "shown": -15.0,
+    "ok": true,
+    "tol": 0.6,
+    "page": "Videos",
+    "source": "ffmpeg ebur128 of the mp4 vs qa_report.json",
+    "note": null
+   },
+   {
+    "key": "lines:pip_pilot_v1",
+    "label": "pip_pilot_v1 narration lines on disk",
+    "expected": 16,
+    "shown": 16,
+    "ok": true,
+    "tol": null,
+    "page": "Overview",
+    "source": "cache/<slug>/assets/<line id>.wav",
+    "note": null
+   },
+   {
+    "key": "preview:pip_pilot_v1",
+    "label": "pip_pilot_v1 480p preview",
+    "expected": 1,
+    "shown": 1,
+    "ok": true,
+    "tol": null,
+    "page": "Videos",
+    "source": "dashboard/data/previews (encoded from the current mp4)",
+    "note": "encoded and uploaded by the exporter when the mp4 changes"
+   },
+   {
+    "key": "dur:pip_pilot_v2",
+    "label": "pip_pilot_v2 duration (s)",
+    "expected": 72.4,
+    "shown": 72.375,
+    "ok": true,
+    "tol": 0.15,
+    "page": "Videos",
+    "source": "ffprobe of the mp4 vs qa_report.json",
+    "note": null
+   },
+   {
+    "key": "lufs:pip_pilot_v2",
+    "label": "pip_pilot_v2 loudness (LUFS)",
+    "expected": -15.0,
+    "shown": -15.0,
+    "ok": true,
+    "tol": 0.6,
+    "page": "Videos",
+    "source": "ffmpeg ebur128 of the mp4 vs qa_report.json",
+    "note": null
+   },
+   {
+    "key": "lines:pip_pilot_v2",
+    "label": "pip_pilot_v2 narration lines on disk",
+    "expected": 16,
+    "shown": 16,
+    "ok": true,
+    "tol": null,
+    "page": "Overview",
+    "source": "cache/<slug>/assets/<line id>.wav",
+    "note": null
+   },
+   {
+    "key": "preview:pip_pilot_v2",
+    "label": "pip_pilot_v2 480p preview",
+    "expected": 1,
+    "shown": 1,
+    "ok": true,
+    "tol": null,
+    "page": "Videos",
+    "source": "dashboard/data/previews (encoded from the current mp4)",
+    "note": "encoded and uploaded by the exporter when the mp4 changes"
+   },
+   {
+    "key": "gpu_week",
+    "label": "GPU minutes this quota week",
+    "expected": 55.8,
+    "shown": 58.4,
+    "ok": true,
+    "tol": 8.37,
+    "page": "Kaggle",
+    "source": "`kaggle quota` vs kaggle/usage.jsonl + observed runs",
+    "note": "Kaggle counts whole sessions (install and model loads included); local times start at RUNNING"
+   }
+  ]
+ },
+ "exporter": {
+  "pid": 7520,
+  "started_at": "2026-11-21T17:46:47+05:30",
+  "stats": {
+   "ingests": 0,
+   "ingest_fail": 0,
+   "pulls": 0,
+   "applied": 0,
+   "kaggle_calls": 1,
+   "previews": 3
+  },
+  "last_ingest": null,
+  "media": null,
+  "heartbeat_s": 7200,
+  "upload": false
+ }
+}

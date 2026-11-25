@@ -1,0 +1,36 @@
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+C:\Users\shubh\tools\xpuvenv\Lib\site-packages\huggingface_hub\utils\_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Traceback (most recent call last):
+  File "C:\Users\shubh\tools\xpuvenv\Lib\site-packages\diffusers\models\model_loading_utils.py", line 173, in load_state_dict
+    return load_gguf_checkpoint(checkpoint_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\Projects\heartwick\research\round2\compute\kaggle_t4\gen.py", line 105, in _load
+    w = torch.from_numpy(t.data.copy()).to(dev)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: XPU out of memory. Tried to allocate 300.00 MiB. GPU 0 has a total capacity of 24.98 GiB of which 14.86 GiB is free. Of the allocated memory 9.23 GiB is allocated by PyTorch, and 584.59 MiB is reserved by PyTorch but unallocated. Please use `empty_cache` to release all unoccupied cached memory.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\Projects\heartwick\research\round2\compute\kaggle_t4\gen.py", line 143, in <module>
+    m, ls = load_expert(which)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\Projects\heartwick\research\round2\compute\kaggle_t4\gen.py", line 111, in load_expert
+    m = WanTransformer3DModel.from_single_file(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\tools\xpuvenv\Lib\site-packages\huggingface_hub\utils\_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\tools\xpuvenv\Lib\site-packages\diffusers\loaders\single_file_model.py", line 405, in from_single_file
+    checkpoint = load_single_file_checkpoint(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\tools\xpuvenv\Lib\site-packages\diffusers\loaders\single_file_utils.py", line 505, in load_single_file_checkpoint
+    checkpoint = load_state_dict(pretrained_model_link_or_path, disable_mmap=disable_mmap)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\tools\xpuvenv\Lib\site-packages\diffusers\models\model_loading_utils.py", line 188, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+rc=1 wall_s=143

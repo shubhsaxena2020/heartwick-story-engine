@@ -1,0 +1,298 @@
+{
+ "name": "pip_kit",
+ "kind": "squirrel",
+ "units": 200.0,
+ "units_per_px": 0.3333333333333333,
+ "pelvis_h": 60.0,
+ "source": "heartwick vector part library (assets/src), rendered at 3.0 px per rig unit + paper-theatre finish (assets/src/paper_c.py)",
+ "bones": [
+  {
+   "name": "body",
+   "parent": null,
+   "pivot_px": [
+    1000.0,
+    2400.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "head",
+   "parent": "body",
+   "pivot_px": [
+    1384.0,
+    2358.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "paw_f",
+   "parent": "body",
+   "pivot_px": [
+    1312.0,
+    2454.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "paw_n",
+   "parent": "body",
+   "pivot_px": [
+    1336.0,
+    2466.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "leg_f",
+   "parent": "body",
+   "pivot_px": [
+    1042.0,
+    2460.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "leg_n",
+   "parent": "body",
+   "pivot_px": [
+    1066.0,
+    2472.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "tail1",
+   "parent": "body",
+   "pivot_px": [
+    934.0,
+    2382.0
+   ],
+   "rest_deg": 0.0,
+   "length": 270.0
+  },
+  {
+   "name": "tail2",
+   "parent": "tail1",
+   "pivot_px": [
+    814.0,
+    2382.0
+   ],
+   "rest_deg": 0.0,
+   "length": 255.0
+  },
+  {
+   "name": "tail3",
+   "parent": "tail2",
+   "pivot_px": [
+    706.0,
+    2382.0
+   ],
+   "rest_deg": 0.0,
+   "length": 240.0
+  }
+ ],
+ "parts": [
+  {
+   "bone": "tail1",
+   "name": "tail1",
+   "image": "tail1.png",
+   "anchor_px": [
+    207.0,
+    79.0
+   ],
+   "z": 3,
+   "size_px": [
+    221,
+    115
+   ]
+  },
+  {
+   "bone": "tail2",
+   "name": "tail2",
+   "image": "tail2.png",
+   "anchor_px": [
+    197.0,
+    84.0
+   ],
+   "z": 3.1,
+   "size_px": [
+    223,
+    128
+   ]
+  },
+  {
+   "bone": "tail3",
+   "name": "tail3",
+   "image": "tail3.png",
+   "anchor_px": [
+    154.0,
+    81.0
+   ],
+   "z": 3.2,
+   "size_px": [
+    183,
+    127
+   ]
+  },
+  {
+   "bone": "leg_f",
+   "name": "leg_f",
+   "image": "leg_f.png",
+   "anchor_px": [
+    73.0,
+    73.0
+   ],
+   "z": 5,
+   "size_px": [
+    208,
+    189
+   ]
+  },
+  {
+   "bone": "paw_f",
+   "name": "paw_f",
+   "image": "paw_f.png",
+   "anchor_px": [
+    56.0,
+    56.0
+   ],
+   "z": 6,
+   "size_px": [
+    68,
+    169
+   ]
+  },
+  {
+   "bone": "body",
+   "name": "body",
+   "image": "body.png",
+   "anchor_px": [
+    96.0,
+    185.0
+   ],
+   "z": 10,
+   "size_px": [
+    487,
+    322
+   ]
+  },
+  {
+   "bone": "leg_n",
+   "name": "leg_n",
+   "image": "leg_n.png",
+   "anchor_px": [
+    73.0,
+    73.0
+   ],
+   "z": 12,
+   "size_px": [
+    208,
+    189
+   ]
+  },
+  {
+   "bone": "head",
+   "name": "head",
+   "image": "head.png",
+   "anchor_px": [
+    95.0,
+    227.0
+   ],
+   "z": 14,
+   "size_px": [
+    463,
+    294
+   ]
+  },
+  {
+   "bone": "paw_n",
+   "name": "paw_n",
+   "image": "paw_n.png",
+   "anchor_px": [
+    56.0,
+    56.0
+   ],
+   "z": 16,
+   "size_px": [
+    68,
+    169
+   ]
+  }
+ ],
+ "contacts": [
+  [
+   "leg_n",
+   [
+    66.0,
+    126.0
+   ]
+  ],
+  [
+   "leg_f",
+   [
+    66.0,
+    126.0
+   ]
+  ],
+  [
+   "body",
+   [
+    186.0,
+    150.0
+   ]
+  ],
+  [
+   "paw_n",
+   [
+    12.0,
+    114.0
+   ]
+  ],
+  [
+   "body",
+   [
+    48.0,
+    168.0
+   ]
+  ],
+  [
+   "body",
+   [
+    -42.0,
+    132.0
+   ]
+  ]
+ ],
+ "springs": [
+  {
+   "bones": [
+    "tail2",
+    "tail3"
+   ],
+   "freq": 0.9,
+   "zeta": 0.3,
+   "wind": 4,
+   "hang": 0.0,
+   "rest": -25.0,
+   "drag": 0.06
+  }
+ ],
+ "variants": {
+  "head": {
+   "blink": {
+    "bone": "head",
+    "image": "head__blink.png",
+    "anchor_px": [
+     95.0,
+     227.0
+    ]
+   }
+  }
+ }
+}

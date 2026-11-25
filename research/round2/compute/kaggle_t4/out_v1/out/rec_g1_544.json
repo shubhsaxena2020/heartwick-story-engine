@@ -1,0 +1,57 @@
+{
+ "plan": {
+  "name": "g1_544",
+  "high": "/root/.cache/huggingface/hub/models--jayn7--WAN2.2-I2V_A14B-DISTILL-LIGHTX2V-4STEP-GGUF/snapshots/338fb8eedd8f485c9188cf1b1de541721fc81d66/high_noise_260412/wan2.2_i2v_A14b_high_noise_lightx2v_4step_720p_260412-Q4_K_M.gguf",
+  "low": "/root/.cache/huggingface/hub/models--jayn7--WAN2.2-I2V_A14B-DISTILL-LIGHTX2V-4STEP-GGUF/snapshots/338fb8eedd8f485c9188cf1b1de541721fc81d66/low_noise_260412/wan2.2_i2v_A14b_low_noise_lightx2v_4step_720p_260412-Q4_K_M.gguf",
+  "quant": "Q4_K_M",
+  "clips": [
+   {
+    "id": "q4_544x960_81f",
+    "image": "/kaggle/working/key.jpg",
+    "w": 544,
+    "h": 960,
+    "frames": 81,
+    "seed": 7,
+    "emb": "/kaggle/working/emb.pt"
+   }
+  ]
+ },
+ "phases": {
+  "vae_load_s": 0.8,
+  "peak_vram_gb_encode": 8.4,
+  "high_load_s": 41.6,
+  "peak_vram_gb_high": 15.16,
+  "low_load_s": 42.1,
+  "peak_vram_gb_low": 15.16,
+  "peak_vram_gb_decode": 11.21,
+  "wall_s": 1650.8
+ },
+ "clips": {
+  "q4_544x960_81f": {
+   "cfg": {
+    "id": "q4_544x960_81f",
+    "image": "/kaggle/working/key.jpg",
+    "w": 544,
+    "h": 960,
+    "frames": 81,
+    "seed": 7,
+    "emb": "/kaggle/working/emb.pt"
+   },
+   "vae_encode_s": 113.0,
+   "tokens": 42840,
+   "high_step_s": [
+    319.0,
+    317.3
+   ],
+   "high_finite": true,
+   "low_step_s": [
+    297.3,
+    312.4
+   ],
+   "low_finite": true,
+   "vae_decode_s": 194.1,
+   "decode_tiled": false,
+   "gpu_s_total": 1553.1
+  }
+ }
+}

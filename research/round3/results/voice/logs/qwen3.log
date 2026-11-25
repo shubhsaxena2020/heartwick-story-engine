@@ -1,0 +1,69 @@
+
+$ uv venv -q -p 3.11 /tmp/v_qwen3 && uv pip install -q -p /tmp/v_qwen3/bin/python qwen-tts soundfile scipy
+
+$ cd /tmp && /tmp/v_qwen3/bin/python /tmp/st_qwen3.py
+/bin/sh: 1: sox: not found
+SoX could not be found!
+
+    If you do not have SoX, proceed here:
+     - - - http://sox.sourceforge.net/ - - -
+
+    If you do (or think that you should) have SoX, double-check your
+    path variables.
+    
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 2606804b-f7cd-4568-8a07-659a5e91dc2d)')' thrown while requesting HEAD https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base/resolve/fd4b254389122332181a7c3db7f27e918eec64e3/speech_tokenizer/config.json
+Retrying in 1s [Retry 1/5].
+Fetching 4 files:  25%|██▌       | 1/4 [00:00<00:00,  5.38it/s]Fetching 4 files:  50%|█████     | 2/4 [00:00<00:00,  4.81it/s]Fetching 4 files:  75%|███████▌  | 3/4 [00:01<00:00,  2.34it/s]Fetching 4 files: 100%|██████████| 4/4 [00:01<00:00,  2.37it/s]Fetching 4 files: 100%|██████████| 4/4 [00:01<00:00,  2.37it/s]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+line__narrator_baritone__qwen3__s7 {'gen_s': 278.0, 'sr': 24000}
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+line__british_narrator__qwen3__s7 {'gen_s': 267.8, 'sr': 24000}
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+line__narrator_baritone__qwen3__s11 {'gen_s': 251.9, 'sr': 24000}
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+line__british_narrator__qwen3__s11 {'gen_s': 277.2, 'sr': 24000}
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+villain__library {'gen_s': 94.0, 'sr': 24000}
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+sleep__f_library {'gen_s': 133.3, 'sr': 24000}
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+sleep__m_library {'gen_s': 128.2, 'sr': 24000}
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:00<00:00,  7.56it/s]Fetching 4 files: 100%|██████████| 4/4 [00:08<00:00,  2.20s/it]Fetching 4 files: 100%|██████████| 4/4 [00:08<00:00,  2.20s/it]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+villain design try 0 f0 90.9
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+villain design try 1 f0 81.6
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+villain design try 2 f0 80.8
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 1759.72it/s]
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+villain__bass_redesign {'gen_s': 94.7, 'sr': 24000, 'ref_f0': 80.8}
+
+$ rm -rf /tmp/v_qwen3 ~/.cache/uv

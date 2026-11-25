@@ -1,0 +1,59 @@
+
+$ cp /kaggle/working/logs/*.log /kaggle/working/out/; ls -la /kaggle/working/out /kaggle/working/out/takes
+/kaggle/working/out:
+total 4620
+drwxr-xr-x 3 root root   4096 Nov 23 09:21 .
+drwxr-xr-x 4 root root   4096 Nov 23 08:37 ..
+-rw-r--r-- 1 root root    108 Nov 23 09:21 final.log
+-rw-r--r-- 1 root root 538029 Nov 23 09:12 line__british_narrator__qwen3__s11.mp3
+-rw-r--r-- 1 root root 535149 Nov 23 09:13 line__british_narrator__qwen3__s7.mp3
+-rw-r--r-- 1 root root 494253 Nov 23 09:14 line__narrator_baritone__qwen3__s11.mp3
+-rw-r--r-- 1 root root 500013 Nov 23 09:14 line__narrator_baritone__qwen3__s7.mp3
+-rw-r--r-- 1 root root 463725 Nov 23 09:15 line__narrator_warm_f__voxcpm2__s11.mp3
+-rw-r--r-- 1 root root 446445 Nov 23 09:16 line__narrator_warm_f__voxcpm2__s7.mp3
+-rw-r--r-- 1 root root   4704 Nov 23 09:21 qwen3.log
+-rw-r--r-- 1 root root   6802 Nov 23 09:21 score.log
+-rw-r--r-- 1 root root    385 Nov 23 09:21 setup.log
+-rw-r--r-- 1 root root 257517 Nov 23 09:17 sleep__f_library.mp3
+-rw-r--r-- 1 root root 301869 Nov 23 09:17 sleep__f_slow085.mp3
+-rw-r--r-- 1 root root 261549 Nov 23 09:18 sleep__m_library.mp3
+-rw-r--r-- 1 root root 306477 Nov 23 09:19 sleep__m_slow085.mp3
+-rw-r--r-- 1 root root    221 Nov 23 09:21 status.json
+drwxr-xr-x 2 root root   4096 Nov 23 09:10 takes
+-rw-r--r-- 1 root root 175725 Nov 23 09:20 villain__bass_redesign.mp3
+-rw-r--r-- 1 root root 183789 Nov 23 09:20 villain__library.mp3
+-rw-r--r-- 1 root root 183789 Nov 23 09:21 villain__library_pitchdown.mp3
+-rw-r--r-- 1 root root   7983 Nov 23 09:21 voice_scores.json
+-rw-r--r-- 1 root root  15399 Nov 23 09:21 voxcpm.log
+
+/kaggle/working/out/takes:
+total 10892
+drwxr-xr-x 2 root root    4096 Nov 23 09:10 .
+drwxr-xr-x 3 root root    4096 Nov 23 09:21 ..
+-rw-r--r-- 1 root root      29 Nov 23 08:26 line__british_narrator__qwen3__s11.json
+-rw-r--r-- 1 root root 1073086 Nov 23 08:26 line__british_narrator__qwen3__s11.wav
+-rw-r--r-- 1 root root      29 Nov 23 08:17 line__british_narrator__qwen3__s7.json
+-rw-r--r-- 1 root root 1067892 Nov 23 08:17 line__british_narrator__qwen3__s7.wav
+-rw-r--r-- 1 root root      29 Nov 23 08:21 line__narrator_baritone__qwen3__s11.json
+-rw-r--r-- 1 root root  986152 Nov 23 08:21 line__narrator_baritone__qwen3__s11.wav
+-rw-r--r-- 1 root root      29 Nov 23 08:13 line__narrator_baritone__qwen3__s7.json
+-rw-r--r-- 1 root root  997460 Nov 23 08:13 line__narrator_baritone__qwen3__s7.wav
+-rw-r--r-- 1 root root      29 Nov 23 09:09 line__narrator_warm_f__voxcpm2__s11.json
+-rw-r--r-- 1 root root 1847990 Nov 23 09:09 line__narrator_warm_f__voxcpm2__s11.wav
+-rw-r--r-- 1 root root      29 Nov 23 08:55 line__narrator_warm_f__voxcpm2__s7.json
+-rw-r--r-- 1 root root 1780532 Nov 23 08:55 line__narrator_warm_f__voxcpm2__s7.wav
+-rw-r--r-- 1 root root      29 Nov 23 08:30 sleep__f_library.json
+-rw-r--r-- 1 root root  512250 Nov 23 08:30 sleep__f_library.wav
+-rw-r--r-- 1 root root      47 Nov 23 09:10 sleep__f_slow085.json
+-rw-r--r-- 1 root root  601422 Nov 23 09:10 sleep__f_slow085.wav
+-rw-r--r-- 1 root root      29 Nov 23 08:32 sleep__m_library.json
+-rw-r--r-- 1 root root  519800 Nov 23 08:32 sleep__m_library.wav
+-rw-r--r-- 1 root root      47 Nov 23 09:10 sleep__m_slow085.json
+-rw-r--r-- 1 root root  610202 Nov 23 09:10 sleep__m_slow085.wav
+-rw-r--r-- 1 root root      44 Nov 23 08:39 villain__bass_redesign.json
+-rw-r--r-- 1 root root  347978 Nov 23 08:39 villain__bass_redesign.wav
+-rw-r--r-- 1 root root      16 Nov 23 08:37 villain_bass_ref.json
+-rw-r--r-- 1 root root      28 Nov 23 08:28 villain__library.json
+-rw-r--r-- 1 root root      76 Nov 23 09:10 villain__library_pitchdown.json
+-rw-r--r-- 1 root root  364386 Nov 23 09:10 villain__library_pitchdown.wav
+-rw-r--r-- 1 root root  364352 Nov 23 08:28 villain__library.wav

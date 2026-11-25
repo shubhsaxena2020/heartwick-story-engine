@@ -1,0 +1,80 @@
+{
+ "name": "maple_yard",
+ "world": [
+  1400,
+  2100
+ ],
+ "ground": 1760.0,
+ "tall": false,
+ "margin": 260,
+ "q": 1.25,
+ "spots": {
+  "left": [
+   420.0,
+   1740.0
+  ],
+  "center": [
+   700.0,
+   1760.0
+  ],
+  "right": [
+   952.0000000000001,
+   1760.0
+  ],
+  "under_maple": [
+   812.0,
+   1790.0
+  ],
+  "canopy": [
+   1008.0,
+   810.0
+  ]
+ },
+ "fx": {
+  "particles": [
+   "leaves",
+   "motes"
+  ],
+  "rays": {
+   "origin": [
+    280.0,
+    430.0
+   ],
+   "angle": 62,
+   "length": 2200,
+   "alpha": 0.12
+  },
+  "birds": true
+ },
+ "layers": [
+  {
+   "name": "sky",
+   "depth": 0.08,
+   "image": "00_sky.jpg"
+  },
+  {
+   "name": "far",
+   "depth": 0.3,
+   "image": "01_far.png"
+  },
+  {
+   "name": "mid",
+   "depth": 0.6,
+   "image": "02_mid.png"
+  },
+  {
+   "name": "ground",
+   "depth": 0.92,
+   "image": "03_ground.png"
+  },
+  {
+   "name": "actors",
+   "depth": 1.0
+  },
+  {
+   "name": "fore",
+   "depth": 1.25,
+   "image": "05_fore.png"
+  }
+ ]
+}

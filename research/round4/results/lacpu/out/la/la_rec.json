@@ -1,0 +1,25 @@
+{
+ "device": "cpu",
+ "load_s": 103.9,
+ "la_k2": {
+  "esrgan_s": 6.89,
+  "depth_s": 2.87,
+  "matte_s": 2.82,
+  "plate_s": 4.39,
+  "render_s": 21.1,
+  "frames": 144,
+  "ms_per_frame": 146.5
+ },
+ "la_k10": {
+  "esrgan_s": 6.77,
+  "depth_s": 2.59,
+  "matte_s": 2.8,
+  "plate_s": 3.53,
+  "render_s": 20.6,
+  "frames": 144,
+  "ms_per_frame": 143.1
+ },
+ "torch_bench": {
+  "skipped": "cpu"
+ }
+}

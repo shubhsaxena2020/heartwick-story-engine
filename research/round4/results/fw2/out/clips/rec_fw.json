@@ -1,0 +1,130 @@
+{
+ "name": "fw",
+ "weights_from": "/kaggle/input/notebooks/shubhsaxena2008/heartwick-r4-wcache/fastwan5b",
+ "clips": {
+  "fw480_k2_plain_s7": {
+   "cfg": {
+    "id": "fw480_k2_plain_s7",
+    "image": "/kaggle/working/in/K2.jpg",
+    "prompt": "k2_plain",
+    "w": 480,
+    "h": 832,
+    "frames": 121,
+    "seed": 7,
+    "fps": 24,
+    "emb": "/kaggle/input/notebooks/shubhsaxena2008/heartwick-r4-bench/emb/emb_k2_plain.pt"
+   },
+   "encode_s": 5.9,
+   "tokens": 12090,
+   "step_s": [
+    13.4,
+    12.4,
+    11.0
+   ],
+   "finite": true,
+   "peak_vram_gb_dit": 12.49,
+   "tiled": false,
+   "decode_s": 314.5,
+   "peak_vram_gb_decode": 14.9,
+   "gpu_s_total": 357.2
+  },
+  "fw480_k2_mouth_s7": {
+   "cfg": {
+    "id": "fw480_k2_mouth_s7",
+    "image": "/kaggle/working/in/K2.jpg",
+    "prompt": "k2_mouth",
+    "w": 480,
+    "h": 832,
+    "frames": 121,
+    "seed": 7,
+    "fps": 24,
+    "emb": "/kaggle/input/notebooks/shubhsaxena2008/heartwick-r4-bench/emb/emb_k2_mouth.pt"
+   },
+   "encode_s": 0.8,
+   "tokens": 12090,
+   "step_s": [
+    10.8,
+    10.8,
+    10.8
+   ],
+   "finite": true,
+   "peak_vram_gb_dit": 12.49,
+   "tiled": false,
+   "decode_s": 312.8,
+   "peak_vram_gb_decode": 14.9,
+   "gpu_s_total": 346.0
+  },
+  "fw480_k10_mouth_s7": {
+   "cfg": {
+    "id": "fw480_k10_mouth_s7",
+    "image": "/kaggle/working/in/K10.jpg",
+    "prompt": "k10_mouth",
+    "w": 480,
+    "h": 832,
+    "frames": 121,
+    "seed": 7,
+    "fps": 24,
+    "emb": "/kaggle/input/notebooks/shubhsaxena2008/heartwick-r4-bench/emb/emb_k10_mouth.pt"
+   },
+   "encode_s": 0.8,
+   "tokens": 12090,
+   "step_s": [
+    10.9,
+    11.0,
+    11.0
+   ],
+   "finite": true,
+   "peak_vram_gb_dit": 12.49,
+   "tiled": false,
+   "decode_s": 312.4,
+   "peak_vram_gb_decode": 14.9,
+   "gpu_s_total": 346.1
+  },
+  "fw480_k2_mouth_s11": {
+   "cfg": {
+    "id": "fw480_k2_mouth_s11",
+    "image": "/kaggle/working/in/K2.jpg",
+    "prompt": "k2_mouth",
+    "w": 480,
+    "h": 832,
+    "frames": 121,
+    "seed": 11,
+    "fps": 24,
+    "emb": "/kaggle/input/notebooks/shubhsaxena2008/heartwick-r4-bench/emb/emb_k2_mouth.pt"
+   },
+   "encode_s": 0.8,
+   "tokens": 12090,
+   "step_s": [
+    11.1,
+    11.1,
+    11.0
+   ],
+   "finite": true,
+   "peak_vram_gb_dit": 12.49,
+   "tiled": false,
+   "decode_s": 313.2,
+   "peak_vram_gb_decode": 14.9,
+   "gpu_s_total": 347.2
+  },
+  "fw704_k2_mouth_s7": {
+   "cfg": {
+    "id": "fw704_k2_mouth_s7",
+    "image": "/kaggle/working/in/K2.jpg",
+    "prompt": "k2_mouth",
+    "w": 704,
+    "h": 1280,
+    "frames": 121,
+    "seed": 7,
+    "fps": 24,
+    "emb": "/kaggle/input/notebooks/shubhsaxena2008/heartwick-r4-bench/emb/emb_k2_mouth.pt"
+   },
+   "encode_s": 1.6,
+   "tokens": 27280,
+   "error_dit": "imestep_proj, rotary_emb)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 472, in forward\n    self.scale_shift_table.unsqueeze(0) + temb.float()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.88 GiB. GPU 0 has a total capacity of 14.56 GiB of which 1.80 GiB is free. Including non-PyTorch memory, this process has 12.76 GiB memory in use. Of the allocated memory 12.56 GiB is allocated by PyTorch, and 70.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"
+  }
+ },
+ "phases": {
+  "vae_load_s": 79.2,
+  "dit_load_s": 2883.2
+ }
+}

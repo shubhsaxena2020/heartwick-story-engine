@@ -1,0 +1,274 @@
+{
+ "name": "hare",
+ "kind": "squirrel",
+ "units": 320.0,
+ "units_per_px": 0.3333333333333333,
+ "pelvis_h": 60.0,
+ "source": "heartwick vector part library (assets/src), rendered at 3.0 px per rig unit + paper-theatre finish (assets/src/paper_c.py)",
+ "bones": [
+  {
+   "name": "body",
+   "parent": null,
+   "pivot_px": [
+    1000.0,
+    2400.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "head",
+   "parent": "body",
+   "pivot_px": [
+    1384.0,
+    2358.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "paw_f",
+   "parent": "body",
+   "pivot_px": [
+    1312.0,
+    2454.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "paw_n",
+   "parent": "body",
+   "pivot_px": [
+    1336.0,
+    2466.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "leg_f",
+   "parent": "body",
+   "pivot_px": [
+    1042.0,
+    2460.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "leg_n",
+   "parent": "body",
+   "pivot_px": [
+    1066.0,
+    2472.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "tail1",
+   "parent": "body",
+   "pivot_px": [
+    934.0,
+    2382.0
+   ],
+   "rest_deg": 0.0,
+   "length": 270.0
+  },
+  {
+   "name": "tail2",
+   "parent": "tail1",
+   "pivot_px": [
+    898.0,
+    2382.0
+   ],
+   "rest_deg": 0.0,
+   "length": 255.0
+  },
+  {
+   "name": "tail3",
+   "parent": "tail2",
+   "pivot_px": [
+    868.0,
+    2382.0
+   ],
+   "rest_deg": 0.0,
+   "length": 240.0
+  }
+ ],
+ "parts": [
+  {
+   "bone": "tail3",
+   "name": "tail3",
+   "image": "tail3.png",
+   "anchor_px": [
+    30.0,
+    30.0
+   ],
+   "z": 2.8,
+   "size_px": [
+    16,
+    16
+   ]
+  },
+  {
+   "bone": "tail2",
+   "name": "tail2",
+   "image": "tail2.png",
+   "anchor_px": [
+    30.0,
+    30.0
+   ],
+   "z": 2.9,
+   "size_px": [
+    16,
+    16
+   ]
+  },
+  {
+   "bone": "tail1",
+   "name": "tail1",
+   "image": "tail1.png",
+   "anchor_px": [
+    118.0,
+    94.0
+   ],
+   "z": 3,
+   "size_px": [
+    132,
+    132
+   ]
+  },
+  {
+   "bone": "leg_f",
+   "name": "leg_f",
+   "image": "leg_f.png",
+   "anchor_px": [
+    82.0,
+    82.0
+   ],
+   "z": 5,
+   "size_px": [
+    303,
+    215
+   ]
+  },
+  {
+   "bone": "paw_f",
+   "name": "paw_f",
+   "image": "paw_f.png",
+   "anchor_px": [
+    61.0,
+    61.0
+   ],
+   "z": 6,
+   "size_px": [
+    81,
+    183
+   ]
+  },
+  {
+   "bone": "body",
+   "name": "body",
+   "image": "body.png",
+   "anchor_px": [
+    119.0,
+    214.0
+   ],
+   "z": 10,
+   "size_px": [
+    556,
+    380
+   ]
+  },
+  {
+   "bone": "leg_n",
+   "name": "leg_n",
+   "image": "leg_n.png",
+   "anchor_px": [
+    82.0,
+    82.0
+   ],
+   "z": 12,
+   "size_px": [
+    303,
+    215
+   ]
+  },
+  {
+   "bone": "head",
+   "name": "head",
+   "image": "head.png",
+   "anchor_px": [
+    125.0,
+    460.0
+   ],
+   "z": 14,
+   "size_px": [
+    493,
+    529
+   ]
+  },
+  {
+   "bone": "paw_n",
+   "name": "paw_n",
+   "image": "paw_n.png",
+   "anchor_px": [
+    61.0,
+    61.0
+   ],
+   "z": 16,
+   "size_px": [
+    81,
+    183
+   ]
+  }
+ ],
+ "contacts": [
+  [
+   "leg_n",
+   [
+    90.0,
+    144.0
+   ]
+  ],
+  [
+   "leg_f",
+   [
+    90.0,
+    144.0
+   ]
+  ],
+  [
+   "body",
+   [
+    186.0,
+    174.0
+   ]
+  ],
+  [
+   "paw_n",
+   [
+    6.0,
+    132.0
+   ]
+  ],
+  [
+   "body",
+   [
+    42.0,
+    186.0
+   ]
+  ],
+  [
+   "body",
+   [
+    -60.0,
+    150.0
+   ]
+  ]
+ ],
+ "springs": [],
+ "variants": {}
+}

@@ -1,0 +1,8 @@
+source                                 wall s/clip  par  h/week clips/week
+kaggle_t4x2_480_q5 (26 of 30 h/week to video)         870    2    26.0        200
+laptop_igpu_night_480 (8 h x 7, needs page-file fix)        1665    1    56.0         97
+hf_zerogpu_father_free_account (5 min/day)          75    1     0.6         28
+TOTAL                                                                  325
+need for 7 videos at 12 clips/video x1.4 attempts = 118 gens/week -> capacity covers 2.8x (19.3 videos/week)
+need for 7 videos at 18 clips/video x1.4 attempts = 176 gens/week -> capacity covers 1.8x (12.9 videos/week)
+need for 7 videos at 24 clips/video x1.4 attempts = 235 gens/week -> capacity covers 1.4x (9.7 videos/week)

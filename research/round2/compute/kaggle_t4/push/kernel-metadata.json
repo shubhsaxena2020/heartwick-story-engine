@@ -1,0 +1,15 @@
+{
+ "id": "shubhsaxena2008/heartwick-r2-compute-t4",
+ "title": "Heartwick R2 Compute T4",
+ "code_file": "r2_compute_t4.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "model_sources": []
+}

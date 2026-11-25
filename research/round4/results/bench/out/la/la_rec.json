@@ -1,0 +1,24 @@
+{
+ "load_s": 76.1,
+ "la_k2": {
+  "esrgan_s": 0.43,
+  "depth_s": 0.61,
+  "matte_s": 3.69,
+  "plate_s": 5.38,
+  "render_s": 21.5,
+  "frames": 144,
+  "ms_per_frame": 149.3
+ },
+ "la_k10": {
+  "esrgan_s": 0.17,
+  "depth_s": 0.34,
+  "matte_s": 3.64,
+  "plate_s": 4.32,
+  "render_s": 19.5,
+  "frames": 144,
+  "ms_per_frame": 135.4
+ },
+ "torch_bench": {
+  "torch_ms_per_frame": 20.16
+ }
+}

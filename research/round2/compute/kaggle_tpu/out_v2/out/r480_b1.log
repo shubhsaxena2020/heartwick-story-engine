@@ -1,0 +1,15 @@
+
+$ source /tmp/mdv/bin/activate; cd /tmp/maxdiffusion; set -o pipefail; export HF_HUB_CACHE=/tmp/hf; export LIBTPU_INIT_ARGS='--xla_tpu_enable_async_collective_fusion=true --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true --xla_tpu_enable_async_collective_fusion_multiple_steps=true --xla_tpu_overlap_compute_collective_tc=true --xla_enable_async_all_reduce=true'; python src/maxdiffusion/generate_wan.py /kaggle/working/r480_b1.yml 2>&1 | grep -v '^\s*$' | tail -400
+Traceback (most recent call last):
+  File "/tmp/maxdiffusion/src/maxdiffusion/generate_wan.py", line 16, in <module>
+    import jax
+ModuleNotFoundError: No module named 'jax'
+
+$ grep -E 'load_time|compile_time|generation_time|generation time|Error|error' /kaggle/working/out/r480_b1.log | tail -20; free -g; df -h /tmp
+ModuleNotFoundError: No module named 'jax'
+$ grep -E 'load_time|compile_time|generation_time|generation time|Error|error' /kaggle/working/out/r480_b1.log | tail -20; free -g; df -h /tmp
+               total        used        free      shared  buff/cache   available
+Mem:              31           0          24           0           5          30
+Swap:              0           0           0
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         8.0T  5.6T  2.5T  70% /

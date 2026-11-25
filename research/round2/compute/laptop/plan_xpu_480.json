@@ -1,0 +1,2 @@
+{"name": "xpu_q4_480", "quant": "Q4_K_M", "high": "C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf", "low": "C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf",
+ "clips": [{"id": "xpu_q4_480x832_81f", "image": "C:/Users/shubh/Projects/heartwick/research/round2/compute/laptop/key.jpg", "w": 480, "h": 832, "frames": 81, "seed": 7, "emb": "C:/Users/shubh/tools/r2models/emb_nell.pt"}]}

@@ -1,0 +1,609 @@
+{
+ "name": "elder",
+ "kind": "humanoid",
+ "units": 1000.0,
+ "units_per_px": 0.5,
+ "pelvis_h": 468,
+ "source": "heartwick vector part library (assets/src), rendered at 2.0 px per rig unit + paper-theatre finish (assets/src/paper_c.py)",
+ "bones": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "pivot_px": [
+    1000.0,
+    2400.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "spine",
+   "parent": "pelvis",
+   "pivot_px": [
+    1000.0,
+    2400.0
+   ],
+   "rest_deg": 0.0,
+   "length": 344.0
+  },
+  {
+   "name": "chest",
+   "parent": "spine",
+   "pivot_px": [
+    1000.0,
+    2056.0
+   ],
+   "rest_deg": 0.0,
+   "length": 300.0
+  },
+  {
+   "name": "neck",
+   "parent": "chest",
+   "pivot_px": [
+    1016.0,
+    1756.0
+   ],
+   "rest_deg": 0.0,
+   "length": 76.0
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "pivot_px": [
+    1020.0,
+    1680.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "uarm_f",
+   "parent": "chest",
+   "pivot_px": [
+    980.0,
+    1804.0
+   ],
+   "rest_deg": 0.0,
+   "length": 336.0
+  },
+  {
+   "name": "farm_f",
+   "parent": "uarm_f",
+   "pivot_px": [
+    980.0,
+    2140.0
+   ],
+   "rest_deg": 0.0,
+   "length": 296.0
+  },
+  {
+   "name": "hand_f",
+   "parent": "farm_f",
+   "pivot_px": [
+    980.0,
+    2436.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "uarm_n",
+   "parent": "chest",
+   "pivot_px": [
+    1020.0,
+    1804.0
+   ],
+   "rest_deg": 0.0,
+   "length": 336.0
+  },
+  {
+   "name": "farm_n",
+   "parent": "uarm_n",
+   "pivot_px": [
+    1020.0,
+    2140.0
+   ],
+   "rest_deg": 0.0,
+   "length": 296.0
+  },
+  {
+   "name": "hand_n",
+   "parent": "farm_n",
+   "pivot_px": [
+    1020.0,
+    2436.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "thigh_f",
+   "parent": "pelvis",
+   "pivot_px": [
+    976.0,
+    2408.0
+   ],
+   "rest_deg": 0.0,
+   "length": 464.0
+  },
+  {
+   "name": "shin_f",
+   "parent": "thigh_f",
+   "pivot_px": [
+    976.0,
+    2872.0
+   ],
+   "rest_deg": 0.0,
+   "length": 444.0
+  },
+  {
+   "name": "foot_f",
+   "parent": "shin_f",
+   "pivot_px": [
+    976.0,
+    3316.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "thigh_n",
+   "parent": "pelvis",
+   "pivot_px": [
+    1024.0,
+    2408.0
+   ],
+   "rest_deg": 0.0,
+   "length": 464.0
+  },
+  {
+   "name": "shin_n",
+   "parent": "thigh_n",
+   "pivot_px": [
+    1024.0,
+    2872.0
+   ],
+   "rest_deg": 0.0,
+   "length": 444.0
+  },
+  {
+   "name": "foot_n",
+   "parent": "shin_n",
+   "pivot_px": [
+    1024.0,
+    3316.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  }
+ ],
+ "parts": [
+  {
+   "bone": "shin_f",
+   "name": "hem_f",
+   "image": "hem_f.png",
+   "anchor_px": [
+    215.0,
+    137.0
+   ],
+   "z": 9.0,
+   "size_px": [
+    407,
+    547
+   ]
+  },
+  {
+   "bone": "thigh_f",
+   "name": "skirt_f",
+   "image": "skirt_f.png",
+   "anchor_px": [
+    151.0,
+    156.0
+   ],
+   "z": 9.5,
+   "size_px": [
+    274,
+    696
+   ]
+  },
+  {
+   "bone": "thigh_f",
+   "name": "thigh_f",
+   "image": "thigh_f.png",
+   "anchor_px": [
+    78.0,
+    78.0
+   ],
+   "z": 10,
+   "size_px": [
+    124,
+    576
+   ]
+  },
+  {
+   "bone": "shin_f",
+   "name": "shin_f",
+   "image": "shin_f.png",
+   "anchor_px": [
+    62.0,
+    62.0
+   ],
+   "z": 11,
+   "size_px": [
+    92,
+    526
+   ]
+  },
+  {
+   "bone": "uarm_f",
+   "name": "uarm_f",
+   "image": "uarm_f.png",
+   "anchor_px": [
+    76.0,
+    76.0
+   ],
+   "z": 12,
+   "size_px": [
+    120,
+    454
+   ]
+  },
+  {
+   "bone": "foot_f",
+   "name": "foot_f",
+   "image": "foot_f.png",
+   "anchor_px": [
+    74.0,
+    77.0
+   ],
+   "z": 12,
+   "size_px": [
+    177,
+    99
+   ]
+  },
+  {
+   "bone": "pelvis",
+   "name": "skirt_drape",
+   "image": "skirt_drape.png",
+   "anchor_px": [
+    193.0,
+    136.0
+   ],
+   "z": 12.5,
+   "size_px": [
+    354,
+    735
+   ]
+  },
+  {
+   "bone": "farm_f",
+   "name": "farm_f",
+   "image": "farm_f.png",
+   "anchor_px": [
+    92.0,
+    76.0
+   ],
+   "z": 13,
+   "size_px": [
+    160,
+    395
+   ]
+  },
+  {
+   "bone": "hand_f",
+   "name": "hand_f",
+   "image": "hand_f.png",
+   "anchor_px": [
+    52.0,
+    27.0
+   ],
+   "z": 14,
+   "size_px": [
+    85,
+    133
+   ]
+  },
+  {
+   "bone": "thigh_n",
+   "name": "thigh_n",
+   "image": "thigh_n.png",
+   "anchor_px": [
+    78.0,
+    78.0
+   ],
+   "z": 16,
+   "size_px": [
+    124,
+    576
+   ]
+  },
+  {
+   "bone": "shin_n",
+   "name": "shin_n",
+   "image": "shin_n.png",
+   "anchor_px": [
+    62.0,
+    62.0
+   ],
+   "z": 17,
+   "size_px": [
+    92,
+    526
+   ]
+  },
+  {
+   "bone": "foot_n",
+   "name": "foot_n",
+   "image": "foot_n.png",
+   "anchor_px": [
+    74.0,
+    77.0
+   ],
+   "z": 18,
+   "size_px": [
+    177,
+    99
+   ]
+  },
+  {
+   "bone": "pelvis",
+   "name": "skirt_hip",
+   "image": "skirt_hip.png",
+   "anchor_px": [
+    158.0,
+    177.0
+   ],
+   "z": 20,
+   "size_px": [
+    284,
+    327
+   ]
+  },
+  {
+   "bone": "shin_n",
+   "name": "hem_n",
+   "image": "hem_n.png",
+   "anchor_px": [
+    245.0,
+    137.0
+   ],
+   "z": 20.5,
+   "size_px": [
+    467,
+    547
+   ]
+  },
+  {
+   "bone": "thigh_n",
+   "name": "skirt_n",
+   "image": "skirt_n.png",
+   "anchor_px": [
+    181.0,
+    156.0
+   ],
+   "z": 21,
+   "size_px": [
+    334,
+    696
+   ]
+  },
+  {
+   "bone": "spine",
+   "name": "spine",
+   "image": "spine.png",
+   "anchor_px": [
+    133.0,
+    461.0
+   ],
+   "z": 30,
+   "size_px": [
+    236,
+    544
+   ]
+  },
+  {
+   "bone": "chest",
+   "name": "chest",
+   "image": "chest.png",
+   "anchor_px": [
+    125.0,
+    340.0
+   ],
+   "z": 31,
+   "size_px": [
+    220,
+    407
+   ]
+  },
+  {
+   "bone": "neck",
+   "name": "neck",
+   "image": "neck.png",
+   "anchor_px": [
+    52.0,
+    146.0
+   ],
+   "z": 32,
+   "size_px": [
+    72,
+    178
+   ]
+  },
+  {
+   "bone": "head",
+   "name": "head",
+   "image": "head.png",
+   "anchor_px": [
+    182.0,
+    283.0
+   ],
+   "z": 34,
+   "size_px": [
+    322,
+    488
+   ]
+  },
+  {
+   "bone": "uarm_n",
+   "name": "uarm_n",
+   "image": "uarm_n.png",
+   "anchor_px": [
+    76.0,
+    76.0
+   ],
+   "z": 40,
+   "size_px": [
+    120,
+    454
+   ]
+  },
+  {
+   "bone": "farm_n",
+   "name": "farm_n",
+   "image": "farm_n.png",
+   "anchor_px": [
+    92.0,
+    76.0
+   ],
+   "z": 41,
+   "size_px": [
+    160,
+    395
+   ]
+  },
+  {
+   "bone": "hand_n",
+   "name": "hand_n",
+   "image": "hand_n.png",
+   "anchor_px": [
+    54.0,
+    427.0
+   ],
+   "z": 42,
+   "size_px": [
+    81,
+    1089
+   ]
+  }
+ ],
+ "contacts": [
+  [
+   "foot_n",
+   [
+    88.0,
+    20.0
+   ]
+  ],
+  [
+   "foot_n",
+   [
+    -32.0,
+    24.0
+   ]
+  ],
+  [
+   "foot_f",
+   [
+    88.0,
+    20.0
+   ]
+  ],
+  [
+   "foot_f",
+   [
+    -32.0,
+    24.0
+   ]
+  ],
+  [
+   "shin_n",
+   [
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "shin_f",
+   [
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "shin_f",
+   [
+    0.0,
+    266.4
+   ]
+  ]
+ ],
+ "springs": [],
+ "variants": {
+  "head": {
+   "blink": {
+    "bone": "head",
+    "image": "head__blink.png",
+    "anchor_px": [
+     182.0,
+     283.0
+    ]
+   }
+  },
+  "hand_f": {
+   "point": {
+    "bone": "hand_f",
+    "image": "hand_f__point.png",
+    "anchor_px": [
+     52.0,
+     27.0
+    ]
+   },
+   "fist": {
+    "bone": "hand_f",
+    "image": "hand_f__fist.png",
+    "anchor_px": [
+     54.0,
+     24.0
+    ]
+   },
+   "cup": {
+    "bone": "hand_f",
+    "image": "hand_f__cup.png",
+    "anchor_px": [
+     52.0,
+     27.0
+    ]
+   }
+  },
+  "hand_n": {
+   "open": {
+    "bone": "hand_n",
+    "image": "hand_n__open.png",
+    "anchor_px": [
+     52.0,
+     27.0
+    ]
+   },
+   "point": {
+    "bone": "hand_n",
+    "image": "hand_n__point.png",
+    "anchor_px": [
+     52.0,
+     27.0
+    ]
+   },
+   "cup": {
+    "bone": "hand_n",
+    "image": "hand_n__cup.png",
+    "anchor_px": [
+     52.0,
+     27.0
+    ]
+   }
+  }
+ },
+ "props": {
+  "hand_n": "staff (built into hand_n; use the hand_n variants for an empty hand)"
+ }
+}

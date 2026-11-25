@@ -1,0 +1,3 @@
+{"id": "shubhsaxena2008/heartwick-r4-cpuconc1", "title": "Heartwick R4 Cpuconc1", "code_file": "main.py", "language": "python",
+ "kernel_type": "script", "is_private": true, "enable_gpu": false, "enable_tpu": false, "enable_internet": false,
+ "dataset_sources": [], "competition_sources": [], "kernel_sources": [], "model_sources": []}

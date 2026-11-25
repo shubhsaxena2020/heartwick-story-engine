@@ -1,0 +1,59 @@
+{
+ "load_s": 52.7,
+ "new_garden_1088_s3": {
+  "s": 61.7,
+  "nonblank": true,
+  "w": 1088,
+  "h": 1920,
+  "n_refs": 2,
+  "peak_gb": 9.59
+ },
+ "new_garden_1088_s21": {
+  "s": 61.7,
+  "nonblank": true,
+  "w": 1088,
+  "h": 1920,
+  "n_refs": 2,
+  "peak_gb": 9.59
+ },
+ "new_window_768_s3": {
+  "s": 39.7,
+  "nonblank": true,
+  "w": 768,
+  "h": 1344,
+  "n_refs": 2,
+  "peak_gb": 9.59
+ },
+ "new_window_768_s21": {
+  "s": 38.7,
+  "nonblank": true,
+  "w": 768,
+  "h": 1344,
+  "n_refs": 2,
+  "peak_gb": 9.59
+ },
+ "edit_blink_K2_s3": {
+  "s": 33.9,
+  "nonblank": true,
+  "w": 768,
+  "h": 1344,
+  "n_refs": 1,
+  "peak_gb": 9.59
+ },
+ "edit_mouth_K2_s3": {
+  "s": 33.4,
+  "nonblank": true,
+  "w": 768,
+  "h": 1344,
+  "n_refs": 1,
+  "peak_gb": 9.59
+ },
+ "edit_closeup_K10_s3": {
+  "s": 48.0,
+  "nonblank": true,
+  "w": 1088,
+  "h": 1920,
+  "n_refs": 1,
+  "peak_gb": 9.59
+ }
+}

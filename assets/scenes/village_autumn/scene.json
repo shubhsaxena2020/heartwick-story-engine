@@ -1,0 +1,88 @@
+{
+ "name": "village_autumn",
+ "world": [
+  1400,
+  3000
+ ],
+ "ground": 2480.0,
+ "tall": true,
+ "margin": 260,
+ "q": 1.25,
+ "spots": {
+  "left": [
+   420.0,
+   2460.0
+  ],
+  "center": [
+   700.0,
+   2480.0
+  ],
+  "right": [
+   952.0000000000001,
+   2480.0
+  ],
+  "under_maple": [
+   868.0,
+   2510.0
+  ],
+  "canopy": [
+   1092.0,
+   1500.0
+  ],
+  "sky": [
+   700.0,
+   900.0
+  ]
+ },
+ "fx": {
+  "particles": [
+   "leaves",
+   "motes"
+  ],
+  "rays": {
+   "origin": [
+    336.0,
+    1250.0
+   ],
+   "angle": 62,
+   "length": 2600,
+   "alpha": 0.12
+  },
+  "mist": {
+   "y": 2200.0,
+   "alpha": 0.22
+  },
+  "birds": true
+ },
+ "layers": [
+  {
+   "name": "sky",
+   "depth": 0.08,
+   "image": "00_sky.jpg"
+  },
+  {
+   "name": "far",
+   "depth": 0.3,
+   "image": "01_far.png"
+  },
+  {
+   "name": "mid",
+   "depth": 0.6,
+   "image": "02_mid.png"
+  },
+  {
+   "name": "ground",
+   "depth": 0.92,
+   "image": "03_ground.png"
+  },
+  {
+   "name": "actors",
+   "depth": 1.0
+  },
+  {
+   "name": "fore",
+   "depth": 1.25,
+   "image": "05_fore.png"
+  }
+ ]
+}

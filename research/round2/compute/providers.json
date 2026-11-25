@@ -1,0 +1,14 @@
+{
+ "_note": "Free GPU sources checked 22 Nov 2026 for Heartwick (no card anywhere; Shubh is 17; father is an adult without a card). Nothing was signed up for or logged into.",
+ "kaggle": {"gpu": "T4 x2 (16 GB each) per session", "quota": "about 30 GPU-h/week, 12 h/session, 2 GPU sessions (queued count)", "card": false, "phone": "required for GPU/internet", "age": "under legal contracting age -> parental-consent process (Terms)", "automation": "official CLI/API", "commercial": "Terms: 'only use the Services for your own internal, personal, non-commercial use, and not on behalf of or for the benefit of any third party'", "multi_account": "Terms: 'may not have, control, or operate under more than one active Kaggle account' -> second account for the same person = ban risk", "measured": "this round"},
+ "kaggle_tpu": {"gpu": "machine_shape TpuV5E8 / TpuV6E8 accepted by CLI 2.2.5", "measured": "both API-pushed runs landed on a 4-vCPU / 31 GB CPU VM with jax.devices()==[CpuDevice]; no TPU attached", "verdict": "not usable by automation as tested"},
+ "hf_zerogpu": {"gpu": "half RTX Pro 6000 Blackwell (48 GB)", "quota": "anonymous 2 min/day, free account 5 min/day, quota belongs to the CALLER not the Space owner", "hosting": "free account in good standing (verified email, >30 days old) may host 2 ZeroGPU Spaces; hosting adds no quota", "card": false, "age": "13+", "commercial": "HF ToS has no non-commercial clause; model licence governs (Apache-2.0)"},
+ "colab_free": {"gpu": "T4 when available, unpublished dynamic limits, <=12 h", "card": false, "restrictions": "free tier disallows remote control/SSH, bypassing the notebook UI for a web UI, distributed workers; all tiers ban multiple accounts to get around limits", "automation": "headless/scripted use outside the notebook UI is risky", "verdict": "manual top-up only"},
+ "lightning_ai": {"quota": "reports conflict: Sep-2026 tracker says one-time grant, 5 credits on registration + 25 only after adding a card; Nov-2026 tracker says starter GPU hours cut 80->50", "card": "needed for the bigger grant", "verdict": "small one-time bonus at best; not a weekly source"},
+ "sagemaker_studio_lab": {"quota": "4 h GPU per 24 h", "status": "AWS: no longer open to new customers (per gpuperhour, Sep 2026)", "verdict": "closed"},
+ "paperspace_gradient_free": {"gpu": "Quadro M4000 8 GB, 6 h auto-shutdown", "verdict": "cannot hold even one A14B expert; useless for this model"},
+ "saturn_cloud": {"verdict": "no current free GPU tier found"},
+ "intel_tiber_ai_cloud": {"quota": "free JupyterLab learning environment; free Max-GPU instances reported dropped in the console migration", "verdict": "not a dependable GPU source"},
+ "deepnote_free": {"gpu": "none (CPU basic machines only)", "verdict": "no"},
+ "modal": {"quota": "$30/month credit", "card": "card required -> excluded by Shubh's rule", "verdict": "excluded"}
+}

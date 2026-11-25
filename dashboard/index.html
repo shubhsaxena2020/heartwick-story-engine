@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heartwick Studio</title>
+<style>
+@font-face { font-family: "Nunito"; src: url("/fonts/Nunito-VF.ttf") format("truetype"); font-weight: 200 1000; }
+@font-face { font-family: "Fraunces"; src: url("/fonts/Fraunces-VF.ttf") format("truetype"); font-weight: 100 900; }
+:root {
+  --bg: #10233A; --panel: #16304a; --panel2: #1c3a57; --line: #2a4a68;
+  --cream: #FFF4E2; --muted: #b9c4cf; --ember: #FFA552; --honey: #F3C77A; --maple: #B8432F; --sage: #8DA67E; --teal: #1F4E5C;
+  --ok: #8DA67E; --warn: #F3C77A; --bad: #ff7b6b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--cream); font-family: "Nunito", system-ui, sans-serif; font-size: 15px; }
+header { padding: 20px 24px 8px; display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 30px; margin: 0; }
+h1 small { font-family: "Nunito"; font-size: 12px; letter-spacing: .25em; color: var(--honey); margin-left: 8px; font-weight: 800; }
+h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 20px; margin: 0 0 12px; }
+.sub { color: var(--muted); font-size: 13px; }
+main { padding: 8px 24px 40px; display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
+section { min-width: 0; }
+section { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.queue { display: grid; grid-template-columns: repeat(6, minmax(130px, 1fr)); gap: 10px; overflow-x: auto; }
+.col { background: var(--panel2); border-radius: 10px; padding: 10px; min-height: 90px; }
+.col h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--honey); }
+.chip { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; margin-bottom: 6px; font-size: 13px; }
+.chip.nc { border-color: var(--bad); }
+.videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr)); gap: 14px; }
+.card { background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.card img.thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #0b1a2b; display: block; }
+.card .body { padding: 12px; display: grid; gap: 8px; }
+.badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 800; background: var(--teal); }
+.badge.review { background: var(--ember); color: var(--bg); } .badge.approved { background: var(--ok); color: var(--bg); }
+.badge.needs_changes { background: var(--bad); color: var(--bg); }
+.links { overflow-wrap: anywhere; } .links a { color: var(--honey); margin-right: 10px; font-size: 13px; }
+.kv { color: var(--muted); font-size: 13px; }
+textarea { width: 100%; min-height: 54px; background: var(--bg); color: var(--cream); border: 1px solid var(--line); border-radius: 8px; padding: 6px; font: inherit; }
+.toggle { display: flex; gap: 8px; }
+button { font: inherit; font-weight: 800; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+button.ap { background: var(--ok); color: var(--bg); } button.nc { background: var(--bad); color: var(--bg); }
+button.ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+button:focus-visible, a:focus-visible, textarea:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+td, th { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+th { color: var(--honey); font-weight: 800; }
+.bar { height: 14px; background: var(--bg); border-radius: 999px; overflow: hidden; border: 1px solid var(--line); }
+.bar > div { height: 100%; background: linear-gradient(90deg, var(--sage), var(--ember)); }
+.err { color: var(--bad); }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+.ph { aspect-ratio: 16/9; display: grid; place-items: center; color: var(--muted); background: #0b1a2b; font-size: 13px; }
+.tablewrap { overflow-x: auto; }
+audio { width: 100%; height: 32px; }
+video { width: 100%; max-height: 420px; background: #000; display: block; }
+@media (max-width: 860px) { .grid2 { grid-template-columns: minmax(0, 1fr); } .queue { grid-template-columns: repeat(6, 150px); } header, main { padding-left: 16px; padding-right: 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Heartwick <small>STUDIO</small></h1>
+  <span class="sub" id="gen">loading...</span>
+  <button class="ghost" id="live">Check Kaggle now</button>
+</header>
+<main>
+  <section>
+    <h2>Story queue</h2>
+    <div class="queue" id="queue"></div>
+    <p class="sub" id="stories"></p>
+  </section>
+  <section>
+    <h2>Videos</h2>
+    <div class="videos" id="videos"></div>
+  </section>
+  <div class="grid2">
+    <section>
+      <h2>Kaggle GPU</h2>
+      <div id="quota"></div>
+      <div id="klive" class="sub"></div>
+      <div class="tablewrap"><table id="jobs"></table></div>
+      <h3 class="sub" style="margin:14px 0 4px">Queue runner (tools/run_queue.py)</h3>
+      <pre id="qlog" style="white-space:pre-wrap;font-size:12px;color:var(--muted);max-height:220px;overflow:auto;margin:0"></pre>
+    </section>
+    <section>
+      <h2>Errors</h2>
+      <div id="errors"></div>
+    </section>
+  </div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const LABEL = {script:"Script", narration:"Narration", images:"Images", render:"Render", review:"Review", approved:"Approved"};
+let playing = null;
+
+async function load(live) {
+  const r = await fetch("/api/state" + (live ? "?live=1" : ""));
+  const s = await r.json();
+  $("gen").textContent = "updated " + s.generated.replace("T", " ");
+  // queue
+  $("queue").innerHTML = s.stages.map(st => `<div class="col"><h3>${LABEL[st]}</h3>${
+    s.videos.filter(v => v.stage === st).map(v => `<div class="chip ${v.approval && v.approval.status==='needs_changes' ? 'nc':''}">${esc(v.name)}<div class="kv">${esc(v.progress.narration)} lines, ${esc(v.progress.images)} images</div></div>`).join("")
+  }</div>`).join("");
+  $("stories").textContent = "Scripts: " + s.stories.map(x => `${x.slug} (${x.chapters} chapters, ${x.words} words)`).join(", ");
+  // videos (keep a playing video untouched)
+  const cards = s.videos.map(v => {
+    const f = v.files, ap = v.approval || {};
+    const status = ap.status && ap.status !== "pending" ? ap.status : v.stage;
+    const qa = v.qa || {}, au = qa.audio || {};
+    return `<div class="card" data-name="${esc(v.name)}">
+      ${f[v.name + ".mp4"] ? `<video controls preload="none" poster="${esc(f["thumbnail.jpg"] || "")}" src="${esc(f[v.name + ".mp4"])}"></video>`
+        : (f["thumbnail.jpg"] ? `<img class="thumb" src="${esc(f["thumbnail.jpg"])}" alt="thumbnail">` : `<div class="ph">No preview yet (stage: ${esc(v.stage)})</div>`)}
+      <div class="body">
+        <div><b>${esc(v.name)}</b> <span class="badge ${esc(status)}">${esc(status.replace("_", " "))}</span></div>
+        <div class="kv">${esc(v.title || "")}</div>
+        ${qa.duration_s ? `<div class="kv">${qa.duration_s.toFixed(1)} s, ${qa.shots} shots (${qa.shots_per_min}/min), ${au.integrated_lufs ?? "?"} LUFS, peak ${au.true_peak_dbfs ?? "?"} dB</div>` : ""}
+        <div class="links">${Object.entries(f).filter(([k]) => !k.endsWith(".mp4")).map(([k, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(k)}</a>`).join("")}${f[v.name + ".mp4"] ? `<a href="${esc(f[v.name + ".mp4"])}" download>download mp4</a>` : ""}</div>
+        ${v.samples.length ? `<div class="kv">Voice samples:</div>` + v.samples.map(u => `<div class="kv">${esc(u.split("/").pop())}<audio controls preload="none" src="${esc(u)}"></audio></div>`).join("") : ""}
+        ${v.errors.length ? `<div class="err">${v.errors.map(esc).join("<br>")}</div>` : ""}
+        ${v.stage === "review" || v.stage === "approved" ? `
+        <textarea aria-label="Note for ${esc(v.name)}" placeholder="Notes for changes (optional)">${esc(ap.note || "")}</textarea>
+        <div class="toggle">
+          <button class="ap" onclick="decide('${esc(v.name)}','approved',this)">Approve</button>
+          <button class="nc" onclick="decide('${esc(v.name)}','needs_changes',this)">Needs changes</button>
+          ${ap.status ? `<button class="ghost" onclick="decide('${esc(v.name)}','pending',this)">Reset</button>` : ""}
+        </div>
+        ${ap.at ? `<div class="kv">Decision saved ${esc(ap.at.replace("T", " "))}</div>` : ""}` : ""}
+      </div></div>`;
+  }).join("");
+  const typing = document.activeElement && document.activeElement.tagName === "TEXTAREA";
+  if (!playing && !typing) $("videos").innerHTML = cards || `<p class="sub">No videos yet. Run: python heartwick.py make stories/&lt;story&gt;.md</p>`;
+  // kaggle
+  const k = s.kaggle, pct = Math.min(100, 100 * k.gpu_minutes_7d / k.quota_minutes);
+  $("quota").innerHTML = `<div class="kv">GPU used in the last 7 days: <b>${k.gpu_minutes_7d} min</b> of ~${k.quota_minutes / 60} h weekly quota (${pct.toFixed(1)}%). All-time: ${k.gpu_minutes_total} min.</div><div class="bar"><div style="width:${pct}%"></div></div>`;
+  $("qlog").textContent = (k.queue_log || []).join(String.fromCharCode(10)) || "Queue runner not started.";
+  if (s.kaggle_live) $("klive").innerHTML = "Live: " + Object.entries(s.kaggle_live).map(([a, b]) => `${esc(a)}: ${esc(b)}`).join(" | ");
+  $("jobs").innerHTML = `<tr><th>Kernel</th><th>Pushed</th><th>State</th><th>Min</th><th>Work</th></tr>` + k.jobs.map(j =>
+    `<tr><td>${esc(j.slug.split("/").pop())}${j.gpu ? " (GPU)" : " (CPU)"}</td><td>${esc(j.pushed.replace("T", " "))}</td><td class="${["complete", "queued/running"].includes(j.state) ? "" : "err"}">${esc(j.state)}</td><td>${esc(j.run_min_est)}</td><td>${j.images} img, ${j.utts} lines${j.render ? ", render" : ""}</td></tr>`).join("");
+  $("errors").innerHTML = s.errors.length ? s.errors.map(e => `<div class="err">${esc(e.video)}: ${esc(e.msg)}</div>`).join("") : `<p class="sub">No errors.</p>`;
+}
+
+async function decide(name, status, btn) {
+  const note = btn.closest(".body").querySelector("textarea")?.value || "";
+  const r = await fetch("/api/approve", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({name, status, note})});
+  if (!r.ok) { alert("Could not save"); return; }
+  playing = null; load(false);
+}
+document.addEventListener("play", () => { playing = true; }, true);
+document.addEventListener("pause", () => { playing = null; }, true);
+$("live").onclick = () => load(true);
+load(false);
+setInterval(() => { if (!playing) load(false); }, 30000);
+</script>
+</body>
+</html>

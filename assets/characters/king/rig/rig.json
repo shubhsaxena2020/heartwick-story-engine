@@ -1,0 +1,634 @@
+{
+ "name": "king",
+ "kind": "humanoid",
+ "units": 1000.0,
+ "units_per_px": 0.5,
+ "pelvis_h": 468,
+ "source": "heartwick vector part library (assets/src), rendered at 2.0 px per rig unit",
+ "bones": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "pivot_px": [
+    1000.0,
+    2400.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "spine",
+   "parent": "pelvis",
+   "pivot_px": [
+    1000.0,
+    2400.0
+   ],
+   "rest_deg": 0.0,
+   "length": 344.0
+  },
+  {
+   "name": "chest",
+   "parent": "spine",
+   "pivot_px": [
+    1000.0,
+    2056.0
+   ],
+   "rest_deg": 0.0,
+   "length": 300.0
+  },
+  {
+   "name": "neck",
+   "parent": "chest",
+   "pivot_px": [
+    1016.0,
+    1756.0
+   ],
+   "rest_deg": 0.0,
+   "length": 76.0
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "pivot_px": [
+    1020.0,
+    1680.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "uarm_f",
+   "parent": "chest",
+   "pivot_px": [
+    980.0,
+    1804.0
+   ],
+   "rest_deg": 0.0,
+   "length": 336.0
+  },
+  {
+   "name": "farm_f",
+   "parent": "uarm_f",
+   "pivot_px": [
+    980.0,
+    2140.0
+   ],
+   "rest_deg": 0.0,
+   "length": 296.0
+  },
+  {
+   "name": "hand_f",
+   "parent": "farm_f",
+   "pivot_px": [
+    980.0,
+    2436.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "uarm_n",
+   "parent": "chest",
+   "pivot_px": [
+    1020.0,
+    1804.0
+   ],
+   "rest_deg": 0.0,
+   "length": 336.0
+  },
+  {
+   "name": "farm_n",
+   "parent": "uarm_n",
+   "pivot_px": [
+    1020.0,
+    2140.0
+   ],
+   "rest_deg": 0.0,
+   "length": 296.0
+  },
+  {
+   "name": "hand_n",
+   "parent": "farm_n",
+   "pivot_px": [
+    1020.0,
+    2436.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "thigh_f",
+   "parent": "pelvis",
+   "pivot_px": [
+    976.0,
+    2408.0
+   ],
+   "rest_deg": 0.0,
+   "length": 464.0
+  },
+  {
+   "name": "shin_f",
+   "parent": "thigh_f",
+   "pivot_px": [
+    976.0,
+    2872.0
+   ],
+   "rest_deg": 0.0,
+   "length": 444.0
+  },
+  {
+   "name": "foot_f",
+   "parent": "shin_f",
+   "pivot_px": [
+    976.0,
+    3316.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "thigh_n",
+   "parent": "pelvis",
+   "pivot_px": [
+    1024.0,
+    2408.0
+   ],
+   "rest_deg": 0.0,
+   "length": 464.0
+  },
+  {
+   "name": "shin_n",
+   "parent": "thigh_n",
+   "pivot_px": [
+    1024.0,
+    2872.0
+   ],
+   "rest_deg": 0.0,
+   "length": 444.0
+  },
+  {
+   "name": "foot_n",
+   "parent": "shin_n",
+   "pivot_px": [
+    1024.0,
+    3316.0
+   ],
+   "rest_deg": 0.0,
+   "length": 0.0
+  },
+  {
+   "name": "cape1",
+   "parent": "chest",
+   "pivot_px": [
+    932.0,
+    1788.0
+   ],
+   "rest_deg": 0.0,
+   "length": 300.0
+  },
+  {
+   "name": "cape2",
+   "parent": "cape1",
+   "pivot_px": [
+    932.0,
+    2088.0
+   ],
+   "rest_deg": 0.0,
+   "length": 300.0
+  },
+  {
+   "name": "cape3",
+   "parent": "cape2",
+   "pivot_px": [
+    932.0,
+    2388.0
+   ],
+   "rest_deg": 0.0,
+   "length": 280.0
+  }
+ ],
+ "parts": [
+  {
+   "bone": "cape3",
+   "name": "cape3",
+   "image": "cape3.png",
+   "anchor_px": [
+    177.0,
+    77.0
+   ],
+   "z": 4.8,
+   "size_px": [
+    354,
+    429
+   ]
+  },
+  {
+   "bone": "cape2",
+   "name": "cape2",
+   "image": "cape2.png",
+   "anchor_px": [
+    163.0,
+    80.0
+   ],
+   "z": 4.9,
+   "size_px": [
+    326,
+    454
+   ]
+  },
+  {
+   "bone": "cape1",
+   "name": "cape1",
+   "image": "cape1.png",
+   "anchor_px": [
+    142.0,
+    80.0
+   ],
+   "z": 5.0,
+   "size_px": [
+    284,
+    454
+   ]
+  },
+  {
+   "bone": "thigh_f",
+   "name": "thigh_f",
+   "image": "thigh_f.png",
+   "anchor_px": [
+    66.0,
+    66.0
+   ],
+   "z": 10,
+   "size_px": [
+    132,
+    584
+   ]
+  },
+  {
+   "bone": "shin_f",
+   "name": "shin_f",
+   "image": "shin_f.png",
+   "anchor_px": [
+    66.0,
+    50.0
+   ],
+   "z": 11,
+   "size_px": [
+    132,
+    545
+   ]
+  },
+  {
+   "bone": "uarm_f",
+   "name": "uarm_f",
+   "image": "uarm_f.png",
+   "anchor_px": [
+    60.0,
+    60.0
+   ],
+   "z": 12,
+   "size_px": [
+    120,
+    448
+   ]
+  },
+  {
+   "bone": "foot_f",
+   "name": "foot_f",
+   "image": "foot_f.png",
+   "anchor_px": [
+    58.0,
+    61.0
+   ],
+   "z": 12,
+   "size_px": [
+    177,
+    99
+   ]
+  },
+  {
+   "bone": "farm_f",
+   "name": "farm_f",
+   "image": "farm_f.png",
+   "anchor_px": [
+    52.0,
+    52.0
+   ],
+   "z": 13,
+   "size_px": [
+    104,
+    392
+   ]
+  },
+  {
+   "bone": "hand_f",
+   "name": "hand_f",
+   "image": "hand_f.png",
+   "anchor_px": [
+    36.0,
+    11.0
+   ],
+   "z": 14,
+   "size_px": [
+    85,
+    133
+   ]
+  },
+  {
+   "bone": "thigh_n",
+   "name": "thigh_n",
+   "image": "thigh_n.png",
+   "anchor_px": [
+    66.0,
+    66.0
+   ],
+   "z": 16,
+   "size_px": [
+    132,
+    584
+   ]
+  },
+  {
+   "bone": "shin_n",
+   "name": "shin_n",
+   "image": "shin_n.png",
+   "anchor_px": [
+    66.0,
+    50.0
+   ],
+   "z": 17,
+   "size_px": [
+    132,
+    545
+   ]
+  },
+  {
+   "bone": "foot_n",
+   "name": "foot_n",
+   "image": "foot_n.png",
+   "anchor_px": [
+    58.0,
+    61.0
+   ],
+   "z": 18,
+   "size_px": [
+    177,
+    99
+   ]
+  },
+  {
+   "bone": "pelvis",
+   "name": "pelvis",
+   "image": "pelvis.png",
+   "anchor_px": [
+    176.0,
+    114.0
+   ],
+   "z": 29,
+   "size_px": [
+    356,
+    288
+   ]
+  },
+  {
+   "bone": "spine",
+   "name": "spine",
+   "image": "spine.png",
+   "anchor_px": [
+    157.0,
+    445.0
+   ],
+   "z": 30,
+   "size_px": [
+    322,
+    544
+   ]
+  },
+  {
+   "bone": "chest",
+   "name": "chest",
+   "image": "chest.png",
+   "anchor_px": [
+    116.0,
+    315.0
+   ],
+   "z": 31,
+   "size_px": [
+    237,
+    398
+   ]
+  },
+  {
+   "bone": "neck",
+   "name": "neck",
+   "image": "neck.png",
+   "anchor_px": [
+    40.0,
+    134.0
+   ],
+   "z": 32,
+   "size_px": [
+    80,
+    186
+   ]
+  },
+  {
+   "bone": "chest",
+   "name": "collar",
+   "image": "collar.png",
+   "anchor_px": [
+    107.0,
+    335.0
+   ],
+   "z": 33,
+   "size_px": [
+    196,
+    106
+   ]
+  },
+  {
+   "bone": "head",
+   "name": "head",
+   "image": "head.png",
+   "anchor_px": [
+    145.0,
+    317.0
+   ],
+   "z": 34,
+   "size_px": [
+    301,
+    401
+   ]
+  },
+  {
+   "bone": "uarm_n",
+   "name": "uarm_n",
+   "image": "uarm_n.png",
+   "anchor_px": [
+    60.0,
+    60.0
+   ],
+   "z": 40,
+   "size_px": [
+    120,
+    448
+   ]
+  },
+  {
+   "bone": "farm_n",
+   "name": "farm_n",
+   "image": "farm_n.png",
+   "anchor_px": [
+    52.0,
+    52.0
+   ],
+   "z": 41,
+   "size_px": [
+    104,
+    392
+   ]
+  },
+  {
+   "bone": "hand_n",
+   "name": "hand_n",
+   "image": "hand_n.png",
+   "anchor_px": [
+    36.0,
+    11.0
+   ],
+   "z": 42,
+   "size_px": [
+    85,
+    133
+   ]
+  }
+ ],
+ "contacts": [
+  [
+   "foot_n",
+   [
+    88.0,
+    20.0
+   ]
+  ],
+  [
+   "foot_n",
+   [
+    -32.0,
+    24.0
+   ]
+  ],
+  [
+   "foot_f",
+   [
+    88.0,
+    20.0
+   ]
+  ],
+  [
+   "foot_f",
+   [
+    -32.0,
+    24.0
+   ]
+  ],
+  [
+   "shin_n",
+   [
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "shin_f",
+   [
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "shin_f",
+   [
+    0.0,
+    266.4
+   ]
+  ]
+ ],
+ "springs": [
+  {
+   "bones": [
+    "cape1",
+    "cape2",
+    "cape3"
+   ],
+   "freq": 0.6,
+   "zeta": 0.3,
+   "wind": 4,
+   "drag": 0.06
+  }
+ ],
+ "variants": {
+  "head": {
+   "blink": {
+    "bone": "head",
+    "image": "head__blink.png",
+    "anchor_px": [
+     145.0,
+     317.0
+    ]
+   }
+  },
+  "hand_f": {
+   "point": {
+    "bone": "hand_f",
+    "image": "hand_f__point.png",
+    "anchor_px": [
+     36.0,
+     11.0
+    ]
+   },
+   "fist": {
+    "bone": "hand_f",
+    "image": "hand_f__fist.png",
+    "anchor_px": [
+     38.0,
+     8.0
+    ]
+   },
+   "cup": {
+    "bone": "hand_f",
+    "image": "hand_f__cup.png",
+    "anchor_px": [
+     36.0,
+     11.0
+    ]
+   }
+  },
+  "hand_n": {
+   "point": {
+    "bone": "hand_n",
+    "image": "hand_n__point.png",
+    "anchor_px": [
+     36.0,
+     11.0
+    ]
+   },
+   "fist": {
+    "bone": "hand_n",
+    "image": "hand_n__fist.png",
+    "anchor_px": [
+     38.0,
+     8.0
+    ]
+   },
+   "cup": {
+    "bone": "hand_n",
+    "image": "hand_n__cup.png",
+    "anchor_px": [
+     36.0,
+     11.0
+    ]
+   }
+  }
+ }
+}

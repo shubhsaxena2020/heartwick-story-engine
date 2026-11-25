@@ -1,0 +1,18 @@
+{
+ "id": "shubhsaxena2008/heartwick-r4-fw2",
+ "title": "Heartwick R4 Fw2",
+ "code_file": "main.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [
+  "shubhsaxena2008/heartwick-r4-bench",
+  "shubhsaxena2008/heartwick-r4-wcache"
+ ],
+ "model_sources": []
+}

@@ -1,0 +1,127 @@
+{
+ "plan": {
+  "name": "g0_q4",
+  "high": "/root/.cache/huggingface/hub/models--jayn7--WAN2.2-I2V_A14B-DISTILL-LIGHTX2V-4STEP-GGUF/snapshots/338fb8eedd8f485c9188cf1b1de541721fc81d66/high_noise_260412/wan2.2_i2v_A14b_high_noise_lightx2v_4step_720p_260412-Q4_K_M.gguf",
+  "low": "/root/.cache/huggingface/hub/models--jayn7--WAN2.2-I2V_A14B-DISTILL-LIGHTX2V-4STEP-GGUF/snapshots/338fb8eedd8f485c9188cf1b1de541721fc81d66/low_noise_260412/wan2.2_i2v_A14b_low_noise_lightx2v_4step_720p_260412-Q4_K_M.gguf",
+  "quant": "Q4_K_M",
+  "clips": [
+   {
+    "id": "q4_480x832_81f",
+    "image": "/kaggle/working/key.jpg",
+    "w": 480,
+    "h": 832,
+    "frames": 81,
+    "seed": 7,
+    "emb": "/kaggle/working/emb.pt"
+   },
+   {
+    "id": "q4_384x672_81f",
+    "image": "/kaggle/working/key.jpg",
+    "w": 384,
+    "h": 672,
+    "frames": 81,
+    "seed": 7,
+    "emb": "/kaggle/working/emb.pt"
+   },
+   {
+    "id": "q4_480x832_41f",
+    "image": "/kaggle/working/key.jpg",
+    "w": 480,
+    "h": 832,
+    "frames": 41,
+    "seed": 7,
+    "emb": "/kaggle/working/emb.pt"
+   }
+  ]
+ },
+ "phases": {
+  "vae_load_s": 4.5,
+  "peak_vram_gb_encode": 6.54,
+  "high_load_s": 42.5,
+  "peak_vram_gb_high": 14.0,
+  "low_load_s": 42.8,
+  "peak_vram_gb_low": 14.0,
+  "peak_vram_gb_decode": 10.23,
+  "wall_s": 1790.9
+ },
+ "clips": {
+  "q4_480x832_81f": {
+   "cfg": {
+    "id": "q4_480x832_81f",
+    "image": "/kaggle/working/key.jpg",
+    "w": 480,
+    "h": 832,
+    "frames": 81,
+    "seed": 7,
+    "emb": "/kaggle/working/emb.pt"
+   },
+   "vae_encode_s": 88.6,
+   "tokens": 32760,
+   "high_step_s": [
+    154.3,
+    157.1
+   ],
+   "high_finite": true,
+   "low_step_s": [
+    181.0,
+    160.9
+   ],
+   "low_finite": true,
+   "vae_decode_s": 146.5,
+   "decode_tiled": false,
+   "gpu_s_total": 888.4
+  },
+  "q4_384x672_81f": {
+   "cfg": {
+    "id": "q4_384x672_81f",
+    "image": "/kaggle/working/key.jpg",
+    "w": 384,
+    "h": 672,
+    "frames": 81,
+    "seed": 7,
+    "emb": "/kaggle/working/emb.pt"
+   },
+   "vae_encode_s": 55.5,
+   "tokens": 21168,
+   "high_step_s": [
+    74.0,
+    74.2
+   ],
+   "high_finite": true,
+   "low_step_s": [
+    73.5,
+    72.7
+   ],
+   "low_finite": true,
+   "vae_decode_s": 93.3,
+   "decode_tiled": false,
+   "gpu_s_total": 443.2
+  },
+  "q4_480x832_41f": {
+   "cfg": {
+    "id": "q4_480x832_41f",
+    "image": "/kaggle/working/key.jpg",
+    "w": 480,
+    "h": 832,
+    "frames": 41,
+    "seed": 7,
+    "emb": "/kaggle/working/emb.pt"
+   },
+   "vae_encode_s": 45.2,
+   "tokens": 17160,
+   "high_step_s": [
+    54.7,
+    55.1
+   ],
+   "high_finite": true,
+   "low_step_s": [
+    54.2,
+    54.1
+   ],
+   "low_finite": true,
+   "vae_decode_s": 74.0,
+   "decode_tiled": false,
+   "gpu_s_total": 337.3
+  }
+ }
+}

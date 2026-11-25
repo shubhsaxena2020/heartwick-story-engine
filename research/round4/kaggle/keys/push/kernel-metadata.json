@@ -1,0 +1,17 @@
+{
+ "id": "shubhsaxena2008/heartwick-r4-keys",
+ "title": "Heartwick R4 Keys",
+ "code_file": "main.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [
+  "shubhsaxena2008/heartwick-r4-wcache"
+ ],
+ "model_sources": []
+}

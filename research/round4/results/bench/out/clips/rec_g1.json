@@ -1,0 +1,63 @@
+{
+ "name": "g1",
+ "clips": {
+  "fw480_k10_mouth_s7": {
+   "cfg": {
+    "id": "fw480_k10_mouth_s7",
+    "image": "/kaggle/working/in/K10.jpg",
+    "prompt": "k10_mouth",
+    "w": 480,
+    "h": 832,
+    "frames": 121,
+    "seed": 7,
+    "fps": 24,
+    "emb": "/kaggle/working/emb/emb_k10_mouth.pt"
+   },
+   "encode_s": 1.3,
+   "tokens": 12090,
+   "step_s": [
+    12.3,
+    12.5,
+    12.8
+   ],
+   "finite": true,
+   "tiled": true,
+   "error": "~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_kl_wan.py\", line 177, in forward\n    return super().forward(x)\n           ~~~~~~~~~~~~~~~^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py\", line 723, in forward\n    return self._conv_forward(input, self.weight, self.bias)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py\", line 718, in _conv_forward\n    return F.conv3d(\n           ~~~~~~~~^\n        input, weight, bias, self.stride, self.padding, self.dilation, self.groups\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 58.81 MiB is free. Including non-PyTorch memory, this process has 14.50 GiB memory in use. Of the allocated memory 14.28 GiB is allocated by PyTorch, and 89.01 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"
+  },
+  "fw704_k10_mouth_s7": {
+   "cfg": {
+    "id": "fw704_k10_mouth_s7",
+    "image": "/kaggle/working/in/K10.jpg",
+    "prompt": "k10_mouth",
+    "w": 704,
+    "h": 1280,
+    "frames": 121,
+    "seed": 7,
+    "fps": 24,
+    "emb": "/kaggle/working/emb/emb_k10_mouth.pt"
+   },
+   "encode_s": 3.3,
+   "tokens": 27280,
+   "error": "/dist-packages/diffusers/utils/peft_utils.py\", line 352, in wrapper\n    result = forward_fn(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 704, in forward\n    hidden_states = block(hidden_states, encoder_hidden_states, timestep_proj, rotary_emb)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 472, in forward\n    self.scale_shift_table.unsqueeze(0) + temb.float()\n                                          ~~~~~~~~~~^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.88 GiB. GPU 0 has a total capacity of 14.56 GiB of which 1.04 GiB is free. Including non-PyTorch memory, this process has 13.52 GiB memory in use. Of the allocated memory 13.34 GiB is allocated by PyTorch, and 49.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"
+  },
+  "fw480_k2_mouth_s11": {
+   "cfg": {
+    "id": "fw480_k2_mouth_s11",
+    "image": "/kaggle/working/in/K2.jpg",
+    "prompt": "k2_mouth",
+    "w": 480,
+    "h": 832,
+    "frames": 121,
+    "seed": 11,
+    "fps": 24,
+    "emb": "/kaggle/working/emb/emb_k2_mouth.pt"
+   },
+   "encode_s": 1.5,
+   "tokens": 12090,
+   "error": " _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention.py\", line 1747, in forward\n    hidden_states = module(hidden_states)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/activations.py\", line 86, in forward\n    hidden_states = self.gelu(hidden_states)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/activations.py\", line 82, in gelu\n    return F.gelu(gate, approximate=self.approximate)\n           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 332.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 340.81 MiB is free. Including non-PyTorch memory, this process has 14.23 GiB memory in use. Of the allocated memory 13.96 GiB is allocated by PyTorch, and 137.07 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"
+  }
+ },
+ "phases": {
+  "load_s": 28.9
+ }
+}

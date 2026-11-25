@@ -1,0 +1,139 @@
+{
+ "_note": "Measured 22 Nov 2026. One 'clip' = Wan2.2-I2V-A14B lightx2v-distill 260412, 4 steps, 81 frames @16 fps (5.06 s), keyframe 480x832 unless noted. GPU seconds include VAE encode + 4 denoise steps + VAE decode, not model loads (42 s per expert per batch).",
+ "kaggle_t4_per_gpu": {
+  "q4_480x832_81f": {
+   "gpu_s": 888.4,
+   "encode": 88.6,
+   "steps": [
+    154.3,
+    157.1,
+    181.0,
+    160.9
+   ],
+   "decode": 146.5,
+   "peak_vram_gb": 14.0
+  },
+  "q5_480x832_81f": {
+   "gpu_s": 862.9,
+   "encode": 83.1,
+   "steps": [
+    161.8,
+    156.3,
+    158.5,
+    156.3
+   ],
+   "decode": 146.9,
+   "peak_vram_gb": 15.14
+  },
+  "q5_480x832_81f_s11": {
+   "gpu_s": 860.2
+  },
+  "q4_cont_480x832_81f (last-frame continuation)": {
+   "gpu_s": 865.3
+  },
+  "q4_384x672_81f": {
+   "gpu_s": 443.2,
+   "encode": 55.5,
+   "steps": [
+    74.0,
+    74.2,
+    73.5,
+    72.7
+   ],
+   "decode": 93.3
+  },
+  "q4_480x832_41f": {
+   "gpu_s": 337.3,
+   "encode": 45.2,
+   "steps": [
+    54.7,
+    55.1,
+    54.2,
+    54.1
+   ],
+   "decode": 74.0
+  },
+  "q4_544x960_81f": {
+   "gpu_s": 1553.1,
+   "encode": 113.0,
+   "steps": [
+    319.0,
+    317.3,
+    297.3,
+    312.4
+   ],
+   "decode": 194.1,
+   "peak_vram_gb": 15.16
+  }
+ },
+ "kaggle_t4_session": {
+  "setup_s": 26.4,
+  "umt5_embed_s": 100.3,
+  "gguf_download_s_parallel": 181,
+  "expert_load_s": 42.5,
+  "round1_wall_s_both_gpus_busy": 1860.6,
+  "round1_clips": 5,
+  "total_session_s": 3895.3,
+  "total_clips": 8
+ },
+ "kaggle_t4_bench": {
+  "gemm_fp16_tflops": 21.2,
+  "sdpa_tflops_L32760": 12.4,
+  "sdpa_s_L32760_40heads": 1.77,
+  "sageattention_1.0.6": "fails to compile on sm75 (Triton int8 dot: 'arith.extf' must be floating-point), not usable on T4"
+ },
+ "zerogpu_round1": {
+  "wall_s_per_clip": 66.1,
+  "note": "Lightning 6 steps, fp8, half RTX Pro 6000, includes queue; quota is charged on GPU time"
+ },
+ "laptop_arc130t_bench_xpu": {
+  "gemm_fp16_tflops_8192": 11.78,
+  "gemm_wan_ffn_tflops": 17.54,
+  "sdpa_tflops_L32760": 4.51,
+  "sdpa_s_L32760_40heads": 4.87
+ },
+ "laptop_sdcpp_vulkan_smoke_256x448x17": {
+  "high_s_per_it": 38,
+  "low_s_per_it": 38,
+  "vae_encode_s": 17.3,
+  "vae_decode_s": 25.6,
+  "t5_s": 25.1,
+  "notes": "weights streamed from disk every step (--params-backend disk); conv-direct on the VAE caused Vulkan device-lost; 480x832x81 failed to allocate a 2.5 GB Vulkan_Host buffer (commit exhausted)"
+ },
+ "sources": {
+  "kaggle_t4x2_480_q5 (26 of 30 h/week to video)": {
+   "wall_s_per_clip": 870,
+   "parallel": 2,
+   "hours_per_week": 26,
+   "efficiency": 0.93
+  },
+  "laptop_igpu_night_480 (8 h x 7, needs page-file fix)": {
+   "wall_s_per_clip": 1665,
+   "parallel": 1,
+   "hours_per_week": 56,
+   "efficiency": 0.8
+  },
+  "hf_zerogpu_father_free_account (5 min/day)": {
+   "wall_s_per_clip": 75,
+   "parallel": 1,
+   "hours_per_week": 0.583,
+   "efficiency": 1.0
+  }
+ },
+ "laptop_arc130t_xpu_block_bench": {
+  "480x832_s_per_block": 8.32,
+  "384x672_s_per_block": 4.18,
+  "dequant_s_per_block": 0.151,
+  "480x832_est_step_s": 339,
+  "384x672_est_step_s": 173,
+  "vae_encode_s_measured": {
+   "480x832": 113.2,
+   "384x672": 70.5
+  },
+  "est_clip_s": {
+   "480x832": 1665,
+   "384x672": 880
+  },
+  "full_clip_attempts": "3 attempts (480 x2, 384 x1) died on Windows commit exhaustion (XPU OOM with 13.9 GiB 'free', 'bad allocation', MemoryError): other agents + docker held ~50 of 63 GB commit; page file 16 GB fixed at 100%"
+ }
+}

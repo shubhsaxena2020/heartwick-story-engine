@@ -1,0 +1,41 @@
+Heartwick round 3: permutation experiments (23 Nov 2026), PARTIAL
+====================================================================
+WHAT RAN
+- heartwick-r3-wan (video GPU session) sat QUEUED 13:35-18:21 IST (~4.7 h) beside the engine's queued kernel;
+  the coordinator deleted it. It never ran: 0 GPU minutes. No round-3 video axis was measured on Kaggle.
+- heartwick-r3-keys (keys / FLF2V / style): built, never pushed (agent budget ran out).
+- heartwick-r3-voice-cpu (CPU, no GPU quota): COMPLETE.
+- Extra, no GPU: the existing round-1/2 clips were re-scored. 8-frame sheets made with ffmpeg; critic =
+  9Router cc/claude-sonnet-5-5, fixed rubric, 2 runs each.
+
+VIDEO: RE-SCORED ROUND-1/2 CLIPS (one seed each = weak evidence)
+clip                         critic  motion ident anat frame art artif  kneel(critic)    pip(critic)   GPU-s/clip
+round-1 ref (ZeroGPU fp8)     6.00     4     7    5    7    8    5     crouch x2        same/unclear  ~66 wall
+Q4_K_M 480 s7                 5.58     4    6.5   5    6    8    4     crouch x2        grows/unclear 888
+Q5_K_M 480 s7                 6.00     5     6    5    7    8    5     crouch x2        grows x2      863
+Q5_K_M 480 s11                6.17     6     6    5    7    8    5     crouch x2        unclear       863
+Q4_K_M 544x960 s7             6.50     6     7    6    6    8    6     unclear/crouch   same x2       1553
+Side by side: compare/r1_r2_rescored.jpg. Sheets + raw critic JSON: results/r2_sheets/.
+- Q4 vs Q5: invisible. The 0.4 gap is about the size of the seed spread (0.17).
+- 544x960: the only visible gain (cleaner hands and squirrel; Pip keeps his size), at 1.8x the GPU time.
+  She still kneels on BOTH knees. One sample only.
+- No plain-I2V clip fixes the kneel. That is a control problem, so FLF2V/keys (untested) remain the main lever.
+
+VOICE (measured; same 52-word ~20 s line, 2 seeds; whisper large-v3 WER, UTMOS, pitch range, HuBERT emotion)
+narrator            model    WER  UTMOS s7/s11  range st  words/s  happy       CPU s/take
+british_narrator    Qwen3    0*   4.53/4.54     11.0      2.43     0.94/0.84   272
+narrator_warm_f     VoxCPM2  0*   4.46/4.48      9.3      2.87     0.97/0.97   857
+narrator_baritone   Qwen3    0*   4.44/4.46      9.0      2.62     0.89/0.91   265
+(*the only miss is grey->gray)
+PICK: british_narrator (best UTMOS on both seeds, most pitch movement, calm pace, 3x cheaper than VoxCPM2).
+      narrator_warm_f for cozy Nell Shorts. The margins are small; a human listen should confirm.
+VILLAIN: the re-designed voice voice/villain_bass_ref.wav. Median F0 140 -> 96 Hz (10th pct 73 Hz), UTMOS 4.46,
+      WER 0, but it reads less angry (0.23 vs 0.90). The rubberband pitch-down was rejected (UTMOS 1.82).
+SLEEP: 1.3 s pauses + atempo 0.85. Pace 2.44 -> 2.08 (female) and 2.36 -> 2.01 (male) words/s; UTMOS -0.03/-0.06.
+
+PRESET: unchanged from round 2 (Q5_K_M, 480x832, 4 steps, RIFE 30 + animevideov3).
+  863 GPU-s per clip; a finished minute is 12 clips = ~2.9 T4-h = ~1.45 h of T4x2 session (~2.0 h with 1.4x retries).
+  Candidate upgrade: 544x960 at ~2.6 h of session per finished minute before retries; confirm with a 2nd seed.
+
+RE-RUN THE UNTESTED AXES: see WINNERS.json "rerun"
+  (wan/build.py + r3_push.py for session 1; keys/build.py + r3_push.py for session 2; critic.py + aggregate.py to score).

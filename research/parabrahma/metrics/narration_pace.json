@@ -1,0 +1,68 @@
+{
+ "Df1utU8sgp4": {
+  "words": 318,
+  "span_s": 164.9,
+  "wps_overall": 1.93,
+  "wps_while_talking": 1.94,
+  "segments": 11,
+  "words_per_segment_median": 26.0,
+  "first_word_at_s": 0.0,
+  "words_in_first_2_5s": 7,
+  "low_conf_word_share": 0.0
+ },
+ "Df3wpMpiIIP": {
+  "words": 216,
+  "span_s": 109.3,
+  "wps_overall": 1.98,
+  "wps_while_talking": 2.01,
+  "segments": 14,
+  "words_per_segment_median": 10.5,
+  "first_word_at_s": 0.0,
+  "words_in_first_2_5s": 8,
+  "low_conf_word_share": 0.0
+ },
+ "Df4nj-MBExu": {
+  "words": 159,
+  "span_s": 94.6,
+  "wps_overall": 1.68,
+  "wps_while_talking": 1.71,
+  "segments": 4,
+  "words_per_segment_median": 46.0,
+  "first_word_at_s": 0.0,
+  "words_in_first_2_5s": 7,
+  "low_conf_word_share": 0.006
+ },
+ "Df6WrJTC3N0": {
+  "words": 374,
+  "span_s": 174.2,
+  "wps_overall": 2.15,
+  "wps_while_talking": 2.16,
+  "segments": 9,
+  "words_per_segment_median": 46.0,
+  "first_word_at_s": 0.0,
+  "words_in_first_2_5s": 9,
+  "low_conf_word_share": 0.008
+ },
+ "Dfxaq7MJzbS": {
+  "words": 253,
+  "span_s": 115.2,
+  "wps_overall": 2.2,
+  "wps_while_talking": 2.29,
+  "segments": 15,
+  "words_per_segment_median": 14.0,
+  "first_word_at_s": 0.0,
+  "words_in_first_2_5s": 6,
+  "low_conf_word_share": 0.0
+ },
+ "Dfy2G2eTz-O": {
+  "words": 271,
+  "span_s": 124.1,
+  "wps_overall": 2.18,
+  "wps_while_talking": 2.23,
+  "segments": 6,
+  "words_per_segment_median": 44.0,
+  "first_word_at_s": 0.0,
+  "words_in_first_2_5s": 9,
+  "low_conf_word_share": 0.0
+ }
+}

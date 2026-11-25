@@ -1,0 +1,563 @@
+[V] version: stable-diffusion.cpp version unknown, commit 532d2c1 --- main.cpp:760
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Intel(R) Arc(TM) 130T GPU (24GB) (Intel Corporation) | uma: 1 | rebar: 1 | fp16: 1 | bf16: 0 | fp4: 0 | warp size: 32 | shared memory: 32768 | int dot: 1 | matrix cores: KHR_coopmat
+load_backend: loaded Vulkan backend from C:\Users\shubh\tools\sdcpp\bin\ggml-vulkan.dll
+load_backend: loaded CPU backend from C:\Users\shubh\tools\sdcpp\bin\ggml-cpu-alderlake.dll
+[V] System Info: 
+   SSE3 = 1 |    SSSE3 = 1 |    AVX = 1 |    AVX_VNNI = 1 |    AVX2 = 1 |    F16C = 1 |    FMA = 1 |    BMI2 = 1 |    OPENMP = 1 |    REPACK = 1 |  --- main.cpp:761
+[V] using 4 threads for model loading --- model_loader.cpp:194
+[I] loading diffusion model from 'C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf' --- diffusion_engine.cpp:697
+[I] load C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf using gguf format --- model_loader.cpp:220
+[V] init from 'C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf' --- model_loader.cpp:266
+[V] GGUF v3, tensor_count=1095, metadata_kv_count=3 --- gguf_reader_ext.h:225
+[I] loading high noise diffusion model from 'C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf' --- diffusion_engine.cpp:704
+[I] load C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf using gguf format --- model_loader.cpp:220
+[V] init from 'C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf' --- model_loader.cpp:266
+[V] GGUF v3, tensor_count=1095, metadata_kv_count=3 --- gguf_reader_ext.h:225
+[I] loading t5xxl from 'C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf' --- diffusion_engine.cpp:739
+[I] load C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf using gguf format --- model_loader.cpp:220
+[V] init from 'C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf' --- model_loader.cpp:266
+[V] GGUF v3, tensor_count=242, metadata_kv_count=30 --- gguf_reader_ext.h:225
+[I] loading vae from 'C:/Users/shubh/tools/r2models/wan_2.1_vae.safetensors' --- diffusion_engine.cpp:768
+[I] load C:/Users/shubh/tools/r2models/wan_2.1_vae.safetensors using safetensors format --- model_loader.cpp:226
+[V] init from 'C:/Users/shubh/tools/r2models/wan_2.1_vae.safetensors', prefix = 'vae.' --- model_loader.cpp:294
+[I] Version: Wan 2.2 I2V  --- diffusion_engine.cpp:982
+[V] Found 2 backend devices: --- ggml_extend_backend.cpp:719
+[V] #0: Vulkan0 --- ggml_extend_backend.cpp:722
+[V] #1: CPU --- ggml_extend_backend.cpp:722
+[V] Initializing backend: Vulkan0 --- ggml_extend_backend.cpp:421
+[V] using 4 threads for model loading --- model_loader.cpp:194
+[I] Weight type stat:                      f32: 1451 |    q8_0: 169  |    q4_K: 560  |    q6_K: 240  |    bf16: 206   --- diffusion_engine.cpp:1560
+[I] Conditioner weight type stat:          f32: 73   |    q8_0: 169   --- diffusion_engine.cpp:1561
+[I] Diffusion model weight type stat:      f32: 689  |    q4_K: 280  |    q6_K: 120  |    bf16: 6     --- diffusion_engine.cpp:1562
+[I] VAE weight type stat:                 bf16: 194   --- diffusion_engine.cpp:1563
+[V] using mmap for I/O --- model_loader.cpp:931
+[I] using mmap for 'C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf' --- model_loader.cpp:937
+[V] using mmap for I/O --- model_loader.cpp:931
+[I] using mmap for 'C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf' --- model_loader.cpp:937
+[V] using mmap for I/O --- model_loader.cpp:931
+[I] using mmap for 'C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf' --- model_loader.cpp:937
+[V] using mmap for I/O --- model_loader.cpp:931
+[I] using mmap for 'C:/Users/shubh/tools/r2models/wan_2.1_vae.safetensors' --- model_loader.cpp:937
+[V] wan: model_type = t2v, num_layers = 40, vace_layers = 0, dim = 2048, ffn_dim = 8192, num_heads = 16 --- wan.hpp:98
+[I] Wan2.2-I2V-14B --- wan.hpp:970
+[V] wan: model_type = t2v, num_layers = 40, vace_layers = 0, dim = 2048, ffn_dim = 8192, num_heads = 16 --- wan.hpp:98
+[I] Wan2.2-I2V-14B --- wan.hpp:970
+[I] using VAE for encoding / decoding --- model_builders.cpp:226
+[V] Wan VAE convolution type: 3D --- wan_vae.hpp:1328
+[I] flash attention auto: Vulkan0 -> on (probe: normal 6.295 ms, flash 5.036 ms) --- flash_attn.cpp:99
+[I] conv2d direct auto: Vulkan0 -> on (probe: im2col 0.891 ms, direct 0.664 ms) --- conv_direct.cpp:83
+[I] conv3d direct auto: Vulkan0 -> on (probe: im2col 2.043 ms, direct 1.328 ms) --- conv_direct.cpp:83
+[V] validating model metadata --- diffusion_engine.cpp:1314
+[V] model metadata validated; weights will be prepared lazily --- diffusion_engine.cpp:1384
+[I] total params memory size = 24424.18MB (VRAM 24424.18MB, RAM 0.00MB): text_encoders 5757.05MB(VRAM), diffusion_model 18425.04MB(VRAM), vae 242.10MB(VRAM), controlnet 0.00MB(N/A), extensions 0.00MB(N/A) --- diffusion_engine.cpp:1445
+[I] running in FLOW mode --- diffusion_engine.cpp:1485
+[I] preprocess init[0]: 480x832 crop=(2,0,475,832) resize=256x448 pad=(0,0) output=256x448 filter=auto(0) antialias=false --- image_preprocess.cpp:304
+[V] using 4 threads for model loading --- model_loader.cpp:194
+[I] get_sigmas with discrete scheduler --- denoiser.hpp:1132
+[V] switching from high noise model at step 2 --- request.cpp:475
+[I] sampling using Euler method --- request.cpp:478
+[I] sampling(high noise) using Euler method --- request.cpp:480
+[I] IMG2VID --- video.cpp:939
+[V] VAE encode tile size: 256x256 pixels (32x32 latent) --- vae.hpp:282
+[V] num tiles : 1, 2  --- tiling.cpp:178
+[V] processing 2 tiles --- tiling.cpp:179
+[I] wan_vae build cached graph cut plan done (taking 3 ms) --- ggml_graph_cut.cpp:1034
+[V] loading 86/194 tensors from C:/Users/shubh/tools/r2models/wan_2.1_vae.safetensors --- model_loader.cpp:1170
+  |##################################################| 86/86 - 471.10MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.03s, memcpy: 0.00s, convert: 0.13s, copy_to_backend: 0.00s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (102.26 MB, 86 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] wan_vae compute buffer size: 1256.52 MB(VRAM) on Vulkan0 (peak across 1 segment) --- execution_engine.cpp:730
+[V] wan_vae compute buffer size: 12.75 MB(RAM) on CPU (peak across 1 segment) --- execution_engine.cpp:730
+  |=========================>                        | 1/2 -  13.32s/it - ETA 00:13[K  |==================================================| 2/2 -   8.03s/it[K
+[V] model manager released params backend buffers (102.26 MB, 86 tensors, 1 blocks, VRAM) from Vulkan0 --- model_manager.cpp:1316
+[V] computing vae encode graph completed, taking 21.67s --- vae.hpp:312
+[I] encode_first_stage completed, taking 21696 ms --- video.cpp:990
+[V] parse '2D hand-drawn anime animation. The older woman in the green cardigan takes two slow steps to the maple tree, kneels down on the leaves, and gently lifts the small grey squirrel in both hands, smiling. Golden maple leaves keep falling. The camera slowly pushes in and drifts right. Smooth natural motion, consistent character, no morphing.' to [['2D hand-drawn anime animation. The older woman in the green cardigan takes two slow steps to the maple tree, kneels down on the leaves, and gently lifts the small grey squirrel in both hands, smiling. Golden maple leaves keep falling. The camera slowly pushes in and drifts right. Smooth natural motion, consistent character, no morphing.', 1], ] --- conditioner.hpp:1514
+[V] split prompt "2D hand-drawn anime animation. The older woman in the green cardigan takes two slow steps to the maple tree, kneels down on the leaves, and gently lifts the small grey squirrel in both hands, smiling. Golden maple leaves keep falling. The camera slowly pushes in and drifts right. Smooth natural motion, consistent character, no morphing." to tokens ["▁", "2", "D", "▁hand", "-", "draw", "n", "▁anime", "▁animation", ".", "▁The", "▁older", "▁woman", "▁in", "▁the", "▁green", "▁cardigan", "▁takes", "▁two", "▁slow", "▁steps", "▁to", "▁the", "▁map", "le", "▁tree", ",", "▁knee", "ls", "▁down", "▁on", "▁the", "▁leaves", ",", "▁and", "▁gent", "ly", "▁lift", "s", "▁the", "▁small", "▁grey", "▁", "squirrel", "▁in", "▁both", "▁hands", ",", "▁smil", "ing", ".", "▁Golden", "▁map", "le", "▁leaves", "▁keep", "▁falling", ".", "▁The", "▁camera", "▁slowly", "▁push", "es", "▁in", "▁and", "▁drifts", "▁right", ".", "▁Smooth", "▁natural", "▁motion", ",", "▁consistent", "▁character", ",", "▁no", "▁", "morph", "ing", ".", ] --- t5_unigram_tokenizer.cpp:346
+[I] t5 build cached graph cut plan done (taking 4 ms) --- ggml_graph_cut.cpp:1034
+[V] t5 using 26 segments --- execution_engine.cpp:577
+[V] loading 1/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 1/1 - 456.89MB/s[K
+[I] loading tensors completed, taking 2.33s (read: 1.14s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.12s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (1064.09 MB, 1 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 896.97MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 935.59MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.08s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 940.09MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.09s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 940.09MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.08s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 876.86MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 888.81MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 926.73MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 940.09MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 940.09MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 763.82MB/s[K
+[I] loading tensors completed, taking 0.26s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 931.14MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 918.02MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.08s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 892.87MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 935.59MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 935.59MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.08s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 913.73MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 931.14MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.08s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 935.59MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 922.35MB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.07s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 502.67MB/s[K
+[I] loading tensors completed, taking 0.39s (read: 0.21s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 618.79MB/s[K
+[I] loading tensors completed, taking 0.32s (read: 0.18s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 580.23MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.19s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 544.68MB/s[K
+[I] loading tensors completed, taking 0.36s (read: 0.20s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 10/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 10/10 - 607.26MB/s[K
+[I] loading tensors completed, taking 0.32s (read: 0.18s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (195.54 MB, 10 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 1/242 tensors from C:/Users/shubh/tools/r2models/umt5-xxl-encoder-Q8_0.gguf --- model_loader.cpp:1170
+  |##################################################| 1/1 -   0.74MB/s[K
+[I] loading tensors completed, taking 0.02s (read: 0.00s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.00s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (  0.02 MB, 1 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] t5 compute buffer size: 289.00 MB(VRAM) on Vulkan0 (peak across 26 segments) --- execution_engine.cpp:730
+[V] t5 compute buffer size: 1072.10 MB(RAM) on CPU (peak across 26 segments) --- execution_engine.cpp:730
+[V] computing condition graph completed, taking 30968 ms --- conditioner.hpp:1610
+[V] conditioning cache stored (1/4) --- conditioning_cache.h:118
+[I] get_learned_condition completed, taking 30.99s --- video.cpp:1263
+[V] model manager released params backend buffers (5757.05 MB, 242 tensors, 26 blocks, VRAM) from Vulkan0 --- model_manager.cpp:1316
+[I] generate_video 256x448x17 --- video.cpp:1931
+[V] sample(high noise) 32x56x5 --- video.cpp:1947
+[I] Wan2.2-I2V-14B build cached graph cut plan done (taking 19 ms) --- ggml_graph_cut.cpp:1034
+[V] Wan2.2-I2V-14B using 42 segments --- execution_engine.cpp:577
+[V] loading 2/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 2/2 -  97.66MB/s[K
+[I] loading tensors completed, taking 0.03s (read: 0.01s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.00s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (  1.43 MB, 2 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 37/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |#####################################             | 27/37 - 426.56MB/s[K  |################################################  | 35/37 - 400.96MB/s[K  |##################################################| 37/37 - 514.69MB/s[K
+[I] loading tensors completed, taking 1.29s (read: 0.64s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.02s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (661.89 MB, 37 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 607.18MB/s[K
+[I] loading tensors completed, taking 0.36s (read: 0.26s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 652.36MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 608.87MB/s[K
+[I] loading tensors completed, taking 0.36s (read: 0.27s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 573.80MB/s[K
+[I] loading tensors completed, taking 0.38s (read: 0.27s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 352.52MB/s[K  |##################################################| 27/27 - 520.65MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.29s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 280.53MB/s[K  |##################################################| 27/27 - 299.85MB/s[K
+[I] loading tensors completed, taking 0.73s (read: 0.51s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 200.72MB/s[K  |##################################################| 27/27 - 425.62MB/s[K
+[I] loading tensors completed, taking 0.51s (read: 0.36s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 285.61MB/s[K  |##################################################| 27/27 - 421.53MB/s[K
+[I] loading tensors completed, taking 0.52s (read: 0.36s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 205.57MB/s[K  |##################################################| 27/27 - 434.05MB/s[K
+[I] loading tensors completed, taking 0.50s (read: 0.33s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 196.10MB/s[K  |##################################################| 27/27 - 455.70MB/s[K
+[I] loading tensors completed, taking 0.48s (read: 0.31s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 582.96MB/s[K
+[I] loading tensors completed, taking 0.38s (read: 0.25s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 362.45MB/s[K  |##################################################| 27/27 - 526.91MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.25s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 206.57MB/s[K  |####################################              | 19/27 - 102.54MB/s[K  |####################################              | 19/27 -  67.65MB/s[K  |##################################################| 27/27 - 218.97MB/s[K
+[I] loading tensors completed, taking 1.00s (read: 0.59s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 589.23MB/s[K
+[I] loading tensors completed, taking 0.37s (read: 0.25s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 639.05MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.25s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 650.43MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 654.31MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 563.48MB/s[K
+[I] loading tensors completed, taking 0.39s (read: 0.27s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 297.73MB/s[K  |##################################################| 27/27 - 526.91MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.31s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 656.27MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 666.24MB/s[K
+[I] loading tensors completed, taking 0.33s (read: 0.23s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 355.77MB/s[K  |##################################################| 27/27 - 521.89MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.28s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 372.95MB/s[K  |##################################################| 27/27 - 534.62MB/s[K
+[I] loading tensors completed, taking 0.41s (read: 0.29s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 589.23MB/s[K
+[I] loading tensors completed, taking 0.37s (read: 0.25s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 142.15MB/s[K
+[I] loading tensors completed, taking 1.54s (read: 1.14s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 302.01MB/s[K  |##################################################| 27/27 - 470.37MB/s[K
+[I] loading tensors completed, taking 0.47s (read: 0.35s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 590.82MB/s[K
+[I] loading tensors completed, taking 0.37s (read: 0.26s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |############                                      |  6/27 -   2.06MB/s[K  |##################################################| 27/27 - 572.31MB/s[K
+[I] loading tensors completed, taking 0.38s (read: 0.25s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 350.91MB/s[K  |##################################################| 27/27 - 516.97MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.30s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 350.91MB/s[K  |##################################################| 27/27 - 519.42MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.30s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 594.02MB/s[K
+[I] loading tensors completed, taking 0.37s (read: 0.26s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 200.72MB/s[K  |###########################################       | 23/27 - 153.20MB/s[K  |##################################################| 27/27 - 335.16MB/s[K
+[I] loading tensors completed, taking 0.65s (read: 0.55s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##############################                    | 16/27 - 196.73MB/s[K  |##################################################| 27/27 - 445.51MB/s[K
+[I] loading tensors completed, taking 0.49s (read: 0.38s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 362.45MB/s[K  |##################################################| 27/27 - 526.91MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.28s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 364.16MB/s[K  |##################################################| 27/27 - 528.18MB/s[K
+[I] loading tensors completed, taking 0.41s (read: 0.28s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 624.48MB/s[K
+[I] loading tensors completed, taking 0.35s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 286.91MB/s[K  |##################################################| 27/27 - 459.52MB/s[K
+[I] loading tensors completed, taking 0.48s (read: 0.36s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 196.10MB/s[K  |##################################################| 27/27 - 451.02MB/s[K
+[I] loading tensors completed, taking 0.49s (read: 0.30s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 297.73MB/s[K  |##################################################| 27/27 - 493.68MB/s[K
+[I] loading tensors completed, taking 0.44s (read: 0.33s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 3/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 3/3 -  22.91MB/s[K
+[I] loading tensors completed, taking 0.03s (read: 0.00s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.00s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (  0.66 MB, 3 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] Wan2.2-I2V-14B compute buffer size: 259.82 MB(VRAM) on Vulkan0 (peak across 42 segments) --- execution_engine.cpp:730
+[V] Wan2.2-I2V-14B compute buffer size: 10.19 MB(RAM) on CPU (peak across 42 segments) --- execution_engine.cpp:730
+  |=========================>                        | 1/2 -  68.92s/it - ETA 01:08[K[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 748.10MB/s[K
+[I] loading tensors completed, taking 0.29s (read: 0.11s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.06s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 194.30MB/s[K  |##################################################| 27/27 - 334.65MB/s[K
+[I] loading tensors completed, taking 0.65s (read: 0.36s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 -   1.01GB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.02s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 160.93MB/s[K
+[I] loading tensors completed, taking 1.36s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.02s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 -   1.03GB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.05s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 510.94MB/s[K
+[I] loading tensors completed, taking 0.43s (read: 0.22s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 909.52MB/s[K
+[I] loading tensors completed, taking 0.24s (read: 0.12s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 996.33MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 991.83MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 991.83MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 -   1.00GB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 996.33MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 -   1.01GB/s[K
+[I] loading tensors completed, taking 0.21s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 289.56MB/s[K
+[I] loading tensors completed, taking 0.76s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 1010.11MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 1000.88MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 991.83MB/s[K
+[I] loading tensors completed, taking 0.22s (read: 0.03s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 3/1095 tensors from C:/Users/shubh/tools/r2models/hi_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 3/3 -  28.88MB/s[K
+[I] loading tensors completed, taking 0.02s (read: 0.00s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.00s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (  0.66 MB, 3 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+  |==================================================| 2/2 -  49.05s/it[K
+[V] model manager released params backend buffers (5705.43 MB, 663 tensors, 26 blocks, VRAM) from Vulkan0 --- model_manager.cpp:1316
+[I] sampling(high noise) completed, taking 119.55s --- video.cpp:1987
+[V] sample 32x56x5 --- video.cpp:1994
+[I] Wan2.2-I2V-14B build cached graph cut plan done (taking 16 ms) --- ggml_graph_cut.cpp:1034
+[V] Wan2.2-I2V-14B using 42 segments --- execution_engine.cpp:577
+[V] loading 2/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 2/2 - 118.00MB/s[K
+[I] loading tensors completed, taking 0.03s (read: 0.01s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.00s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (  1.43 MB, 2 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 37/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |#####################################             | 27/37 - 438.86MB/s[K  |##################################################| 37/37 - 514.69MB/s[K
+[I] loading tensors completed, taking 1.29s (read: 0.59s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.02s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (661.89 MB, 37 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 648.50MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 286.91MB/s[K  |##################################################| 27/27 - 390.72MB/s[K
+[I] loading tensors completed, taking 0.56s (read: 0.37s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 194.30MB/s[K  |##################################################| 27/27 - 381.87MB/s[K
+[I] loading tensors completed, taking 0.57s (read: 0.41s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 202.63MB/s[K  |##################################################| 27/27 - 308.72MB/s[K
+[I] loading tensors completed, taking 0.71s (read: 0.46s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 302.01MB/s[K  |##################################################| 27/27 - 520.65MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.31s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 362.45MB/s[K  |##################################################| 27/27 - 529.45MB/s[K
+[I] loading tensors completed, taking 0.41s (read: 0.29s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 500.44MB/s[K
+[I] loading tensors completed, taking 0.44s (read: 0.27s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 662.22MB/s[K
+[I] loading tensors completed, taking 0.33s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 654.31MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 660.22MB/s[K
+[I] loading tensors completed, taking 0.33s (read: 0.23s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 656.27MB/s[K
+[I] loading tensors completed, taking 0.34s (read: 0.24s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 196.10MB/s[K  |##################################################| 27/27 - 474.44MB/s[K
+[I] loading tensors completed, taking 0.46s (read: 0.36s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 300.57MB/s[K  |##################################################| 27/27 - 518.19MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.32s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 367.62MB/s[K  |##################################################| 27/27 - 533.32MB/s[K
+[I] loading tensors completed, taking 0.41s (read: 0.29s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 195.20MB/s[K  |##################################################| 27/27 - 296.61MB/s[K
+[I] loading tensors completed, taking 0.74s (read: 0.56s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 354.13MB/s[K  |##################################################| 27/27 - 523.13MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.28s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 288.22MB/s[K  |##################################################| 27/27 - 428.95MB/s[K
+[I] loading tensors completed, taking 0.51s (read: 0.38s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 360.75MB/s[K  |##################################################| 27/27 - 525.64MB/s[K
+[I] loading tensors completed, taking 0.42s (read: 0.26s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 202.63MB/s[K  |##################################################| 27/27 - 375.33MB/s[K
+[I] loading tensors completed, taking 0.58s (read: 0.41s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###################                               | 10/27 -   0.55MB/s[K  |###################                               | 10/27 -   0.28MB/s[K  |###############################################   | 25/27 - 124.92MB/s[K  |##################################################| 27/27 - 255.47MB/s[K
+[I] loading tensors completed, taking 0.86s (read: 0.60s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 199.78MB/s[K  |##################################################| 27/27 - 378.57MB/s[K
+[I] loading tensors completed, taking 0.58s (read: 0.34s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.03s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 290.87MB/s[K  |##################################################| 27/27 - 375.33MB/s[K
+[I] loading tensors completed, taking 0.58s (read: 0.36s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |####################################              | 19/27 - 200.72MB/s[K  |##################################################| 27/27 - 434.05MB/s[K
+[I] loading tensors completed, taking 0.50s (read: 0.37s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 602.18MB/s[K
+[I] loading tensors completed, taking 0.36s (read: 0.26s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 365.88MB/s[K  |##################################################| 27/27 - 507.39MB/s[K
+[I] loading tensors completed, taking 0.43s (read: 0.29s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###########################################       | 23/27 - 289.54MB/s[K  |##################################################| 27/27 - 407.42MB/s[K
+[I] loading tensors completed, taking 0.54s (read: 0.42s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |###############################################   | 25/27 - 350.91MB/s[K  |##################################################| 27/27 - 473.42MB/s[K
+[I] loading tensors completed, taking 0.46s (read: 0.33s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+  |##################################################| 27/27 - 430.64MB/s[K
+[I] loading tensors completed, taking 0.51s (read: 0.35s, memcpy: 0.00s, convert: 0.00s, copy_to_backend: 0.01s) --- model_loader.cpp:1442
+[V] model manager prepared params backend buffers (219.19 MB, 27 tensors, 1 blocks, VRAM) on Vulkan0 --- model_manager.cpp:508
+[V] loading 27/1095 tensors from C:/Users/shubh/tools/r2models/lo_260412_Q4_K_M.gguf --- model_loader.cpp:1170
+rc=127 wall_s=235

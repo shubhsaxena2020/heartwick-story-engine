@@ -1,0 +1,88 @@
+Disabling torchao because diffusers requires `torchao>=0.15.0` but found version 0.10.0. Upgrade it with `pip install -U 'torchao>=0.15.0'`.
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Quantized parameter condition_embedder.time_embedder.linear_1.weight is required to remain in FP32, dequantizing now.
+Quantized parameter condition_embedder.time_embedder.linear_2.weight is required to remain in FP32, dequantizing now.
+Quantized parameter condition_embedder.time_embedder.linear_1.weight is required to remain in FP32, dequantizing now.
+Quantized parameter condition_embedder.time_embedder.linear_2.weight is required to remain in FP32, dequantizing now.
+{
+ "q4_480x832_81f": {
+  "cfg": {
+   "id": "q4_480x832_81f",
+   "image": "/kaggle/working/key.jpg",
+   "w": 480,
+   "h": 832,
+   "frames": 81,
+   "seed": 7,
+   "emb": "/kaggle/working/emb.pt"
+  },
+  "vae_encode_s": 88.6,
+  "tokens": 32760,
+  "high_step_s": [
+   154.3,
+   157.1
+  ],
+  "high_finite": true,
+  "low_step_s": [
+   181.0,
+   160.9
+  ],
+  "low_finite": true,
+  "vae_decode_s": 146.5,
+  "decode_tiled": false,
+  "gpu_s_total": 888.4
+ },
+ "q4_384x672_81f": {
+  "cfg": {
+   "id": "q4_384x672_81f",
+   "image": "/kaggle/working/key.jpg",
+   "w": 384,
+   "h": 672,
+   "frames": 81,
+   "seed": 7,
+   "emb": "/kaggle/working/emb.pt"
+  },
+  "vae_encode_s": 55.5,
+  "tokens": 21168,
+  "high_step_s": [
+   74.0,
+   74.2
+  ],
+  "high_finite": true,
+  "low_step_s": [
+   73.5,
+   72.7
+  ],
+  "low_finite": true,
+  "vae_decode_s": 93.3,
+  "decode_tiled": false,
+  "gpu_s_total": 443.2
+ },
+ "q4_480x832_41f": {
+  "cfg": {
+   "id": "q4_480x832_41f",
+   "image": "/kaggle/working/key.jpg",
+   "w": 480,
+   "h": 832,
+   "frames": 41,
+   "seed": 7,
+   "emb": "/kaggle/working/emb.pt"
+  },
+  "vae_encode_s": 45.2,
+  "tokens": 17160,
+  "high_step_s": [
+   54.7,
+   55.1
+  ],
+  "high_finite": true,
+  "low_step_s": [
+   54.2,
+   54.1
+  ],
+  "low_finite": true,
+  "vae_decode_s": 74.0,
+  "decode_tiled": false,
+  "gpu_s_total": 337.3
+ }
+}

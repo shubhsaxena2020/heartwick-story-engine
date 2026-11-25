@@ -1,0 +1,28 @@
+{
+ "schema": 1,
+ "generated_at": "2026-11-21T17:50:43+05:30",
+ "stages": [
+  "script",
+  "narration",
+  "images",
+  "render",
+  "review",
+  "approved",
+  "published"
+ ],
+ "counts": {},
+ "stories": [],
+ "videos": [],
+ "kaggle": {
+  "jobs": []
+ },
+ "queue": {},
+ "research": {
+  "present": false
+ },
+ "channel": {
+  "exists": false
+ },
+ "events": [],
+ "truth": null
+}

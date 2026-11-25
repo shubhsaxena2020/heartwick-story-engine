@@ -1,0 +1,247 @@
+{
+ "r1_wan22_i2v_sheet.jpg": {
+  "runs": [
+   {
+    "scores": {
+     "motion_naturalness": 4,
+     "identity": 7,
+     "anatomy": 5,
+     "framing": 7,
+     "art_quality": 8,
+     "artifacts": 5
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "yes",
+    "smiles": "yes",
+    "worst_problem": "Nell crouches or squats and then stands up while lifting Pip overhead, rather than kneeling on one knee and holding the squirrel in both hands, which breaks the scripted action."
+   },
+   {
+    "scores": {
+     "motion_naturalness": 4,
+     "identity": 7,
+     "anatomy": 5,
+     "framing": 7,
+     "art_quality": 8,
+     "artifacts": 5
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "unclear",
+    "smiles": "yes",
+    "worst_problem": "Nell crouches/squats rather than kneeling on one knee, then stands upright and holds the squirrel up at head height, which is not the scripted kneeling lift."
+   }
+  ],
+  "mean": {
+   "motion_naturalness": 4.0,
+   "identity": 7.0,
+   "anatomy": 5.0,
+   "framing": 7.0,
+   "art_quality": 8.0,
+   "artifacts": 5.0
+  },
+  "spread": {
+   "motion_naturalness": 0.0,
+   "identity": 0.0,
+   "anatomy": 0.0,
+   "framing": 0.0,
+   "art_quality": 0.0,
+   "artifacts": 0.0
+  },
+  "total": 6.0
+ },
+ "r2_q4_480_sheet.jpg": {
+  "runs": [
+   {
+    "scores": {
+     "motion_naturalness": 4,
+     "identity": 6,
+     "anatomy": 5,
+     "framing": 6,
+     "art_quality": 8,
+     "artifacts": 4
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "grows",
+    "smiles": "yes",
+    "worst_problem": "Nell crouches or squats instead of kneeling on one knee, then stands up while lifting the squirrel, which looks larger and is held high against the tree trunk."
+   },
+   {
+    "scores": {
+     "motion_naturalness": 4,
+     "identity": 7,
+     "anatomy": 5,
+     "framing": 6,
+     "art_quality": 8,
+     "artifacts": 4
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "unclear",
+    "smiles": "yes",
+    "worst_problem": "Nell crouches or squats rather than kneeling on one knee, then rises while lifting a squirrel up high toward the tree trunk in a way that looks unnatural, with Pip's size and pose unstable across frames."
+   }
+  ],
+  "mean": {
+   "motion_naturalness": 4.0,
+   "identity": 6.5,
+   "anatomy": 5.0,
+   "framing": 6.0,
+   "art_quality": 8.0,
+   "artifacts": 4.0
+  },
+  "spread": {
+   "motion_naturalness": 0.0,
+   "identity": 1.0,
+   "anatomy": 0.0,
+   "framing": 0.0,
+   "art_quality": 0.0,
+   "artifacts": 0.0
+  },
+  "total": 5.58
+ },
+ "r2_q4_544_sheet.jpg": {
+  "runs": [
+   {
+    "scores": {
+     "motion_naturalness": 6,
+     "identity": 7,
+     "anatomy": 6,
+     "framing": 6,
+     "art_quality": 8,
+     "artifacts": 6
+    },
+    "kneel_one_knee": "unclear",
+    "pip_same_size": "yes",
+    "smiles": "yes",
+    "worst_problem": "Nell's lower body is hidden by the skirt so the kneel looks like a squat or double-knee kneel rather than a clear one-knee pose, and the squirrel is held at arm's length, raised overhead instead of lifted in both hands."
+   },
+   {
+    "scores": {
+     "motion_naturalness": 6,
+     "identity": 7,
+     "anatomy": 6,
+     "framing": 6,
+     "art_quality": 8,
+     "artifacts": 6
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "yes",
+    "smiles": "yes",
+    "worst_problem": "Nell drops into a low crouch/kneel with her skirt bunched, with no visible planted foot, and the squirrel is lifted overhead in frames 6-8, which looks stiff and is not a clear one-knee kneel."
+   }
+  ],
+  "mean": {
+   "motion_naturalness": 6.0,
+   "identity": 7.0,
+   "anatomy": 6.0,
+   "framing": 6.0,
+   "art_quality": 8.0,
+   "artifacts": 6.0
+  },
+  "spread": {
+   "motion_naturalness": 0.0,
+   "identity": 0.0,
+   "anatomy": 0.0,
+   "framing": 0.0,
+   "art_quality": 0.0,
+   "artifacts": 0.0
+  },
+  "total": 6.5
+ },
+ "r2_q5_480_s11_sheet.jpg": {
+  "runs": [
+   {
+    "scores": {
+     "motion_naturalness": 6,
+     "identity": 6,
+     "anatomy": 5,
+     "framing": 7,
+     "art_quality": 8,
+     "artifacts": 5
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "unclear",
+    "smiles": "yes",
+    "worst_problem": "Nell drops into a low squat or kneel with both legs hidden under her skirt instead of kneeling on one knee, and Pip is small and hard to see in her hands, with a leaf-like object in the lift that muddles the squirrel."
+   },
+   {
+    "scores": {
+     "motion_naturalness": 6,
+     "identity": 6,
+     "anatomy": 5,
+     "framing": 7,
+     "art_quality": 8,
+     "artifacts": 5
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "unclear",
+    "smiles": "yes",
+    "worst_problem": "Nell drops into a low crouch/kneel with both legs hidden under the skirt instead of a clear one-knee kneel, and the squirrel becomes small and ambiguous in her hands, mixed up with an orange leaf."
+   }
+  ],
+  "mean": {
+   "motion_naturalness": 6.0,
+   "identity": 6.0,
+   "anatomy": 5.0,
+   "framing": 7.0,
+   "art_quality": 8.0,
+   "artifacts": 5.0
+  },
+  "spread": {
+   "motion_naturalness": 0.0,
+   "identity": 0.0,
+   "anatomy": 0.0,
+   "framing": 0.0,
+   "art_quality": 0.0,
+   "artifacts": 0.0
+  },
+  "total": 6.17
+ },
+ "r2_q5_480_sheet.jpg": {
+  "runs": [
+   {
+    "scores": {
+     "motion_naturalness": 5,
+     "identity": 6,
+     "anatomy": 5,
+     "framing": 7,
+     "art_quality": 8,
+     "artifacts": 5
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "grows",
+    "smiles": "yes",
+    "worst_problem": "Nell drops into a low squat or sit with the skirt bunched, not a clear one-knee kneel, and Pip looks larger once lifted to her face."
+   },
+   {
+    "scores": {
+     "motion_naturalness": 5,
+     "identity": 6,
+     "anatomy": 5,
+     "framing": 7,
+     "art_quality": 8,
+     "artifacts": 5
+    },
+    "kneel_one_knee": "no (crouch/squat)",
+    "pip_same_size": "grows",
+    "smiles": "yes",
+    "worst_problem": "Nell drops into a low crouch/kneel with her skirt bunched, with no visible planted foot, and Pip looks larger when she lifts him to her face."
+   }
+  ],
+  "mean": {
+   "motion_naturalness": 5.0,
+   "identity": 6.0,
+   "anatomy": 5.0,
+   "framing": 7.0,
+   "art_quality": 8.0,
+   "artifacts": 5.0
+  },
+  "spread": {
+   "motion_naturalness": 0.0,
+   "identity": 0.0,
+   "anatomy": 0.0,
+   "framing": 0.0,
+   "art_quality": 0.0,
+   "artifacts": 0.0
+  },
+  "total": 6.0
+ }
+}

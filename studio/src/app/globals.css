@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+/* Heartwick Studio: the clip-factory ops design system (warm asphalt + sodium-vapour orange, pink only for LIVE). */
+@theme {
+  --color-bg: #0d0b0a;
+  --color-panel: #15120f;
+  --color-raised: #1c1814;
+  --color-rule: #2b2520;
+  --color-rule-strong: #3d342c;
+  --color-ink: #efe7de;
+  --color-muted: #a3978b;
+  --color-faint: #8c8176;
+  --color-sodium: #ff8a3d;
+  --color-sodium-deep: #8a3e12;
+  --color-live: #ff3d7f;
+  --color-ok: #58d68d;
+  --color-warn: #f5c04a;
+  --color-err: #ff5a4e;
+  --color-gpu: #ff8a3d;
+  --color-cpu: #6fb7d9;
+  --color-yt: #ff4436;
+  --color-ig: #e1306c;
+
+  --font-mono: var(--font-jet), ui-monospace, "Cascadia Mono", monospace;
+  --font-display: var(--font-shoulders), "Arial Narrow", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* everything is sized in rem: this one value scales the whole console */
+html {
+  font-size: 110%;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* faint blueprint grid behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.018) 1px, transparent 1px);
+  background-size: 32px 32px;
+  z-index: 0;
+}
+
+@layer base {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+::selection {
+  background: var(--color-sodium);
+  color: #1a0d04;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-sodium);
+  outline-offset: 2px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.65625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  line-height: 0.9;
+  letter-spacing: -0.005em;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.panel {
+  position: relative;
+  background: var(--color-panel);
+  border: 1px solid var(--color-rule);
+  border-radius: 4px;
+}
+
+/* corner brackets: the framing device */
+.bracket::before,
+.bracket::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  pointer-events: none;
+  border-color: var(--color-sodium-deep);
+}
+.bracket::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: var(--color-sodium-deep);
+}
+.bracket::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-color: var(--color-sodium-deep);
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-rule-strong) transparent;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-raised) 0%, #241f1a 50%, var(--color-raised) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+  border-radius: 3px;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* ---- one-shot motion (always on unless reduced motion) ---- */
+
+.num-flash {
+  animation: numflash 0.9s ease-out;
+}
+@keyframes numflash {
+  0% {
+    color: var(--color-sodium);
+    text-shadow: 0 0 14px rgb(255 138 61 / 0.7);
+  }
+}
+
+.slide-in {
+  animation: slidein 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.rise-in {
+  animation: risein 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+@keyframes risein {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.line-fresh {
+  animation: linefresh 1.4s ease-out;
+}
+@keyframes linefresh {
+  0% {
+    background: rgb(255 138 61 / 0.14);
+  }
+}
+
+.page-in {
+  animation: pagein 0.3s ease-out both;
+}
+@keyframes pagein {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
+.grow-bar {
+  transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), height 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.grow-in {
+  animation: growin 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(var(--i, 0) * 40ms);
+  transform-origin: bottom;
+}
+@keyframes growin {
+  from {
+    transform: scaleY(0);
+  }
+}
+.grow-x {
+  animation: growx 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(var(--i, 0) * 40ms);
+  transform-origin: left;
+}
+@keyframes growx {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+.ring-seg {
+  transition: stroke-dasharray 0.8s ease, stroke-dashoffset 0.8s ease;
+}
+
+.draw-line {
+  stroke-dasharray: 3000;
+  animation: drawline 1.3s ease-out both;
+}
+@keyframes drawline {
+  from {
+    stroke-dashoffset: 3000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.dead-glow {
+  box-shadow:
+    0 0 0 1px rgb(255 90 78 / 0.55),
+    0 0 24px -6px rgb(255 90 78 / 0.55);
+}
+
+/* ---- continuous motion: only with <html class="motion"> (header toggle). Each infinite animation keeps the
+   browser drawing frames, which costs CPU on the viewing laptop, so they are opt-out. ---- */
+.motion .lamp-pulse {
+  animation: lamp 2.2s ease-in-out infinite;
+}
+@keyframes lamp {
+  50% {
+    opacity: 0.35;
+  }
+}
+.motion .run-stripes {
+  background-image: repeating-linear-gradient(-45deg, rgb(255 255 255 / 0.12) 0 6px, transparent 6px 12px);
+  background-size: 17px 17px;
+  animation: stripes 0.9s linear infinite;
+}
+@keyframes stripes {
+  to {
+    background-position: 17px 0;
+  }
+}
+.motion .flow-dash {
+  animation: flow 1.6s linear infinite;
+}
+@keyframes flow {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+.motion .ember {
+  animation: ember 3.2s ease-in-out infinite;
+}
+@keyframes ember {
+  50% {
+    box-shadow: 0 0 22px -4px rgb(255 138 61 / 0.55);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

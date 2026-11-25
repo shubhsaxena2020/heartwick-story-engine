@@ -1,0 +1,150 @@
+
+$ python /kaggle/working/t1.py
+Disabling torchao because diffusers requires `torchao>=0.15.0` but found version 0.10.0. Upgrade it with `pip install -U 'torchao>=0.15.0'`.
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+The config attributes {'clip_output': False} were passed to AutoencoderKLWan, but are not expected and will be ignored. Please verify your config.json configuration file.
+/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:  18%|█▊        | 2/11 [00:00<00:00, 16.76it/s]Fetching 11 files:  55%|█████▍    | 6/11 [00:00<00:00, 23.13it/s]Fetching 11 files:  73%|███████▎  | 8/11 [00:12<00:00, 23.13it/s]Fetching 11 files:  82%|████████▏ | 9/11 [00:43<00:12,  6.36s/it]Fetching 11 files:  91%|█████████ | 10/11 [00:54<00:07,  7.17s/it]Fetching 11 files: 100%|██████████| 11/11 [00:54<00:00,  4.93s/it]
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:01<00:07,  1.81s/it]
+Loading weights:   0%|          | 0/242 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 1/242 [00:00<03:23,  1.18it/s][A
+Loading weights:   3%|▎         | 7/242 [00:02<01:04,  3.67it/s][A
+Loading weights:   6%|▌         | 15/242 [00:02<00:30,  7.44it/s][A
+Loading weights:   7%|▋         | 17/242 [00:03<00:41,  5.42it/s][A
+Loading weights:   8%|▊         | 19/242 [00:03<00:35,  6.29it/s][A
+Loading weights:  10%|▉         | 23/242 [00:03<00:29,  7.52it/s][A
+Loading weights:  11%|█         | 27/242 [00:04<00:35,  6.02it/s][A
+Loading weights:  12%|█▏        | 29/242 [00:05<00:34,  6.18it/s][A
+Loading weights:  14%|█▎        | 33/242 [00:05<00:25,  8.27it/s][A
+Loading weights:  15%|█▌        | 37/242 [00:05<00:28,  7.28it/s][A
+Loading weights:  16%|█▌        | 39/242 [00:06<00:26,  7.73it/s][A
+Loading weights:  18%|█▊        | 43/242 [00:06<00:19, 10.14it/s][A
+Loading weights:  19%|█▊        | 45/242 [00:06<00:19,  9.93it/s][A
+Loading weights:  19%|█▉        | 47/242 [00:07<00:29,  6.70it/s][A
+Loading weights:  20%|█▉        | 48/242 [00:07<00:29,  6.68it/s][A
+Loading weights:  22%|██▏       | 53/242 [00:07<00:19,  9.71it/s][A
+Loading weights:  24%|██▎       | 57/242 [00:08<00:23,  7.99it/s][A
+Loading weights:  24%|██▍       | 59/242 [00:08<00:23,  7.67it/s][A
+Loading weights:  27%|██▋       | 65/242 [00:08<00:14, 12.37it/s][A
+Loading weights:  28%|██▊       | 67/242 [00:09<00:27,  6.26it/s][A
+Loading weights:  30%|███       | 73/242 [00:09<00:17,  9.50it/s][A
+Loading weights:  32%|███▏      | 77/242 [00:10<00:14, 11.79it/s][A
+Loading weights:  35%|███▌      | 85/242 [00:10<00:08, 18.91it/s][A
+Loading weights:  37%|███▋      | 89/242 [00:10<00:07, 19.31it/s][A
+Loading weights:  40%|████      | 97/242 [00:10<00:07, 19.88it/s][A
+Loading weights:  41%|████▏     | 100/242 [00:11<00:08, 16.47it/s][A
+Loading weights:  44%|████▍     | 107/242 [00:11<00:11, 11.31it/s][A
+Loading weights:  45%|████▌     | 109/242 [00:12<00:14,  9.43it/s][A
+Loading weights:  48%|████▊     | 115/242 [00:12<00:10, 11.78it/s][A
+Loading weights:  48%|████▊     | 117/242 [00:13<00:17,  7.00it/s][A
+Loading weights:  49%|████▉     | 119/242 [00:13<00:16,  7.50it/s][A
+Loading weights:  51%|█████     | 123/242 [00:14<00:14,  8.37it/s][A
+Loading weights:  52%|█████▏    | 127/242 [00:15<00:17,  6.56it/s][A
+Loading weights:  53%|█████▎    | 129/242 [00:15<00:18,  6.06it/s][A
+Loading weights:  55%|█████▍    | 133/242 [00:15<00:12,  8.41it/s][A
+Loading weights:  56%|█████▌    | 135/242 [00:15<00:12,  8.59it/s][A
+Loading weights:  57%|█████▋    | 137/242 [00:16<00:18,  5.60it/s][A
+Loading weights:  57%|█████▋    | 139/242 [00:16<00:16,  6.24it/s][A
+Loading weights:  59%|█████▊    | 142/242 [00:17<00:13,  7.23it/s][A
+Loading weights:  60%|█████▉    | 145/242 [00:17<00:10,  8.92it/s][A
+Loading weights:  61%|██████    | 147/242 [00:18<00:17,  5.42it/s][A
+Loading weights:  61%|██████    | 148/242 [00:18<00:19,  4.86it/s][A
+Loading weights:  63%|██████▎   | 153/242 [00:18<00:10,  8.24it/s][A
+Loading weights:  64%|██████▍   | 155/242 [00:18<00:10,  8.05it/s][A
+Loading weights:  65%|██████▍   | 157/242 [00:19<00:17,  4.97it/s][A
+Loading weights:  66%|██████▌   | 159/242 [00:20<00:14,  5.76it/s][A
+Loading weights:  67%|██████▋   | 163/242 [00:20<00:10,  7.32it/s][A
+Loading weights:  69%|██████▉   | 167/242 [00:21<00:13,  5.66it/s][A
+Loading weights:  70%|██████▉   | 169/242 [00:21<00:13,  5.59it/s][A
+Loading weights:  71%|███████▏  | 173/242 [00:21<00:08,  7.84it/s][A
+Loading weights:  73%|███████▎  | 177/242 [00:22<00:10,  6.22it/s][A
+Loading weights:  74%|███████▎  | 178/242 [00:23<00:11,  5.70it/s][A
+Loading weights:  74%|███████▍  | 179/242 [00:23<00:11,  5.68it/s][A
+Loading weights:  76%|███████▋  | 185/242 [00:23<00:05,  9.56it/s][A
+Loading weights:  77%|███████▋  | 187/242 [00:24<00:09,  5.79it/s][A
+Loading weights:  78%|███████▊  | 188/242 [00:24<00:09,  5.68it/s][A
+Loading weights:  80%|███████▉  | 193/242 [00:24<00:05,  8.18it/s][A
+Loading weights:  81%|████████  | 195/242 [00:25<00:05,  8.28it/s][A
+Loading weights:  81%|████████▏ | 197/242 [00:25<00:08,  5.25it/s][A
+Loading weights:  82%|████████▏ | 199/242 [00:26<00:07,  5.62it/s][A
+Loading weights:  84%|████████▍ | 203/242 [00:26<00:05,  7.79it/s][A
+Loading weights:  86%|████████▌ | 207/242 [00:27<00:06,  5.58it/s][A
+Loading weights:  86%|████████▋ | 209/242 [00:27<00:05,  5.80it/s][A
+Loading weights:  88%|████████▊ | 213/242 [00:28<00:03,  7.74it/s][A
+Loading weights:  90%|████████▉ | 217/242 [00:28<00:03,  6.36it/s][A
+Loading weights:  90%|█████████ | 218/242 [00:29<00:04,  5.87it/s][A
+Loading weights:  90%|█████████ | 219/242 [00:29<00:03,  5.89it/s][A
+Loading weights:  93%|█████████▎| 225/242 [00:29<00:01,  8.95it/s][A
+Loading weights:  94%|█████████▍| 227/242 [00:30<00:02,  5.96it/s][A
+Loading weights:  94%|█████████▍| 228/242 [00:30<00:02,  5.84it/s][A
+Loading weights:  95%|█████████▍| 229/242 [00:30<00:02,  6.23it/s][A
+Loading weights:  96%|█████████▋| 233/242 [00:31<00:01,  8.72it/s][A
+Loading weights:  97%|█████████▋| 235/242 [00:31<00:00,  9.27it/s][A
+Loading weights:  98%|█████████▊| 237/242 [00:32<00:01,  4.74it/s][A
+Loading weights:  99%|█████████▉| 239/242 [00:32<00:00,  5.73it/s][A
+Loading weights: 100%|██████████| 242/242 [00:40<00:00,  1.09s/it][ALoading weights: 100%|██████████| 242/242 [00:40<00:00,  6.00it/s]
+Loading pipeline components...:  80%|████████  | 4/5 [00:42<00:11, 11.33s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:44<00:00,  8.69s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:44<00:00,  8.86s/it]
+Traceback (most recent call last):
+  File "/kaggle/working/t1.py", line 43, in <module>
+    frames = pipe(image=img, prompt=PROMPT, negative_prompt=NEG, height=832, width=480, num_frames=121,
+             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  num_inference_steps=3, guidance_scale=1.0, generator=g).frames[0]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/pipelines/wan/pipeline_wan_i2v.py", line 719, in __call__
+    latents_outputs = self.prepare_latents(
+        image,
+    ...<9 lines>...
+        last_image,
+    )
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/pipelines/wan/pipeline_wan_i2v.py", line 458, in prepare_latents
+    latent_condition = retrieve_latents(self.vae.encode(video_condition), sample_mode="argmax")
+                                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/accelerate_utils.py", line 39, in wrapper
+    self._hf_hook.pre_forward(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py", line 46, in wrapper
+    return wrapper._compiled_fn(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py", line 760, in pre_forward
+    module.to(self.execution_device)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/models/modeling_utils.py", line 1622, in to
+    return super().to(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1384, in to
+    return self._apply(convert)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 934, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 934, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 934, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  [Previous line repeated 3 more times]
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 965, in _apply
+    param_applied = fn(param)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1370, in convert
+    return t.to(
+           ~~~~^
+        device,
+        ^^^^^^^
+        dtype if t.is_floating_point() or t.is_complex() else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        non_blocking,
+        ^^^^^^^^^^^^^
+    )
+    ^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 108.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 22.81 MiB is free. Including non-PyTorch memory, this process has 14.54 GiB memory in use. Of the allocated memory 14.39 GiB is allocated by PyTorch, and 22.90 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+
+$ rm -rf ~/.cache/huggingface/hub/models--FastVideo* ~/.cache/huggingface/hub/models--QuantStack* ; df -h /root | tail -1
+overlay         8.0T  5.6T  2.5T  70% /

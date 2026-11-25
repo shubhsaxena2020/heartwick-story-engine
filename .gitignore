@@ -1,0 +1,45 @@
+# generated / large
+cache/
+kaggle/build/
+out/**/*.mp4
+out/**/*.wav
+out/**/*_seg*.mp4
+__pycache__/
+*.pyc
+# third-party reference media (Parabrahma World) - analysis numbers are kept, media is not redistributed
+reference/*.mp4
+reference/*.wav
+reference/*.json
+reference/frames/
+reference/*.jpg
+analysis/full/
+analysis/*.png
+kaggle/*.log
+tools/profile_render.py
+dashboard/data/
+
+# Heartwick Studio runtime state
+kaggle/queue.json
+kaggle/*.lock
+.playwright-mcp/
+# research: third-party Parabrahma World media and anything derived from its frames/audio/text stays local
+research/parabrahma/media/
+research/parabrahma/audio/
+research/parabrahma/frames/
+research/parabrahma/sheets/
+research/parabrahma/motion/
+research/parabrahma/raw/
+research/parabrahma/asr/
+research/parabrahma/yt/
+research/kaggle_jobs/ds_pb_audio/
+research/kaggle_jobs/*/out/
+research/parabrahma/meta.json
+research/parabrahma/yt_meta.json
+research/parabrahma/yt_list.txt
+research/parabrahma/analyze.log
+
+# engine v2 / research run staging (raw Kaggle outputs; curated copies live in research/voices and research/art)
+research/kaggle_jobs/ds_voices1/
+research/kaggle_out/
+out/*.log
+

@@ -1,0 +1,10 @@
+{
+ "480x832_s_per_block": 8.32,
+ "480x832_tokens": 32760,
+ "384x672_s_per_block": 4.18,
+ "384x672_tokens": 21168,
+ "dequant_s_per_block": 0.151,
+ "block_weight_mb": 229,
+ "480x832_est_step_s": 339.0,
+ "384x672_est_step_s": 173.0
+}

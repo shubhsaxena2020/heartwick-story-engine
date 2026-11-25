@@ -1,0 +1,1 @@
+{"load_s": 79.8, "k2_plain": {"tokens": 65, "finite": true, "dev": "cuda"}, "k2_mouth": {"tokens": 98, "finite": true, "dev": "cuda"}, "k10_mouth": {"tokens": 112, "finite": true, "dev": "cuda"}, "total_s": 83.4}
